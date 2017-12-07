@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>Basic Code Structure</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+
+<link rel="stylesheet" href="../../../../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/3_gml_overview/3_scripts.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F3_scripting%2F3_gml_overview%2F3_scripts.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F3_scripting%2F3_gml_overview%2F3_scripts.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h2> Skripte </h2><div class="body-scroll"><p><br></p><p> Skripts sind im Wesentlichen Funktionen, die Sie selbst als kurze Codeschnipsel schreiben, die Ausdrücke, Rückgabewerte oder alles andere, was die Sprache erlaubt, auflösen können. Wenn Sie einen Codeblock haben, den Sie an mehr als einem Ort oder Objekt verwenden, ist es wahrscheinlich besser in einem Skript, da Sie es bei Bedarf einmal ändern können und die Änderung von jedem &quot;abgeholt&quot; wird Objekt, das einen Aufruf an das Skript hat. Sie können auch aus organisatorischer Sicht sehr praktisch sein, auch wenn der Code, den sie haben, nur einmal von einem einzigen Objekt aufgerufen wird, da Sie große Codeblöcke an logischeren Punkten in leichter zu verwaltende &quot;Brocken&quot; zerlegen können. </p><p> Wenn Sie ein Skript erstellen, werden die Werte, die Sie übergeben möchten, als <b>Argumente bezeichnet,</b> und Sie möchten auf diese Argumente zugreifen - entweder bei Verwendung der Skriptaktion oder beim Aufruf des Skripts als Funktion eines Programms oder eines anderen Skripts. Diese Argumente werden in den <i>eingebauten</i> Variablen gespeichert: </p><p class="code"><tt>argument0</tt>, <tt>argument1</tt>, ..., etc...
+up to <tt>argument15</tt><span class="notranslate"></span></p><p> Es können also maximal 16 Argumente an ein Skript übergeben werden, wenn diese aus einem Code mit den Argumentvariablen aufgerufen werden, und wenn der <tt>argument0...15</tt> Variablen für ein Skript müssen Sie <b>sicherstellen, dass das Skript alle angegebenen Argumente verwendet</b>. Wenn Sie zum Beispiel ein Skript haben, das zwei Argumente akzeptiert und Sie nur eins angeben, erhalten Sie einen Fehler für dieses Skript. Das Gleiche gilt, wenn Sie mehr Argumente angeben, als Sie benötigen. </p><p> Sie können jedoch eine variable Anzahl von Argumenten an ein Skript übergeben, das <i>das integrierte</i> Argumentarray verwendet, und Sie sind <i>nicht</i> auf maximal 16 Argumente beschränkt, wenn Sie dieses Array verwenden, sondern können so viele haben, wie Sie benötigen (auch wenn Sie müssen sicherstellen, dass alle Argumente innerhalb des Skripts referenziert werden): </p><p class="code"><tt>argument[0 ... max_num]</tt>
+<span class="notranslate"></span></p><p> Wenn Sie eine variable Anzahl von Argumenten als Array von Werten übergeben, können Sie die folgende Funktion verwenden: </p><blockquote><ul><li> <a href="argument_count.html"><tt>argument_count</tt></a> </li></ul></blockquote><p> Dies kann verwendet werden, um herauszufinden, wie viele Argumente übergeben wurden, und das Skript so anzupassen, dass nur die angegebenen Argumente verwendet werden. </p><div class="note"> <b>HINWEIS:</b> Sie können die beiden Arten von Argumentvariablen beim Aufrufen eines Skripts nicht mischen. Sie müssen <b>beides verwenden</b> <tt>argument0...15</tt> <b>oder</b> Argument [n]. </div><p><a name="return" id="return"></a> Skripts können auch einen Wert zurückgeben, sodass sie in Ausdrücken verwendet werden können. Dafür würdest du das verwenden <tt>return</tt> Erklärung: </p><p class="code">return &lt;expression&gt;<span class="notranslate"></span></p><p> Es sollte beachtet werden, dass die <i>Ausführung des Skripts bei der return-Anweisung endet</i>, was bedeutet, dass kein Code ausgeführt wird, der nach dem Aufruf der Rückgabe aufgerufen <i>wird</i>. Hier ist ein kurzes Beispielskript mit dem Namen &quot;scr_sqr&quot;, das das Quadrat von jedem Wert berechnet, der an es übergeben wird, und es enthält einen Fehlerfang, falls das Argument, dass es übergeben wird, keine reelle Zahl ist: </p><p class="code">{<br>
+if !is_real(argument0)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;return 0;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;return (argument0 * argument0);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+}<span class="notranslate"></span></p><p> Um ein Skript aus einem Codeabschnitt heraus aufzurufen, gehen Sie genauso vor wie beim Aufrufen von Funktionen - schreiben Sie den Skriptnamen mit den Argumentwerten in Klammern. Also würde das obige Skript so heißen: </p><p class="code">if keyboard_check_pressed(vk_enter)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;val = scr_sqr(amount);<br>
+&nbsp;&nbsp;&nbsp;}<br><span class="notranslate"></span></p><p> Es ist erwähnenswert, dass Sie beim Schreiben Ihrer eigenen Skripts auch bestimmte Kommentare im <b>JSDoc-</b> Stil hinzufügen können, sodass sie bei der Verwendung in Ihrem Code zusammen mit ihren Argumenten und anderen Details automatisch vervollständigt werden. Weitere Informationen hierzu finden Sie im Abschnitt <a href=
+"../../1_overview/3_additional_information/jsdoc.html">JSDoc-Skriptkommentare</a>. Beachten Sie außerdem, dass Sie, wenn Sie Ihre Skripte im Code-Editor eingeben, auf klicken können <img style="vertical-align:middle" src="../../images/icon_f1.png"> oder benutze die mittlere Maustaste <img style="vertical-align:middle"
+src="../../images/icon_mmb.png"> auf den Skriptnamen, um ihn zum direkten Bearbeiten zu öffnen. </p><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Zurück: <a href="index.html">GML-Übersicht</a> </div><div style="float:right"> Weiter: <a href="4_comments.html">Kommentare im Code</a> </div></div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

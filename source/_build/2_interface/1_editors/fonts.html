@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>The Font Editor</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+
+<link rel="stylesheet" href="../../../../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/2_interface/1_editors/fonts.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F2_interface%2F1_editors%2Ffonts.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F2_interface%2F1_editors%2Ffonts.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h2> Der Schriftart-Editor </h2><div class="body-scroll"><p><br></p><p><img class="center" src="images/editor_fonts.png" alt="Schrift-Editor"> Wenn Sie Text in Ihrem Spiel zeichnen möchten, wird dieser Text in einer Arial 12-Punkte-Standardschriftart gezeichnet, aber um interessantere oder einzigartig aussehende Texte zu erstellen, werden Sie wahrscheinlich verschiedene Schriftarten verwenden wollen. Um verschiedene Schriftarten auf Ihrem Computer zu verwenden, müssen Sie in <i><span class="notranslate">GameMaker</span> Studio 2</i> eine <b>Font-Ressource</b> erstellen. Dies geschieht durch Rechtsklick <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> im Ordner &quot;Fonts&quot; im Ressourcenbaum und klicken Sie auf &quot;Erstellen&quot;. Für jede Schriftartenressource, die Sie erstellen, geben Sie einen bestimmten Schriftartentyp von Ihrem Computer an, der dann in Ihrem Spiel mit der Aktion oder dem Code verwendet werden kann, um eine Schriftart für das Zeichnen festzulegen. </p><p> Wenn Sie zum ersten Mal eine Font-Ressource erstellen, wird das Font-Editor-Fenster mit den folgenden Optionen geöffnet: </p><blockquote><a name="font_details" id="font_details"></a> <label class="collapse" for="one">Einzelheiten</label> <input id="one"
+type="checkbox"><div class="index_list"><p> Hier können Sie Ihrer Schriftart einen eindeutigen Namen geben (nur alphanumerische Zeichen und das Unterstrichsymbol &quot;_&quot;) und die zu verwendende Schriftart auswählen. Die Schriftart muss auf Ihrem Computer installiert sein, und aufgrund von Lizenzproblemen speichert <span class="notranslate">GameMaker Studio 2</span> die eigentlichen Schriftartdateien <i>nicht</i> standardmäßig mit der Projektdatei, sondern die Schriftart wird auf einer <b>Texturseite</b> als vorgerenderte Glyphen gerendert. Wenn Sie die eigentliche Schriftdatei ( <tt>*.ttf</tt> nur) zusammen mit dem Projekt, wenn Sie ein Marketplace-Asset erstellen, dann können Sie die Option <b>Schriftart in Marketplace-Asset einschließen aktivieren</b>. Dadurch wird der Datei-Explorer geöffnet, in dem Sie die Schriftartdatei auswählen können, die dann den mit dem Projekt gebündelten Dateien hinzugefügt wird. </p><div class="note"> <b>WICHTIGER HINWEIS</b>: <b>Sie sollten nur Fonts verwenden, die Sie gesetzlich erlaubt und lizenziert haben, um sie in Ihrem Projekt weiterzuverbreiten oder zu verwenden</b>. </div></div><br><a name="font_presets" id="font_presets"></a> <label class=
+"collapse" for="two">Voreinstellungen</label> <input id="two" type=
+"checkbox"><div class="index_list"><p> In diesem Abschnitt können Sie die Größe (in Punkten - Standard ist 12pt) und ob die Schriftart fett oder kursiv gezeichnet oder Anti-Aliasing (Kantenglättung) angewendet werden soll. Das Vorschaufenster auf der rechten Seite zeigt Ihnen den Vorschautext, der mit der von Ihnen angegebenen Größe und Transformation angezeigt wird. </p></div><br><a name="font_texture_page" id="font_texture_page"></a> <label class="collapse" for="six">Texturgruppe</label> <input id=
+"six" type="checkbox"><div class="index_list"><p> Wie oben bereits erwähnt (im Abschnitt <b>Font-Details</b> ), werden alle Font-Glyphen standardmäßig als Teil einer <i>Texturgruppe</i> auf eine Texturseite gerendert, um sie in grafische Ressourcen zu konvertieren. Dieser Abschnitt des Font - Editor ermöglicht es Ihnen, wählen, welche Gruppe Sie sie hinzufügen möchten, und wenn das Spiel kompiliert wird, wird die Schriftart in eine temporäre Textur hinzugefügt werden, um ein einzelnes Bild mit allen erforderlichen Glyphen zu erstellen und dann wird <i>dies</i> der Haupttexturgruppe zum Exportieren hinzugefügt. Beachten Sie, dass diese Option nichts unternimmt, wenn Sie die Font-Datei als Teil des Spiel-Builds eingefügt haben. Weitere Informationen zu Texturgruppen finden Sie <a href="../3_settings/textures.html">hier</a>. </p></div><br><a name="font_range" id="font_range"></a> <label class="collapse"
+for="three">Bereiche</label> <input id="three" type="checkbox"><div class="index_list"><p> Beim Erstellen einer Font-Ressource ist es selten, dass Sie jedes einzelne Zeichen für die Schriftart verwenden möchten. Aus diesem Grund verwendet <i><span class="notranslate">GameMaker</span> Studio 2</i> standardmäßig nur die Zeichen von 32 bis 127 der gewählten Schriftart, da dies die Zahlen und die Groß- und Kleinbuchstaben sowie bestimmte Satzzeichen enthält. Sie können, ändern jedoch den Zeichenbereich verwendet, um Ihre Spiele also optimieren: Wenn Sie nur die Zahlen von einer bestimmten Schriftart benötigen, dann <i>nur</i> die Zahlen auswählen. Um dies zu tun, sollten Sie zuerst auf die Schaltfläche <b>Löschen</b> klicken, um den aktuellen Bereich zu löschen (Sie müssen möglicherweise den Bereich dafür auswählen, indem Sie auf klicken <img style=
+"vertical-align:middle" src="../../images/icon_lmb.png"> auf sie im Vorschaufenster) und klicken Sie dann auf die Schaltfläche <b>Hinzufügen</b> einen neuen Bereich hinzuzufügen. Dies öffnet das folgende verkettete Fenster: <img class="center" src="images/editor_fonts_range.png" alt="Schriftarten-Editor"></p><p> Dieses Fenster enthält einige Schaltflächen, mit denen Sie einen Standardbereich für Ihre Schriftart festlegen können: </p><p> - Der <i>Normalbereich</i> von 32 bis 127 <br> - Der <i>ASCII-</i> Bereich von 0 bis 255 <br> - Die <i>Digits</i> liegen, dass nur die 10 Ziffern enthalten <br> - Der <i>Letters</i> Bereich, der alle Groß- und Kleinbuchstaben enthält nur <br></p><p> Andere Bereiche können verwendet werden, indem Sie den ersten und letzten Zeichenindex des Bereichs eingeben, den Sie in den Zeichenbereichseingabefeldern festlegen möchten (wenn ein Zeichen nicht in dem Bereich liegt, in dem es durch ein Leerzeichen ersetzt wird). Neben diesen Schaltflächen und Eingabefeldern gibt es noch zwei weitere Optionen, die besonders nützlich sind: </p><p> - <i>Aus Code</i>: Wenn Sie auf diese Schaltfläche klicken und dann auf OK klicken, <i><span class="notranslate">GameMaker Studio 2</span></i> Ihren <i><span class="notranslate">GameMaker Studio 2</span></i> automatisch nach Zeichenfolgen und erstellt dann verschiedene Zeichenbereiche, um den gesamten Text in Ihrem Spiel abzudecken. Beachten Sie, dass nach allen Zeichenfolgen (entweder in &quot;&quot; oder &quot;&quot;) gesucht wird und daher auch Dateinamen in den Zeichenbereichen enthalten sein können. <br><br></p><p> - <i>Aus Datei</i>: Dies funktioniert ähnlich wie die oben beschriebene Option &quot;from code&quot;. Wenn Sie darauf klicken, werden Sie aufgefordert, eine Datei anzugeben, und sobald dies geschehen ist, klicken Sie auf OK. <i><span class="notranslate">GameMaker Studio 2</span></i> analysiert dann die Datei und erstellt Zeichenbereiche für den darin enthaltenen Text. </p><p> Beachten Sie, dass Sie den Textbereich manuell bearbeiten können, indem Sie Textglyphen direkt in das Vorschaufenster einfügen oder löschen. </p></div><br><a name="font_preview" id="font_preview"></a> <label class=
+"collapse" for="four">Vorschau</label> <input id="four" type=
+"checkbox"><div class="index_list"><p> Im Vorschaufenster können Sie jeden Text eingeben, den Sie testen möchten. Es wird mit den von Ihnen ausgewählten Voreinstellungen gerendert. </p></div><br><a name="font_range_preview" id="font_range_preview"></a> <label class="collapse" for="five">Bereichsvorschau</label> <input id=
+"five" type="checkbox"><div class="index_list"><p> Hier werden die verschiedenen Bereiche aufgeführt, die Sie hinzugefügt haben. Die Werte für den Bereich werden links und die Bereichs-Glyphen rechts angezeigt. </p></div></blockquote><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Editors Index</a> </div><div style="float:right"> Weiter: <a href="timelines.html">Der Zeitleisteneditor</a> </div></div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

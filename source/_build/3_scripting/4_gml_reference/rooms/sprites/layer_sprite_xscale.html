@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>layer_sprite_xscale</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+
+<link rel="stylesheet" href="../../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/rooms/sprites/layer_sprite_xscale.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Frooms%2Fsprites%2Flayer_sprite_xscale.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Frooms%2Fsprites%2Flayer_sprite_xscale.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h2> layer_sprite_xscale </h2><p><br></p><h3> Beschreibung </h3><blockquote> Mit dieser Funktion können Sie ändern, ob das angegebene Sprite-Element auf einer Ebene entlang der x-Achse skaliert werden soll oder nicht. Sie geben die Sprite-Element-ID (die Sie erhalten, wenn Sie ein Sprite-Element erstellen mit <a href=
+"layer_sprite_create.html"><tt>layer_sprite_create()</tt></a> oder wenn Sie die Funktion verwenden <a href=
+"layer_sprite_get_id.html"><tt>layer_sprite_get_id()</tt></a> ) und stellen Sie dann den Skalierungswert ein. Eine Skala von 1 zeigt keine Skalierung an (1: 1), kleinere Werte werden verkleinert (0,5, zum Beispiel wird die Hälfte der Breite des Sprites verwendet), größere Werte skalieren und negative Werte drehen das Sprite und skalieren es es sei denn, der verwendete Wert ist genau -1 (in diesem Fall wird das verwendete Sprite nur um seine Ursprungsposition ohne Skalierung von rechts nach links gekippt). </blockquote><p><br></p><h3> Syntax: </h3><p class="code">layer_sprite_xscale(sprite_element_id, xscale);<span class="notranslate"></span></p><p><br></p><h3> Argumente: </h3><blockquote><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">sprite_element_id</span> </td> <td> Der eindeutige ID-Wert des zu ändernden Sprite-Elements </td></tr><tr class="alt"><td> <span class="notranslate">xscale</span> </td> <td> Der xscale-Wert (Standardwert ist 1) </td></tr></table></blockquote><p><br></p><h3> Kehrt zurück: </h3><p class="code">N/A<span class="notranslate"></span></p><p><br></p><h3> Beispiel: </h3><p class="code">var asset_sprite = layer_sprite_get_id(layer,
+"gfc_Trees");<br>
+if layer_sprite_get_xscale(asset_sprite) != 1 ||
+!ayer_sprite_get_yscale(asset_sprite) != 1<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;layer_sprite_xscale(asset_sprite, 1);<br>
+&nbsp;&nbsp;&nbsp;layer_sprite_yscale(asset_sprite, 1);<br>
+&nbsp;&nbsp;&nbsp;}<br><span class="notranslate"></span></p><blockquote> Der obige Code überprüft das Sprite-Element, das dem Layer zugeordnet ist, auf dem die Instanz ausgeführt wird, auf der der Code ausgeführt wird, und wenn es in beide Richtungen skaliert wird, werden sowohl die X-Achsenskalierung als auch die Y-Achsenskalierung auf 1 gesetzt. </blockquote><p><br></p><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Sprite Layer Funktionen</a> </div><div style="float:right"> nächstes: <a href=
+"layer_sprite_yscale.html">layer_sprite_yscale</a> </div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>Expressions</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+
+<link rel="stylesheet" href="../../../../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/3_gml_overview/12_expressions.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F3_scripting%2F3_gml_overview%2F12_expressions.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F3_scripting%2F3_gml_overview%2F12_expressions.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h2> Ausdrücke </h2><div class="body-scroll"><p><br></p><p> Ein Ausdruck ist eine mathematische Phrase, die gewöhnliche Zahlen, Variablen, Strings oder GML-Funktionen sowie einen oder mehrere <i>Operatoren</i> (wie Addieren, Subtrahieren, Multiplizieren usw.) enthalten kann. Die in einem Ausdruck verwendeten Werte können reelle Zahlen (zB 3,4 * 6), hexadezimale Zahlen, die mit einem $ -Zeichen (zB <span class="notranslate">$00FFAA</span> | <span class="notranslate">$88FFAA</span> ) beginnen, Strings zwischen doppelten Anführungszeichen (zB &quot;Hallo&quot; + &quot;Welt&quot;) oder komplizierter sein Ausdrücke, die mehrere Operatoren und Werte verwenden. </p><p> Für Ausdrücke existieren die folgenden Operatoren (in der Reihenfolge ihrer Priorität): </p><blockquote> <label class="collapse" for="one">Zuweisen (=)</label> <input id="one" type="checkbox"><div class="index_list"> <b>=</b> - Wird verwendet, um einer Variablen einen Wert zuzuweisen. Beachten Sie, dass dies <i>auch</i> für den Vergleich von Variablen in <i><span class="notranslate">GameMaker Studio 2</span></i> kann. Sie können dies in Beispielen und anderen Codes sehen. Dies ist jedoch ein Vermächtnis alter <i><span class="notranslate">GameMaker</span></i> Versionen und Sie sollten die Operatoren <b>==</b> zum Vergleichen und <b>=</b> zum Zuweisen verwenden, wie in diesen Beispielen gezeigt: <br><br><p class="code">a = 12;<br>
+speed = 5;<br>
+val = (old_val + 5);<br><span class="notranslate"></span></p></div><br> <label class="collapse" for="two">Kombinieren (&amp;&amp;, ||, ^^)</label> <input id="two" type="checkbox"><div class="index_list"> <b>&amp;&amp;, ||, ^^ (und, oder und xor)</b> - Boolesche Werte kombinieren, um entweder wahr oder falsch zu ergeben. Wenn eines der folgenden Beispiele aufgelöst wird <tt>true</tt> dann würde der Code ausgeführt werden: <br><br><p class="code">if (a == b &amp;&amp; c == d) {do something...}//
+and<br>
+if (a == b || c ==d) {do something...}// or<br>
+if (a == b ^^ c == d) {do something...} // xor<br><span class="notranslate"></span></p></div><br> <label class="collapse" for="three">Vergleichen (&lt;, &lt;=, ==,! =,&gt;,&gt; =)</label> <input id="three" type="checkbox"><div class="index_list"> <b>&lt;, &lt;=, ==,! =,&gt;,&gt; =</b> - Dies sind Vergleiche und können nur einen geben <tt>true</tt> oder <tt>false</tt> Ergebnis (wobei true auch als 1 und false als 0 interpretiert werden kann). Anwendungsbeispiele: <br><br><p class="code">if (a &lt; b) {do something...}<br>
+if (a != b) {do something...}<br><span class="notranslate"></span></p></div><br> <label class="collapse" for="four">Bitweise (|, &amp;, ^, &lt;&lt;, &gt;&gt;)</label> <input id="four" type="checkbox"><div class="index_list"> <b>|, &amp;, ^, &lt;&lt;, &gt;&gt;</b>: Mit diesen können Sie bitweise Operationen ausführen, wobei | = bitweise oder, &amp; = bitweise und, ^ = bitweise xor, &lt;&lt; = nach links verschieben, &gt;&gt; = nach rechts verschieben. Anwendungsbeispiele: <br><br><p class="code">x = (x &amp; $ffffffe0) + 32;<br>
+if (y ^ $1f) &gt; 0 {do something...};<br><span class="notranslate"></span></p><br> Weitere Informationen zur Verwendung der bitweisen Operatoren und ihrer Funktionsweise finden Sie im Abschnitt: <a href=
+"../../1_overview/3_additional_information/bitwise_operators.html">Bitweise Operatoren</a>. </div><br> <label class="collapse" for="five">Arithmetisch (+, -, *, /)</label> <input id="five" type="checkbox"><div class="index_list"> <b>+, -, *, /</b> - Addieren, subtrahieren, multiplizieren und dividieren. Anwendungsbeispiele: <br><br><p class="code">c = a * b;<br>
+str = a + "world";<br><span class="notranslate"></span></p></div><br> <label class="collapse" for="six">Inkrement / Dekrement (++, -)</label> <input id="six" type="checkbox"><div class="index_list"> <b>++, -</b> - Addiere oder subtrahiere <i>eins</i> von einem Wert. Es ist erwähnenswert, dass die Platzierung vor oder nach dem hinzuzufügenden oder zu subtrahierenden Wert leicht unterschiedliche Ergebnisse hat. Beispielsweise: <br><br><ul><li> <b>++ a</b> erhöht die Variable und gibt den inkrementierten Wert zurück. </li><li> <b>a ++</b> erhöht die Variable, gibt aber den Wert zurück, bevor sie inkrementiert wurde. </li></ul> Wenn Sie also etwas haben: <br><br><p class="code">var a = 1;<br>
+show_debug_message(string(a++));<br>
+show_debug_message(string(++a));<br><span class="notranslate"></span></p><br> Die Debug-Ausgabe wäre 1 und 3. Hier sind einige Anwendungsbeispiele: <br><br><p class="code">for (var i = 0; i &lt; 10; i++;) {do
+something...};<br>
+if hit == true score--;<br><span class="notranslate"></span></p><br> <i><b>HINWEIS:</b> Auf den Zielplattformen des <span class="notranslate">YoYo</span> Compilers (die mit (YYC) gekennzeichnet sind) werden diese Ausdrücke von links nach rechts ausgewertet, während sie auf allen anderen Zielplattformen von rechts nach links ausgewertet werden, was bedeutet: <br><br></i> <p class="code"><i>val = max(num, ++num, num++);<br></i>
+<span class="notranslate"></span></p><br> Je nach Plattform ergeben sich unterschiedliche Ergebnisse. </div><br> <label class="collapse" for="seven">Division und Modulo (div,%, mod)</label> <input id="seven" type="checkbox"><div class="index_list"> <b>div, mod (%)</b> - Division und modulo, wobei dir div die Menge gibt, in die ein Wert geteilt werden kann, um nur einen ganzzahligen Quotienten zu erzeugen, während mod dir nur den Rest einer Division gibt. Anwendungsbeispiele: <br><br><p class="code">secs = time mod 60;<br>
+time_str = string(time div 60);<br><span class="notranslate"></span></p></div><br> <label class="collapse" for="eight">Unary (!, -, ~)</label> <input id="eight" type="checkbox"><div class="index_list"> Außerdem gibt es die folgenden unären Operatoren: <blockquote><ul><li> <b>!</b>: boolean &quot;nicht&quot;, also <tt>!true == false</tt></li><li> <b>-</b>: negiert den nächsten reellen oder ganzzahligen Wert (nicht gültig für Strings oder Booleans) </li><li> <b>~</b>: negiert den nächsten Wert bitweise </li></ul></blockquote></div></blockquote><p> Als Werte in allen Ausdrücken können Sie Zahlen, Variablen oder Funktionen verwenden, die einen Wert zurückgeben, und Unterausdrücke können auch in Klammern gesetzt werden. Alle Operatoren arbeiten für reale Werte, aber Vergleiche funktionieren auch für Strings und &quot;+&quot; verkettet Strings. </p><p><br></p><h2> Reihenfolge der Operationen </h2><p> Wenn Sie mehrere Operationen in einem einzelnen Ausdruck ausführen, ist es <b>sehr wichtig,</b> dass Sie eckige Klammern () verwenden, um die Reihenfolge der Operationen voneinander zu trennen, da verschiedene Plattformen sie möglicherweise anders ausführen, wenn sie nicht explizit auf diese Weise angegeben werden. Betrachten Sie beispielsweise den folgenden Code: </p><p class="code">a = b == c || d;<br><span class="notranslate"></span></p><p> Die verschiedenen Ziel-Compiler führen die Operationen in verschiedenen Reihenfolgen durch, da sie nicht explizit gezeigt werden, was zu &quot;seltsamen&quot; Ergebnissen führt, die Sie nicht erwarten können, wenn Sie Ihr Spiel spielen. Um dies zu vermeiden, verwenden Sie die (), um die Teile wie folgt zu trennen: </p><p class="code">a = (b == c || d); //better<br>
+a = ((b == c) || d); //best<br><span class="notranslate"></span></p><p> Hier sind einige abschließende Beispiele für die verschiedenen Ausdrücke: </p><p class="code">{<br>
+x = 23;<br>
+colour = $FFAA00;<br>
+str = "hello world";<br>
+y += 5;<br>
+x *= y;<br>
+x = y &lt;&lt; 2;<br>
+x = 23 * ((2 + 4) / sin(y));<br>
+str = "hello" + "world";<br>
+b = (x &lt; 5) &amp;&amp; !(x==2 || x==4);<br>
+}<br><span class="notranslate"></span></p><p><br></p><h2> Accessoren </h2><p> Es gibt auch Ausdrücke &quot;Abkürzungen&quot;, die <b>Accessoren</b> für die Verwendung mit bestimmten <a href=
+"../4_gml_reference/data_structures/index.html">Datenstrukturen</a> und <a href="10_arrays.html">Arrays genannt werden</a>, die es Ihnen ermöglichen, Daten innerhalb dieser Formate schnell und einfach und ohne die Verwendung von Funktionsaufrufen hinzuzufügen oder zu ersetzen. Umfassende Informationen finden Sie auf der folgenden Seite: </p><blockquote><ol><li> <a href="13_accessors.html"><span class=
+"list_link">Accessoren</span></a> <br></li></ol></blockquote><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Zurück: <a href="index.html">GML-Übersicht</a> </div><div style="float:right"> Nächstes: <a href=
+"13_accessors.html">Accessoren</a> </div></div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

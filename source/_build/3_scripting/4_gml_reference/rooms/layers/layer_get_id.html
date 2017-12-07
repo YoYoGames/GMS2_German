@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>layer_get_id</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+
+<link rel="stylesheet" href="../../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/rooms/layers/layer_get_id.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Frooms%2Flayers%2Flayer_get_id.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Frooms%2Flayers%2Flayer_get_id.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h2> layer_get_id </h2><p><br></p><h3> Beschreibung </h3><blockquote> Diese Funktion kann verwendet werden, um den eindeutigen ID-Wert für eine bestimmte <b>Ebene zu erhalten</b>. In der IDE haben alle Layer einen Namen und einen Typ, und um sie bearbeiten oder durch Code ändern zu können, müssen Sie den <b>Layer-ID-</b> Wert <b>angeben</b>. Diese Funktion wird verwendet, um diese ID mithilfe des Namens (einer Zeichenfolge) des Layers (wie in der IDE geschrieben) abzurufen. Wenn Sie mithilfe der Funktion eine neue Ebene mithilfe von Code erstellen <a href="layer_create.html"><tt>layer_create()</tt></a> dann gibt diese Funktion stattdessen den eindeutigen ID-Wert zurück (dynamisch erstellte Layer erhalten keine Namen). Wenn Sie den Namen eines Layers angeben, der im aktuellen Raum nicht vorhanden ist, erhalten Sie einen Fehler, und das Projekt stürzt ab. </blockquote><p><br></p><h3> Syntax: </h3><p class="code">layer_get_id(layer_name)<span class="notranslate"></span></p><p><br></p><h3> Argumente: </h3><blockquote><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">layer_name</span> </td> <td> Der Name der Ebene (eine Zeichenfolge) </td></tr></table></blockquote><p><br></p><h3> Kehrt zurück: </h3><p class="code">Layer ID Value (Real), or -1 if the layer specified
+doesn't exist<span class="notranslate"></span></p><p><br></p><h3> Beispiel: </h3><p class="code">var near = instance_nearest(x, y, obj_Tree);<br>
+var layer_id = layer_get_id("Instances Front");<br>
+layer_add_instance(layer_id, near);<br><span class="notranslate"></span></p><blockquote> Der obige Code wird zuerst den Index der nächsten Instanz zu der gegebenen x / y-Position bringen und ihn in einer lokalen Variablen speichern. Er erhält dann die eindeutige Instanz-Layer-ID für den Layer &quot;Instanzen Front&quot; und verschiebt die gefundene Instanz auf diesen Layer. </blockquote><p><br></p><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Allgemeine Layer-Funktionen</a> </div><div style="float:right"> weiter: <a href=
+"layer_get_depth.html">layer_get_depth</a> </div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

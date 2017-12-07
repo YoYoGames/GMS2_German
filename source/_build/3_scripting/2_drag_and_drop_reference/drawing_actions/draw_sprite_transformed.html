@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>Draw Sprite Transformed</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+
+<link rel="stylesheet" href="../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/2_drag_and_drop_reference/drawing_actions/draw_sprite_transformed.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F2_drag_and_drop_reference%2Fdrawing_actions%2Fdraw_sprite_transformed.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F2_drag_and_drop_reference%2Fdrawing_actions%2Fdraw_sprite_transformed.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h2><img style="vertical-align:middle" src=
+"images/i_drawing_draw_sprite_transformed.png"> Sprite transformiert </h2><div class="body-scroll"><p><br></p><h3> Beschreibung </h3><blockquote><p> Diese Funktion zeichnet das angegebene Sprite ähnlich wie die Aktion <a href="draw_sprite.html"><tt>Draw Sprite</tt></a> aber mit zusätzlichen Optionen zum Ändern der Skalierung, Überblendung, Rotation und des Rahmens des Sprites, das gezeichnet wird. Ändern dieser Werte <i>nicht</i> die Ressource in irgendeiner Weise ändern (nur, wie es gezeichnet wird), und Sie können eine der verfügbaren verwenden <a href=
+"../../4_gml_reference/instances/instance_variables/index.html">Sprite</a> - <a href=
+"../../4_gml_reference/instances/instance_variables/index.html">Eigenschaft Variablen</a> anstelle direkter Werte für alle Argumente in der Funktion. Das folgende Bild zeigt, wie sich verschiedene Werte auf die Zeichnung des Sprites auswirken: <img class=
+"center" src="images/spr_ext.png"></p><div class="note"> <b>HINWEIS:</b> Die Farbüberblendung wird nur für das HTML5-Ziel empfohlen, wenn WebGL aktiviert ist. Sie können jedoch die Überblendungsfarbe festlegen, wenn sie nicht aktiviert ist, und das Sprite wird wie üblich eingeblendet. Jedes Mischen auf diese Weise erzeugt jedoch ein doppeltes Sprite, das dann im Cache gespeichert und bei Bedarf verwendet wird. Dies ist alles andere als optimal und wenn Sie mehrere Farbänderungen verwenden, verlangsamt dies die Spieleleistung, es sei denn, Sie aktivieren WebGL. Wenn Sie WebGL nicht verwenden möchten, können Sie die Schriftart-Cachegröße so einstellen, dass sie begrenzt wird, falls dies mit der Funktion erforderlich sein sollte <a href=
+"../../4_gml_reference/sprites/sprite_set_cache_size.html"><tt>sprite_set_cache_size</tt></a>. </div><div class="note"> <b>HINWEIS</b>: Diese Aktion dient nur zur Verwendung in den verschiedenen <a href=
+"../../../2_interface/1_editors/events/draw_events.html">Draw-Ereignissen</a> und zeichnet nichts, wenn sie an anderer Stelle verwendet wird. </div></blockquote><p><br></p><h3> Aktionssyntax: </h3><img class="center" src=
+"images/a_drawing_draw_sprite_transformed.png" alt="Zeichne Sprite Transformierte Syntax"><p><br></p><h3> Argumente: </h3><blockquote><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">Sprite</span> </td> <td> Das Sprite zum Zeichnen </td></tr><tr class="alt"><td> <span class="notranslate">Frame</span> </td> <td> Der Sprite-Frame zum Zeichnen (verwenden Sie die eingebaute Variable <tt>image_index</tt> für den aktuellen Rahmen) </td></tr><tr><td> <span class="notranslate">X</span> </td> <td> Die x-Position zum Zeichnen im Raum </td></tr><tr class="alt"><td> <span class="notranslate">Y</span> </td> <td> Die y-Position im Raum zu zeichnen </td></tr><tr><td> <span class="notranslate">Scale X</span> </td> <td> Der Skalierungsfaktor für die X-Achse (verwenden Sie die eingebaute Variable <tt>image_xscale</tt> für die aktuelle X-Skala) </td></tr><tr class="alt"><td> <span class="notranslate">Scale Y</span> </td> <td> Der Skalierungsfaktor für die Y-Achse (verwenden Sie die eingebaute Variable <tt>image_yscale</tt> für die aktuelle Y-Skala) </td></tr><tr><td> <span class="notranslate">Rotation</span> </td> <td> Der Zeichenwinkel für das Sprite (von 0 bis 360, im Gegenuhrzeigersinn, wobei 0 rechts ist) - verwenden Sie die eingebaute Variable <tt>image_angle</tt> für die aktuelle Rotation) </td></tr><tr class="alt"><td> <span class="notranslate">Colour</span> </td> <td> Die Farbe, die mit dem Sprite gemischt werden soll (Standard ist weiß, und Sie können die eingebaute Variable verwenden) <tt>image_blend</tt> für die aktuelle Farbe) </td></tr></table></blockquote><p><br></p><h3> Beispiel: </h3><img class="center" src=
+"images/e_drawing_draw_sprite_transformed.png" alt="Sprite transformiertes Beispiel"><blockquote> Der obige Aktionsblockcode prüft eine Variable und wenn sie auf gesetzt ist <tt>true</tt> dann wird das Sprite mit zufälliger Skalierung entlang der X- und Y-Achse gezeichnet und mit der Farbe Rot gemischt, andernfalls wird das Sprite unter Verwendung der Standardtransformationen gezeichnet. </blockquote><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Zeichenaktionen</a> </div><div style="float:right"> weiter: <a href=
+"draw_stacked_sprites.html">Draw Stacked Sprites</a> </div></div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

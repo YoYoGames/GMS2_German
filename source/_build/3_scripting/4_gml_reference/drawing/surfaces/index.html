@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>Surfaces</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/drawing/surfaces/index.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fdrawing%2Fsurfaces%2Findex.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fdrawing%2Fsurfaces%2Findex.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h2> Oberflächen </h2><div class="body-scroll"><p><br></p><p> In den normalen Zeichenereignissen zeichnet <i><span class="notranslate">GameMaker Studio 2</span></i> nicht direkt auf den Bildschirm, sondern auf eine <b>Oberfläche, die so</b> genannte <i>Anwendungsoberfläche</i>. Diese Oberfläche ist im Grunde eine leere &quot;Leinwand&quot;, die später bearbeitet werden kann, bevor sie bei Bedarf auf den Bildschirm gezogen wird. In den meisten Fällen übernimmt <span class="notranslate">GameMaker Studio 2</span> dies für Sie (Sie können sie jedoch auch selbst im Code für Shader, Skalierung und viele andere Dinge - weitere Details sind unten angegeben). </p><p> Abgesehen von dieser Anwendungsoberfläche können Sie jedoch auch eigene Oberflächen erstellen und diese verwenden, um atemberaubende oder subtile Spezialeffekte in Ihrem Spiel zu erstellen. Zum Beispiel können Sie Oberflächen verwenden, um Instanzen zu &quot;fangen&quot;, die dann zerstört werden können. Auf diese Weise können Sie einen Decal-Effekt erzeugen, bei dem das Sprite für die Instanz auf der Oberfläche angezeigt wird, als ob es noch existierte Trümmer, Blut, etc... ohne wirklichen Verarbeitungsaufwand. Eine andere Sache, die Sie mit Oberflächen machen können, ist, sie als Texturen zu verwenden, die manipuliert werden sollen, oder Sprites &quot;on the fly&quot; zu erstellen oder komplexe Overlays zu erstellen. In der Tat sind die Anwendungen für Oberflächen endlos! </p><p> Normale Oberflächen sind recht einfach zu verwenden, aber es gibt einige grundlegende Regeln, die bei der Verwendung beachtet werden müssen: </p><blockquote><ul><li> Zuerst sollten Sie feststellen, dass Oberflächen ( <i>außer</i> der Anwendungsoberfläche) &quot;flüchtig&quot; sind. Dies bedeutet, dass, wenn das Gerät oder das Fenster den Fokus verliert oder minimiert wird (gute Beispiele sind ein Bildschirmschoner in Windows oder auf einem <span class="notranslate">Android</span> Gerät, wenn die App aufgrund eines Anrufs den Fokus verliert), die Oberfläche möglicherweise zerstört wird. Dies liegt daran, dass es im Texturspeicher gespeichert ist und überschrieben werden kann, wenn die Zielplattform diesen Speicher für etwas anderes benötigt, was bedeutet, dass Sie <i><b>immer</b></i> eine Art von fehlersicherem Code haben sollten, normalerweise mit dem <a href="surface_exists.html"><tt>surface_exists</tt></a> Funktion. <br><br></li><li> Zweitens sollten Sie beachten, dass Oberflächen große Mengen an Texturspeicher benötigen, und Sie sollten versuchen, sie so klein wie möglich zu halten. Normalerweise würden Sie versuchen, sie nicht größer als die Größe der Ansicht oder des Anzeigefensters zu halten. <br><br></li><li> Drittens sollten Sie <b>nur Flächen im Zeichenereignis erstellen</b>. Wenn Sie eine Oberfläche im Create-Ereignis einer Instanz erstellen, können Sie möglicherweise den <i>gleichen</i> Index wie die <tt>application_surface</tt>. Dies kann dann zu vielen Problemen und Verwirrung führen, wenn Sie denken, dass Sie Ihre eigene Oberfläche verwenden, aber Sie verwenden tatsächlich das aktuelle Renderziel. Sie sollen auch immer versuchen, <i>Zeichnung</i> in der Auslosung Ereignisse auf eine Oberfläche zu begrenzen, zu, da aufgrund der optimierten Art und Weise, in der <i><span class="notranslate">GameMaker Studio 2</span></i> auf den Bildschirm zieht, wird empfohlen, dass Sie alle Funktionen <i>innerhalb der Auslosung Veranstaltung</i> zeichnen halten - dazu gehört Clearing eine Oberfläche, wenn sie zum ersten Mal erstellt wird, etc... Das Zeichnen auf eine Oberfläche außerhalb des Zeichenereignisses ist möglich und kann sogar für einige Effekte notwendig sein, aber es ist nicht so, wie es gemacht werden sollte. <br><br></li><li> Viertens befindet sich die Oberfläche beim manuellen Zeichnen auf einer Oberfläche <i>immer</i> in der Position von (0,0). Dies bedeutet, dass Sie möglicherweise absolute Koordinaten in lokale Koordinaten für die Oberfläche konvertieren müssen. Wenn Sie z. B. eine Ansichtsfläche haben und etwas zeichnen möchten, das derzeit auf dieser Fläche angezeigt wird, sollten Sie die x- und y-Koordinaten der Kameraansicht von den tatsächlichen x- und y-Koordinaten subtrahieren, um eine relative Position zur Fläche zu erhalten (0,0) Position. Der Code würde also ungefähr so ​​aussehen: <br><br><p class="code">if view_current = 0<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;surface_set_target(surf);<br>
+&nbsp;&nbsp;&nbsp;with (obj_Effect)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var _vx =
+camera_get_view_x(view_camera[1]);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var _vy =
+camera_get_view_y(view_camera[1]);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_sprite(sprite_index,
+image_index, x - _vx, y - _vy);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;surface_reset_target();<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;draw_surface(surf, 0, 0);<br>
+&nbsp;&nbsp;&nbsp;}<br><span class="notranslate"></span></p></li></ul></blockquote><p> Die grundlegende Verwendung einer Oberfläche wäre wie folgt: Sie erstellen zuerst eine Oberfläche und weisen ihren Index einer Variablen zu. Sie würden dann das Zeichnungsziel auf die Oberfläche anstatt auf die Anzeige setzen und die Dinge zeichnen, die Sie wünschen, sowie andere Manipulationen durchführen. Sobald Sie fertig sind, setzen Sie das Zeichenziel zurück, so dass alle weiteren Zeichen wieder auf dem Bildschirm erscheinen. Beachten Sie, dass Sie, wenn Sie das gesamte Display auf eine Fläche zeichnen müssen (einschließlich Kacheln, Hintergründe usw.), einfach auf die Anwendungsoberfläche selbst zugreifen können (siehe unten für weitere Details) oder Sie können einer Ansicht eine Fläche zuweisen Port, der die Variable verwendet <a href=
+"../../cameras%20and%20display/cameras/view_surface_id.html"><tt>view_surface_id[0..7]</tt></a> da damit alles sichtbar ist, was in dieser Ansicht sichtbar ist, wird Port auf die entsprechende Oberfläche gezeichnet. </p><blockquote><a name="surface_functions" id="surface_functions"></a> <label class="collapse" for="one">Oberflächenfunktionen</label> <input id="one" type="checkbox"><div class="index_list"><p> Die folgenden Funktionen existieren, um mit Oberflächen umzugehen (diese Funktionen sind spezifisch für das Erzeugen und Manipulieren von Oberflächen, aber um sie tatsächlich auf den Bildschirm zu zeichnen, sollten Sie die spezifischen <b>Zeichenfunktionen verwenden</b>, die im folgenden Abschnitt über <b>Flächenzeichnung zu</b> finden sind): </p><ul><li> <a href="surface_exists.html">Oberfläche_existiert</a> <br></li><li> <a href="surface_create.html">Oberflächen_Erstellen</a> <br></li><li> <a href="surface_create_ext.html">Oberflächen_Create_Ext</a> <br></li><li> <a href="surface_resize.html">Oberflächengröße</a> <br></li><li> <a href="surface_set_target.html">Oberflächenziel_ziel</a> <br></li><li> <a href=
+"surface_set_target_ext.html">Oberflächensatz_ziel_ext</a> <br></li><li> <a href=
+"surface_reset_target.html">Oberflächenziel_ziel</a> <br></li><li> <a href="surface_copy.html">Oberflächenkopie</a> <br></li><li> <a href="surface_copy_part.html">Oberflächenkopie_part</a> <br></li><li> <a href="surface_get_height.html">oberfläche_get_height</a> <br></li><li> <a href="surface_get_width.html">Surface_get_width</a> <br></li><li> <a href="surface_get_texture.html">oberflächen_get_texture</a> <br></li><li> <a href="surface_getpixel.html">Oberflächengetpixel</a> <br></li><li> <a href=
+"surface_getpixel_ext.html">Oberflächen_getpixel_ext</a> <br></li><li> <a href="surface_free.html">Oberflächen_frei</a> <br></li><li> <a href="surface_save.html">Oberflächenspeicherung</a> <br></li><li> <a href="surface_save_part.html">Surface_save_part</a> <br></li></ul></div><br><a name="application_surface" id="application_surface"></a> <label class="collapse" for="two">Die Anwendungsoberfläche</label> <input id="two" type="checkbox"><div class="index_list"><p> Wie oben erwähnt, wird das normale Zeichnen in Ihrem Spiel auf der <i>Anwendungsoberfläche ausgeführt</i>, und diese Oberfläche kann wie eine normale Oberfläche verändert und manipuliert werden. Es ist jedoch <i>keine</i> normale Oberfläche und fortgeschrittene Benutzer werden feststellen, dass es die vollständige Kontrolle darüber ermöglicht, wie und wann Dinge in <i><span class="notranslate">GameMaker</span> Studio 2</i> gezeichnet werden. Weitere Informationen sowie spezielle Funktionen für diese Funktion finden Sie im folgenden Abschnitt: </p><blockquote><ol><li> <a href="the%20application%20surface.html">Die Anwendungsoberfläche</a> <br></li></ol></blockquote><p> Die folgenden Funktionen und Variablen existieren für die Referenzierung der Anwendungsoberfläche: </p><ul><li> <a href="application_surface.html">Anwendungsoberfläche</a> <br></li></ul><p> Und Sie haben auch ein paar spezielle Funktionen, die <i>nur</i> für die Verwendung mit der Anwendungsoberfläche entwickelt wurden: </p><ul><li> <a href=
+"application_surface_enable.html">application_surface_enable</a> <br></li><li> <a href=
+"application_surface_is_enabled.html">application_surface_is_enabled</a> <br></li><li> <a href=
+"application_get_position.html">application_get_position</a> <br></li><li> <a href=
+"application_surface_draw_enable.html">application_surface_draw_enable</a> <br></li></ul></div><br><a name="surface_drawing" id="surface_drawing"></a> <label class=
+"collapse" for="three">Oberflächenzeichnung</label> <input id="three"
+type="checkbox"><div class="index_list"><p> Oberflächen sind ein unglaublich leistungsstarkes Grafikwerkzeug, mit dem Sie mit <i><span class="notranslate">GameMaker Studio 2</span></i> Spezialeffekte und viele andere Dinge erstellen können. Sie sind relativ einfach zu verwenden, da sie im Grunde eine Leinwand sind, auf die Sie anstelle des Bildschirms zeichnen, und diese Leinwand kann dann manipuliert und geändert werden, bevor sie mit den Funktionen in diesem Abschnitt gezeichnet wird. </p><div class="note"> <b>HINWEIS:</b> Beim Arbeiten mit Oberflächen besteht die Möglichkeit, dass sie aufgrund ihrer Speicherung im Texturspeicher jederzeit nicht mehr existieren können. Sie sollten <b>IMMER</b> überprüfen, ob eine Oberfläche vorhanden ist <a href=
+"surface_exists.html"><tt>surface_exists</tt></a> bevor Sie direkt auf sie verweisen. </div><p> Zum Zeichnen von Flächen existieren folgende Funktionen: </p><blockquote><ol><li> <a href="draw_surface.html">Zeichnungsoberfläche</a> <br></li><li> <a href="draw_surface_ext.html">draw_surface_ext</a> <br></li><li> <a href="draw_surface_part.html">draw_surface_part</a> <br></li><li> <a href=
+"draw_surface_part_ext.html">draw_surface_part_ext</a> <br></li><li> <a href=
+"draw_surface_stretched.html">draw_surface_stretched</a> <br></li><li> <a href=
+"draw_surface_stretched_ext.html">draw_surface_stretched_ext</a> <br></li><li> <a href="draw_surface_tiled.html">draw_surface_tiled</a> <br></li><li> <a href=
+"draw_surface_tiled_ext.html">draw_surface_tiled_ext</a> <br></li><li> <a href=
+"draw_surface_general.html">draw_surface_general</a> <br></li></ol></blockquote></div></blockquote><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Zurück: <a href=
+"../index.html">Zeichnen</a> </div><div style="float:right"> Nächste: <a href=
+"../lighting/index.html">Beleuchtung</a> </div></div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

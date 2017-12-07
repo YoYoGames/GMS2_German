@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>draw_text_ext_transformed_colour</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/drawing/text/draw_text_ext_transformed_colour.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fdrawing%2Ftext%2Fdraw_text_ext_transformed_colour.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fdrawing%2Ftext%2Fdraw_text_ext_transformed_colour.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h1 class="studio"> draw_text_ext_transformed_colour </h1><h2 class="studio"> Zeichnet eine Zeichenfolge mit den von Ihnen definierten Attributen für Farbe, Skalierung, Winkel oder Abstand. </h2><h3 class="studio"> Syntax: </h3><p class="code">draw_text_ext_transformed_colour(x, y, string, sep,
+w, xscale, yscale, angle, c1, c2, c3, c4, alpha);<span class="notranslate"></span></p><p><br></p><div><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">x</span> </td> <td> Die X-Koordinate der gezeichneten Zeichenfolge. </td></tr><tr><td> <span class="notranslate">y</span> </td> <td> Die Y-Koordinate der gezeichneten Zeichenfolge. </td></tr><tr><td> <span class="notranslate">string</span> </td> <td> Die zu zeichnende Zeichenfolge. </td></tr><tr><td> <span class="notranslate">sep</span> </td> <td> Der Abstand zwischen den Textzeilen in Pixeln. </td></tr><tr><td> <span class="notranslate">w</span> </td> <td> Die maximale Breite in Pixel der Zeichenfolge vor einem Zeilenumbruch. </td></tr><tr><td> <span class="notranslate">xscale</span> </td> <td> Die horizontale Skala. </td></tr><tr><td> <span class="notranslate">yscale</span> </td> <td> Die vertikale Skala. </td></tr><tr><td> <span class="notranslate">angle</span> </td> <td> Der Winkel des Textes. </td></tr><tr><td> <span class="notranslate">c1</span> </td> <td> Die Farbe für den oberen linken Teil des gezeichneten Texts. </td></tr><tr><td> <span class="notranslate">c2</span> </td> <td> Die Farbe für die obere rechte Ecke des gezeichneten Textes. </td></tr><tr><td> <span class="notranslate">c3</span> </td> <td> Die Farbe für die untere rechte Ecke des gezeichneten Textes. </td></tr><tr><td> <span class="notranslate">c4</span> </td> <td> Die Farbe für die linke untere Ecke des gezeichneten Textes. </td></tr><tr><td> <span class="notranslate">alpha</span> </td> <td> Das Alpha für den Text. </td></tr></table></div><p><br></p><p> <b>Rückkehr:</b> N / A </p><p><br></p><h3 class="studio"> Beschreibung </h3><p> Diese Funktion ist eine Kombination der Basis <a href=
+"draw_text.html"><tt>draw_text</tt></a> Funktion mit dem <a href=
+"draw_text_ext.html"><tt>draw_text_ext</tt></a>, <a href=
+"draw_text_transformed.html"><tt>draw_text_transformed</tt></a> und <a href="draw_text_colour.html"><tt>draw_text_colour</tt></a> Funktionen. Somit ist dies die allgemeinste aller Funktionen zum Zeichnen von Text und bietet eine große Flexibilität beim Zeichnen. Beachten Sie, dass das Argument &quot;width&quot; auf einer Skala von 1 basiert. Wenn die Skala also anders ist, sollte dieser Wert proportional geändert werden. Wenn die Basisbreite für einen Zeilenumbruch beispielsweise 300 ist und Sie die Skalierung auf 2 festlegen, wird der Text falsch angezeigt und die angegebene Breite wird überschritten. Stattdessen sollten Sie die Breite auf 150 einstellen, um die Skalierung zu kompensieren. <br><br> <i><b>HINWEIS: Die</b> Farbverlaufsmischung ist für das HTML5-Ziel nicht verfügbar, es sei denn, WebGL ist aktiviert, Sie können jedoch weiterhin die Mischfarben festlegen und die Schriftart mit der ersten angegebenen Farbe mischen. Jedes Mischen auf diese Weise erzeugt jedoch eine doppelte Schrift, die dann im Cache gespeichert und bei Bedarf verwendet wird, was alles andere als optimal ist. Wenn Sie mehrere Farbänderungen verwenden, verlangsamt dies die Leistung Ihres Spiels. Sie können die Schriftart-Cache-Größe festlegen, um zu versuchen, dies zu begrenzen, sollte es notwendig sein, die Funktion zu verwenden <a href=
+"../../fonts/font_set_cache_size.html"><tt>font_set_cache_size</tt></a>.</i> <br><br></p><p><br></p><h3 class="studio"> Beispiel: </h3><p class="code">draw_set_halign(fa_center);<br>
+draw_set_valign(fa_middle);<br>
+draw_text_ext_transformed_colour(200, 200, "My name is" +
+global.name +".", 20, 200, 0.5, 0.5, 180, c_blue, c_blue, c_navy,
+c_navy, 1);<br><span class="notranslate"></span></p><p> Dies wird den gegebenen Text mit einer blauen bis dunkelblauen Abwärtsneigung an der Position (200, 200) im Raum zeichnen, gedreht, um auf den Kopf gestellt zu sein und um die Hälfte der normalen Punktgröße der Schriftart. Zwischen jeder Zeile befinden sich 20 Pixel, wenn mehr als eine Zeile gezeichnet wird und jede Zeile eine maximale Breite von 200 Pixel hat. </p><p><br></p><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Zeichentext</a> </div><div style="float:right"> Weiter: <a href=
+"draw_set_font.html">draw_set_font</a> </div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

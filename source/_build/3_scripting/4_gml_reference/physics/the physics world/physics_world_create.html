@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>physics_world_create</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/physics/the physics world/physics_world_create.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fphysics%2Fthe%20physics%20world%2Fphysics_world_create.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fphysics%2Fthe%20physics%20world%2Fphysics_world_create.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h1 class="studio"> physik_welt_erschaffen </h1><h2 class="studio"> Erstellt das Physiksystem in dem angegebenen Raum. </h2><h3 class="studio"> Syntax: </h3><p class="code">physics_world_create(pixeltometrescale);<span class="notranslate"></span></p><p><br></p><div class="param"><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">pixeltometrescale</span> </td> <td> definiert das Verhältnis von Pixeln auf dem Bildschirm zu Metern in der realen Welt. Ein Verhältnis von 32: 1 wird als 1/32 (oder 0,03125) angegeben. </td></tr></table></div><p><br></p><p> <b>Rückkehr:</b> N / A </p><p><br></p><h3 class="studio"> Beschreibung </h3><p> Selbst wenn Sie die Physik für Ihre Objekte definiert haben, ohne eine Welt, in der sie platziert werden können, wird standardmäßig das traditionelle <i><span class="notranslate">GameMaker Studio 2</span></i> Kollisionssystem verwendet. Sie benötigen diese Funktion, um das Physiksystem für den angegebenen Raum in einem Objektereignis zu erstellen. oder der Erstellungscode des Raums selbst (er kann auch ohne Verwendung von Code im Raumeditor definiert werden). Diese Funktion assoziiert eine physikalische &quot;Welt&quot; mit dem Raum und alle im Raum erzeugten Instanzen verhalten sich mit der Physik, die für sie und die Welt selbst definiert wurde. <br><br><img class="center" src=
+"images/physics_world_create_image.png"></p><p> Sie werden feststellen, dass wir ein Argument haben, das ein Verhältnis zwischen Pixelgröße und Metern definiert. Dies liegt daran, dass die Physikfunktionen mit realen Messungen arbeiten und daher müssen Pixelkoordinaten und Pixelgrößen in diese realen Messungen unter Verwendung einer &quot;Pixel-zu-Meter-Skala&quot; übersetzt werden. Sie sollten die Einstellung für die <i>Pixelmaßskala</i> anpassen, bis die durchschnittliche Pixelgröße der Objekte, die Sie verwenden, grob in simulierte Physikobjekte mit einer angemessenen Größe übersetzt wird. <i>Darüber</i> können Sie sehen, dass wir 32 Pixel als Äquivalent von 1 Meter eingestellt haben. Es sollte beachtet werden, dass das Physiksystem mit größeren und kleineren Verhältnissen arbeitet, aber dass die beste Leistung ist, wenn die realen Messungen Ihrer Objekte nicht weniger als 0,1 Meter und nicht mehr als 50 Meter sind. <br><br></p><p><br></p><h3 class="studio"> Beispiel: </h3><p class="code">physics_world_create(1/32)<span class="notranslate"></span></p><p> Der obige Code erzeugt eine physikalische Welt im aktuellen Raum mit einem Maßstab von 32 Pixeln, was einem Meter entspricht. </p><p><br></p><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Die Physikwelt</a> </div><div style="float:right"> Nächstes: <a href=
+"physics_world_gravity.html">physics_world_gravity</a> </div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

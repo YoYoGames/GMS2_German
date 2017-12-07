@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>physics_fixture_add_point</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/physics/fixtures/physics_fixture_add_point.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fphysics%2Ffixtures%2Fphysics_fixture_add_point.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fphysics%2Ffixtures%2Fphysics_fixture_add_point.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h1 class="studio"> physics_fixture_add_point </h1><h2 class="studio"> Diese Funktion fügt einen Punkt hinzu, um eine Polygonform oder eine Kettenform für ein Fixture zu erstellen. </h2><h3 class="studio"> Syntax: </h3><p class="code">physics_fixture_add_point(fixture, xpos, ypos)<span class="notranslate"></span></p><p><br></p><div class="param"><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">fixture</span> </td> <td> der Index der Vorrichtung </td></tr><tr class="alt"><td> <span class="notranslate">xpos</span> </td> <td> die X-Position des Punktes ( <i>relativ zum Fixture-Ursprung</i> für Polygonformen) </td></tr><tr><td> <span class="notranslate">ypos</span> </td> <td> die Y-Position des Punktes ( <i>relativ zum Fixture-Ursprung</i> für Polygonformen) </td></tr></table></div><p><br></p><p> <b>Rückkehr:</b> N / A </p><p><br></p><h3 class="studio"> Beschreibung </h3><p> Diese Funktion definiert die Punkte eines Polygons, das zuvor mit Hilfe von entweder auf das Fixture gesetzt wurde <a href=
+"physics_fixture_set_polygon_shape.html"><tt>physics_fixture_set_polygon_shape</tt></a> oder es kann verwendet werden, um mit der Funktion Punkte zu einer Kette von Kantenbefestigungen hinzuzufügen <a href=
+"physics_fixture_set_chain_shape.html"><tt>physics_fixture_set_chain_shape</tt></a>. Bei einer Polygonform sind die Punkte relativ zum Ursprung der Fixture, wobei die 0,0 Position der x / y Achse die Mitte ist und die nachfolgenden Koordinaten wie in <i><span class="notranslate">GameMaker Studio 2</span></i> üblich berechnet werden, wobei down / read + ist x, + y und oben / links ist -x, -y. Hier ist eine Illustration, die Ihnen hilft, diesen Prozess zu visualisieren: <br><br><img class="center" src=
+"images/physics_fixture_add_point_image.png"></p><p> Wie Sie sehen, kann jedes einfache <b>konvexe</b> Polygon auf diese Weise modelliert werden, aber <b>konkave</b> Polygone werden in diesem Moment <i>nicht</i> unterstützt. Um das Polygon zu schließen, müssen Sie das Fixture schließlich an eine Instanz binden. Sie sollten auch beachten, dass Sie mindestens <b>drei</b> Punkte für Ihr Polygon definiert haben müssen, bevor Sie es an eine Instanz binden, oder Sie erhalten einen Fehler und das Hinzufügen eines Punktes zu einem Fixture, das keine zuvor festgelegte Polygonform hat, verursacht ebenfalls ein Error. Beachten Sie auch, dass die maximale Anzahl von Punkten, die für ein Gerät zulässig sind, <b>acht ist</b>. <br><br> Für Kettenformen (die einfach eine Reihe verbundener Kantenformen sind) wird diese Funktion einen Punkt als eine &quot;Verbindung&quot; festlegen, um die Kanten miteinander zu verketten. Daher müssen Sie mindestens zwei Punkte definiert haben, bevor Sie das Fixture an die Instanz binden, sonst erhalten Sie einen Fehler. Im Gegensatz zu Polygonen sind Sie jedoch nicht auf maximal acht Punkte beschränkt und können so viele hinzufügen, wie Sie zum Erstellen der Kette benötigen. Die Punkte werden in tatsächlichen Raumkoordinaten und nicht in Bezug auf die Instanz definiert. <br><br></p><p><br></p><h3 class="studio"> Beispiel: </h3><p class="code">physics_fixture_set_polygon_shape(fix_Ship);<br>
+physics_fixture_add_point(fix_Ship, 0,0);<br>
+physics_fixture_add_point(fix_Ship, -40, 100);<br>
+physics_fixture_add_point(fix_Ship, 40, 100);<br><span class="notranslate"></span></p><p> Der obige Code wendet eine Polygonform auf die Fixture an, die in der Variablen &quot;fix_Ship&quot; indiziert ist, und definiert dann drei Punkte, um eine dreieckige Form zu erzeugen. </p><p><br></p><div class="clear"><div style="float:left"> Zurück: <a href=
+"index.html">Spielpläne</a> </div><div style="float:right"> Weiter: <a href=
+"physics_fixture_set_density.html">physics_fixture_set_density</a> </div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

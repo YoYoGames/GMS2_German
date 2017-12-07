@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>facebook_login</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/asynchronous functions/facebook/facebook_login.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fasynchronous%20functions%2Ffacebook%2Ffacebook_login.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fasynchronous%20functions%2Ffacebook%2Ffacebook_login.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h2> Facebook Login </h2><div class="body-scroll"><p><br></p><h3> <b>Syntax:</b> </h3><p class="code">facebook_login(permissions, ios_login_type)<span class="notranslate"></span></p><blockquote><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">permissions</span> </td> <td> Die Berechtigungen, die Sie vom angemeldeten Benutzer erhalten möchten. </td></tr><tr class="alt"><td> <span class="notranslate">ios_login_type</span> </td> <td> Der nur für iOS angemeldete Typ (siehe Liste der <b>Konstanten</b> unten). </td></tr></table></blockquote><p><br></p><h3> Kehrt zurück: </h3><p class="code">N/A<span class="notranslate"></span></p><p><br></p><h3> Beschreibung </h3><blockquote><p> Mit dieser Funktion stellt <i><span class="notranslate">GameMaker Studio 2</span></i> eine Verbindung zu Facebook her und fordert den Benutzer auf, sich bei seinem Konto anzumelden. Sie können auch zusätzliche Berechtigungsanfragen in Form einer ds_list eingeben, die diese Funktion dann in eine konvertiert <tt>json</tt> Array, um sie an Facebook zu kommunizieren. Es gibt eine Vielzahl von Berechtigungen, die Sie anfordern können. Sie sind auf den Facebook-Entwicklerseiten dokumentiert, die Sie <a href=
+"https://developers.facebook.com/docs/reference/login/" target=
+"_blank">hier finden</a>. Wenn Sie keine speziellen oder erweiterten Berechtigungen benötigen, müssen Sie trotzdem eine ds_list senden, aber dieses Mal ist sie leer. </p><p> Diese Funktion gilt auch als <i>asynchron,</i> da das Facebook-Login-Fenster auf dem Bildschirm geöffnet ist und das Spiel im Hintergrund weiterläuft. Selbst wenn der Benutzer den Anmeldevorgang abgeschlossen hat, funktioniert keine der anderen Facebook-Funktionen <a href=
+"facebook_status.html"><tt>facebook_status()</tt></a> gibt &quot;AUTORISIERT&quot; zurück. Aufgrund der Notwendigkeit einer Internetverbindung und der unterschiedlichen Datenübertragungsraten bedeutet dies, dass es einige Sekunden dauern kann, bis diese Autorisierung eingeht und das Spiel immer noch läuft. </p><div class="note"><p> <b>Hinweis:</b> Sie können jetzt nur Berechtigungen für diese Funktion <b>lesen</b>. Wenn Sie Schreibrechte benötigen, müssen Sie anrufen <a href=
+"facebook_request_publish_permissions.html"><tt>facebook_request_publish_permissions()</tt></a> nach dem Login. Beachten Sie auch, dass wenn Ihr Spiel mehr als nur das <b>public_profile</b>, <b>email</b> und <b>user_friends anfordert,</b> es von Facebook überprüft werden muss, bevor es von anderen Personen als den Entwicklern des Spiels verwendet werden kann. </p></div><p><br> Für die iOS-Anmeldung ist ein zusätzlicher Parameter erforderlich (andere Plattformen können ihn einfach verwenden) <tt>fb_login_default</tt> für das Argument). Dies sollte eine der folgenden Konstanten sein: </p><div class="compat"><table><tr><th> Konstante </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">fb_login_default</span> </td> <td> Verwende das Standard-Login-Verhalten von iOS (siehe <a href=
+"https://developers.facebook.com/docs/facebook-login/ios/v2.1"
+target="_blank">hier</a> für weitere Details). </td></tr><tr class="alt"><td> <span class="notranslate">fb_login_fallback_to_webview</span> </td> <td> Versuchen Sie sich mit Facebook anzumelden und fragen Sie den Benutzer nach seinen Zugangsdaten. </td></tr><tr><td> <span class="notranslate">fb_login_no_fallback_to_webview</span> </td> <td> Facebook-Login versuchen, aber keine direkte Anfrage nach Zugangsdaten wird gemacht. </td></tr><tr class="alt"><td> <span class="notranslate">fb_login_forcing_webview</span> </td> <td> Versuchen Sie nur die WebView-Anmeldung und fragen Sie den Benutzer nach Anmeldeinformationen </td></tr><tr><td> <span class="notranslate">fb_login_use_system_account</span> </td> <td> Versuchen Sie sich mit Facebook anzumelden, bevorzugen Sie den Systemaccount und wechseln Sie ggf. zu einem schnellen App-Switch. </td></tr><tr class="alt"><td> <span class="notranslate">fb_login_forcing_safari</span> </td> <td> Versuchen Sie nur, sich mit Safari anzumelden. </td></tr></table></div><p> Die oben aufgeführten Konstanten ändern das Login-Verhalten unter iOS. Sie können auswählen, welche Fallback-Methoden verwendet werden sollen (falls vorhanden), sollte die Anmeldung über den normalen Prozess fehlschlagen. Weitere Informationen finden Sie auf dieser <a href=
+"https://developers.facebook.com/docs/reference/ios/3.0/class/FBSession">Facebook-Entwickler-Seite</a>. </p></blockquote><p><br></p><h3> Beispiel: </h3><p class="code">facebook_init();<br>
+var permissions = ds_list_create();<br>
+ds_list_add(permissions,"public_profile", "user_friends");<br>
+facebook_login(permissions, fb_login_default);<br>
+ds_list_destroy(permissions);<br><span class="notranslate"></span></p><blockquote><p> Der obige Code wird Facebook initialisieren und dann den aktuellen Benutzer anmelden und nach den erweiterten Leseberechtigungen fragen. </p></blockquote><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Zurück: <a href=
+"index.html">Facebook</a> </div><div style="float:right"> Nächste Seite: <a href=
+"facebook_request_publish_permissions.html">facebook_request_publish_permissions</a> </div></div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

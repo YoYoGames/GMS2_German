@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>event_inherited</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/objects/generating events/event_inherited.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fobjects%2Fgenerating%20events%2Fevent_inherited.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fobjects%2Fgenerating%20events%2Fevent_inherited.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h1 class="studio"> event_inherited </h1><h2 class="studio"> Führt das geerbte Ereignis aus. </h2><h3 class="studio"> Syntax: </h3><p class="code">event_inherited();<span class="notranslate"></span></p><p><br></p><p> <b>Rückkehr:</b> N / A. </p><p><br></p><h3 class="studio"> Beschreibung </h3><p> Diese Funktion ruft das aktuelle Ereignis des übergeordneten Objekts der Instanz auf. Wenn eine Instanz ein übergeordnetes Objekt besitzt, erbt sie normalerweise automatisch alle gleichen Ereignisse wie das übergeordnete Objekt. Wenn jedoch beispielsweise Ihr übergeordnetes Objekt ein create-Ereignis hat und Sie ein untergeordnetes Objekt hinzufügen, werden alle Instanzen des untergeordneten Objekts ausgeführt Führen Sie das neue create-Ereignis aus, das Sie hinzugefügt haben, und <i>nicht das</i>, was sich im übergeordneten Objekt befindet. Wenn Sie sowohl das übergeordnete Objektereignis als auch das untergeordnete Objektereignis desselben Typs verwenden müssen, sollten Sie diese Funktion verwenden, da das übergeordnete Objektereignis ausgeführt wird, bevor Sie mit dem restlichen Code oder den Aktionen des untergeordneten Ereignisses fortfahren <br><br></p><p><br></p><h3 class="studio"> Beispiel: </h3><p class="code">event_inherited();<br>
+switch (sprite_index)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;case spr_Enemy_1: dmg += 2; break;<br>
+&nbsp;&nbsp;&nbsp;case spr_Enemy_4: dmg -= 1; break;<br>
+&nbsp;&nbsp;&nbsp;case spr_Enemy_10: dmg +=10; break;<br>
+&nbsp;&nbsp;&nbsp;}<br><span class="notranslate"></span></p><p> Der obige Code ruft das geerbte Elternereignis auf (in dem wir die Variable &quot;dmg&quot; und den Sprite-Index setzen) und ändert dann die Variable &quot;dmg&quot;. Wenn für die Instanz, die diesen Code ausführt, kein Parent angegeben ist, erhalten wir den Fehler &quot;unbekannte Variable&quot;, da dmg nicht definiert wurde. </p><p><br></p><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Ereignisse generieren</a> </div><div style="float:right"> Nächstes: <a href=
+"event_perform.html">event_perform</a> </div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

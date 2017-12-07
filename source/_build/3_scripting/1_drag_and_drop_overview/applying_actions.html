@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>Applying Actions To Other Instances</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+
+<link rel="stylesheet" href="../../../../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/1_drag_and_drop_overview/applying_actions.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F3_scripting%2F1_drag_and_drop_overview%2Fapplying_actions.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F3_scripting%2F1_drag_and_drop_overview%2Fapplying_actions.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h2> Anwenden von Aktionen auf andere Instanzen </h2><div class="body-scroll"><p><br></p><p> Die meisten Aktionen in den DnD™ -Bibliotheken haben eine Option, die Aktion auf verschiedene Arten anzuwenden. Dies nennt man den <i>Aktionsradius</i> einstellen und es kann eine von mehreren Dingen: <img class=
+"center" src="images/dnd_applies_to.png" alt="DnD™ gilt für"> Im Wesentlichen sagen Sie <i><span class="notranslate">GameMaker Studio 2</span></i> von welcher Instanz die Aktion ausgeführt werden soll. Der Standardaktionsbereich ist <tt>self</tt> Dies bedeutet, dass nach dem Erstellen des Objekts als Instanz im Raum die Instanz den Aktionscode ausführt. Dies ist jedoch nicht immer das, was Sie wollen, und Sie möchten vielleicht, dass einige Aktionen andere oder sogar alle Instanzen im Raum beeinflussen. Hier kommt die Änderung des Aktionsumfangs ins <i>Spiel</i>. </p><p> Die verschiedenen Bereiche zum Ausführen von Aktionen sind unten aufgeführt. Es sollte jedoch beachtet werden, dass das Ändern des Bereichs für eine Aktion auf diese Weise <b>den neuen Bereich nur auf diese Aktion</b> und <i>nicht</i> auf nachfolgende Aktionen in der Kette <b>anwenden</b> wird. Wenn Sie einen Aktionsänderungsumfang auf mehrere verkettete Aktionen <a href=
+"../2_drag_and_drop_reference/common_actions/apply_to.html">anwenden</a> möchten, verwenden <a href=
+"../2_drag_and_drop_reference/common_actions/apply_to.html">Sie zuerst die</a> Aktion <a href=
+"../2_drag_and_drop_reference/common_actions/apply_to.html">Anwenden auf....</a> </p><blockquote><a name="dnd_scope_self" id="dnd_scope_self"></a> <label class="collapse" for="one"><img style=
+"vertical-align:middle" src="images/i_scope_self.png"> Selbst</label> <input id="one" type="checkbox"><div class="index_list"><div style="margin-left: 2em"><p> Dies ist der Standardbereich für eine Aktion und besagt lediglich, dass die Aktion nur von der Instanz aufgerufen werden sollte, in der der Code ausgeführt wird. </p></div></div><br><a name="dnd_scope_other" id="dnd_scope_other"></a> <label class=
+"collapse" for="two"><img style="vertical-align:middle" src=
+"images/i_scope_other.png"> Andere</label> <input id="two" type=
+"checkbox"><div class="index_list"><div style="margin-left: 2em"><p> Das <tt>other</tt> scope hat zwei Hauptfunktionen und der zurückgegebene Wert hängt davon ab, wo und wie Sie ihn verwenden. Im <a href=
+"../../2_interface/1_editors/events/index.html">Kollisionsereignis</a>, <tt>other</tt> gibt den eindeutigen <i>Instanz-ID-</i> Wert zurück (ein eindeutiger Wert, der zur Unterscheidung einzelner Instanzen jedes Objekts verwendet wird). Sie können also zum Beispiel eine &quot;bullet&quot; -Instanz erstellen und ein Kollisionsereignis mit einer &quot;player&quot; -Instanz haben benutze die <tt>other</tt> Bereich, um Trefferpunkte vom &quot;Spieler&quot; -Objekt zu entfernen und dann zu zurückzukehren <tt>self</tt> Bereich, um die &quot;bullet&quot; -Instanz zu zerstören. </p><p> Außerhalb des Kollisionsereignisses <tt>other</tt> Die Einstellung verhält sich so, als ob sie auf gesetzt wäre <a href=
+"../3_gml_overview/5_keywords.html"><tt>noone</tt></a> <i>es sei denn,</i> es wird innerhalb eines Aktionsbereichs aufgerufen. Dies bedeutet, dass wenn Sie den Umfang einer Gruppe von Aktionen in ein bestimmtes Objekt ändern, während diese Aktionen aufgerufen werden <tt>other</tt> scope gibt die Instanz-ID der Instanz zurück, die ursprünglich die Aktionsgruppe aufgerufen hat. Sie könnten beispielsweise eine Aktion &quot; <a href=
+"../2_drag_and_drop_reference/common_actions/apply_to.html">Anwenden auf...&quot;</a> ausführen und dann im nächsten Code-Block-Referenzbereich den Geltungsbereich festlegen <tt>other</tt> Ausführen einer Aktion für die Instanz, die den gesamten Ereignisblock ausführt, und nicht für die Instanz, die in den yo-Code-Blöcken angewendet wird. Das Bild unten zeigt ein Beispiel: <img class="center" src="images/dnd_scope_other.png" alt="DnD™ Scope"> Im Bild prüfen wir, ob die Maus in der Instanz gedrückt wird, und wenn eine erkannt wird, ändern wir den Bereich mit der Aktion <b>Anwenden auf....</b> Die nächsten zwei Aktionsblöcke werden nun von der &quot;obj_Player&quot; -Instanz aufgerufen (wenn es mehr als eins gibt, wird es für <i>alle ausgeführt</i> ) und das Objekt wird sein Sprite ändern und dann ein Objekt am Objekt erstellen <tt>other</tt> Position, dh: die Position des Objekts, das das Ereignis ausführt und den Mausdruck erkennt. </p></div></div><br><a name="dnd_scope_all" id="dnd_scope_all"></a> <label class=
+"collapse" for="three"><img style="vertical-align:middle" src=
+"images/i_scope_all.png"> Alle</label> <input id="three" type=
+"checkbox"><div class="index_list"><div style="margin-left: 2em"><p> Wenn Sie eine Aktion für festlegen <tt>all</tt>, weisen Sie <i><span class="notranslate">GameMaker Studio 2</span></i> an, diesen Block für jede einzelne aktive Instanz im aktuellen Raum auszuführen. Erstellen Sie beispielsweise eine <a href=
+"../2_drag_and_drop_reference/instance_actions/destroy_object_instance.html">Destroy Object Instance-</a> Aktion, und legen Sie ihren Bereich fest auf <tt>all</tt> wird dazu führen, dass jede Instanz im Raum verschwindet, egal aus welchem ​​Objekt sie erstellt wurde. </p></div></div><br><a name="dnd_scope_object" id="dnd_scope_object"></a> <label class=
+"collapse" for="four"><img style="vertical-align:middle" src=
+"images/i_scope_object.png"> Objekt</label> <input id="four" type=
+"checkbox"><div class="index_list"><div style="margin-left: 2em"><p> Einer Aktion kann auch ein <b>Objekt</b> als Bereich zugewiesen werden. Dies bedeutet, dass <i>alle</i> Instanzen des angegebenen Objekts diese Aktion zur gleichen Zeit ausführen, zu der es aufgerufen wird. Wenn Sie zum Beispiel 100 feindliche Instanzen im Raum haben und alle auf einen bestimmten Punkt zeigen möchten. Sie würden die <a href=
+"../2_drag_and_drop_reference/movement_actions/set_point_direction.html">Set-Point-Richtung</a> aufrufen und den Aktionsbereich auf das Objekt &quot;obj_Enemy&quot; festlegen. Wenn es aufgerufen wird, ändern alle Instanzen dieses Objekts die Richtung. </p></div></div><br><a name="dnd_scope_expression" id="dnd_scope_expression"></a> <label class="collapse" for="five">Ausdruck</label> <input id=
+"five" type="checkbox"><div class="index_list"><div style="margin-left: 2em"><p> Im Eingabefeld <b>Ausdruck geben</b> Sie die ID einer bestimmten Instanz ein, an der die Aktion ausgeführt werden soll. Es kann der eindeutige ID-Wert sein, der einer Instanz aus dem <a href=
+"../../2_interface/1_editors/rooms.html#room_instance_layer">Raum-Editor</a> zugewiesen wurde, oder es kann die ID einer Instanz sein, die Sie in einer Variablen gespeichert haben (wobei die Variable der Eingabewert wäre) oder es kann sogar ein Ausdruck sein Code, wie im Bild unten gezeigt: <img class="center" src="images/dnd_scope_target.png" alt="DnD™ Ziel"> In diesem Fall ruft eine Instanz das <a href=
+"../2_drag_and_drop_reference/instance_actions/set_sprite.html">Set Sprite</a> von der Instanz auf, die durch den für den Ausdruck angegebenen Code erstellt wurde. Beachten Sie, dass in diesem Fall die Instanz, die erstellt wird, ihr <a href=
+"../../2_interface/1_editors/events/index.html">Create Event</a> <i>zuerst</i> <a href=
+"../../2_interface/1_editors/events/index.html">ausführt,</a> bevor die Aktion auf sie angewendet wird. </p></div></div></blockquote><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Drag &amp; Drop Übersicht</a> </div><div style="float:right"> Weiter: <a href="action_scripts.html">Aktionsskripte</a> </div></div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>
