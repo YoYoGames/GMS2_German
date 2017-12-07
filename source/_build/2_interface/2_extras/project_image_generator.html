@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>Project Image Generator</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+
+<link rel="stylesheet" href="../../../../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/2_interface/2_extras/project_image_generator.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F2_interface%2F2_extras%2Fproject_image_generator.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F2_interface%2F2_extras%2Fproject_image_generator.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h2> Projektbildgenerator </h2><div class="body-scroll"><p><br></p><img class="center" src="images/project_image_generator.png" alt="Generiere Projektbilder"><p> Der <b>Project Image Generator</b> wird über das <a href=
+"../../1_overview/2_quick_start/menus/tools_menu.html">Menü</a> <i><span class="notranslate">GameMaker Studio 2</span></i> oben in der <i><span class="notranslate">GameMaker Studio 2</span></i> IDE aufgerufen. Dieses Tool wurde entwickelt, um schnell alle verschiedenen Begrüßungsbildschirme, Werbebilder und Symbole, die von allen verschiedenen Zielplattformen benötigt werden, aus einem einzigen Satz von Bildern zu erstellen. Sie liefern das Basisbild und das Basissymbol und klicken dann auf die Schaltfläche <i>Generieren.</i> Ihre <a href="../3_settings/game_options/index.html">Spieloptionen</a> für jede Plattform werden mit den neuen Bildern aktualisiert. </p><p> Damit dies korrekt funktioniert, müssen Sie einen hochauflösenden Begrüßungsbildschirm und ein hochauflösendes Symbolbild bereitstellen. Die empfohlenen Größen wären: </p><ul><li> <b>Begrüßungsbildschirm</b>: Mindestens 1920x1080px oder 1080x1920px für Hochformat. Er wurde als 24bit-PNG ohne Transparenzen erstellt. <br><br></li><li> <b>Symbole</b>: mindestens 1024x1024px (entspricht der Größe des größten erforderlichen Symbols) und als 24-Bit-PNG erstellt, das über Transparenzen verfügen <i>kann</i> </li></ul><p> Sobald Sie diese Bilder bereitgestellt haben, werden sie in den Vorschau-Fenstern angezeigt und Sie können dann den Typ der &quot;Anpassung&quot; festlegen, der verwendet werden soll, wenn Sie sie auf die verschiedenen Plattformen anwenden. Sie können wählen zwischen: </p><ul><li> <b>Behalten Sie das Seitenverhältnis bei</b> - dadurch wird das Bild so skaliert, dass das Seitenverhältnis beibehalten und eine Hintergrundfarbe hinzugefügt wird, um die Seiten auszufüllen, wenn die Anpassung nicht 1: 1 ist <br><br></li><li> <b>Stretch To Fit</b> - Dies wird die Bilder auf die volle Größe des Bildes / Symbols strecken. <br><br></li><li> <b>Zuschneiden</b> - passt das Basisbild an und passt es entweder entlang der horizontalen oder vertikalen Achse am besten an und beschneidet den Rest. Wenn Sie beispielsweise ein 640x480-Bild haben, das als Begrüßungsbildschirm für 480x800 verwendet werden soll, wird das Bild auf die vertikale Achse (480 -&gt; 800) skaliert <i>,</i> und der Rest des Bildes wird abgeschnitten. Wenn Sie ein 1080x1920-Bild haben, das auf 800x800 passt, wird das Bild verkleinert <i>,</i> damit es auf die horizontale Achse passt und der Rest abgeschnitten wird. </li></ul><p> Sie können auch die Hintergrundfarbe für die beiden Symbole und Bilder festlegen. Diese Farbe wird verwendet, um das Bild zu &quot;puffern&quot;, wenn es mit einem Seitenverhältnis skaliert wird. Das folgende Bild zeigt, wie dies aussieht, sobald alles eingerichtet ist: <img class="center" src=
+"images/project_image_generator_example.png" alt="Generate Project Images Beispiel"></p><p> Jetzt müssen Sie nur noch auf <i>Generate</i> klicken und <i><span class="notranslate">GameMaker Studio 2</span></i> füllt alle Game-Optionen <i>Bild</i> und <i>Icon-</i> Einstellungen mit Bildern für jede Plattform. </p><div class="note"> <b>WICHTIG!</b> Während dieses Tool alle Bilder erzeugt, die Sie benötigen, bedeutet das nicht, dass es perfekt ist! Es wird versuchen, sein Bestes zu tun, um die Bilder zu den verschiedenen Größen und Auflösungen für jede Plattform zu passen, aber manchmal sieht das vielleicht nicht so aus, wie Sie wirklich wollen, da es wirklich keine &quot;Einheitsgröße&quot; gibt. Daher empfehlen wir Ihnen nach dem Ausführen dieses Tools, alle Bilder in den Spieloptionen der einzelnen Plattformen zu überarbeiten und diejenigen zu optimieren, die möglicherweise nicht genau so aussehen, wie Sie es möchten. </div><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Extras Index</a> </div><div style="float:right"> Weiter: <a href=
+"debugging.html">Debuggen</a> </div></div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

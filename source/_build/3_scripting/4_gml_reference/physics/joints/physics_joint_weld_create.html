@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>physics_joint_weld_create</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/physics/joints/physics_joint_weld_create.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fphysics%2Fjoints%2Fphysics_joint_weld_create.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fphysics%2Fjoints%2Fphysics_joint_weld_create.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h1 class="studio"> physics_joint_weld_create </h1><h2 class="studio"> Erstellen Sie eine starke, aber flexible Verbindung, die zwei Instanzen entlang eines bestimmten Winkels verbindet. </h2><h3 class="studio"> Syntax: </h3><p class="code">physics_joint_weld_create(inst1, inst2, anchor_x,
+anchor_y, ref_angle, freq_hz, damping_ratio, col)<span class="notranslate"></span></p><p><br></p><div class="param"><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">inst1</span> </td> <td> Die erste Instanz zum Verbinden mit dem Gelenk </td></tr><tr class="alt"><td> <span class="notranslate">inst2</span> </td> <td> Die zweite Instanz, um sich mit dem Gelenk zu verbinden </td></tr><tr><td> <span class="notranslate">anchor_x</span> </td> <td> Die x-Koordinate für das Gelenk innerhalb der Spielwelt </td></tr><tr class="alt"><td> <span class="notranslate">anchor_y</span> </td> <td> Die y-Koordinate für das Gelenk innerhalb der Spielwelt </td></tr><tr><td> <span class="notranslate">ref_angle</span> </td> <td> Der Gelenkwinkel zu erhalten </td></tr><tr class="alt"><td> <span class="notranslate">freq_hz</span> </td> <td> Dies ist die Schwingungsfrequenz für das Gelenk, in Hertz </td></tr><tr><td> <span class="notranslate">damping_ratio</span> </td> <td> Dieses Dämpfungsverhältnis für die Verbindung </td></tr><tr class="alt"><td> <span class="notranslate">col</span> </td> <td> Ob die beiden Instanzen kollidieren können (wahr) oder nicht (falsch) </td></tr></table></div><p><br></p><p> <b>Rückgabe:</b> Index des Gelenks </p><p><br></p><h3 class="studio"> Beschreibung </h3><p> Die Schweißnaht ist so ausgelegt, dass zwei Befestigungen in einer starken und dennoch flexiblen Verbindung miteinander verbunden werden. Die Schweißverbindung ermöglicht ein Biegen zwischen den zwei verbundenen Vorrichtungen, jedoch ohne die Dehnung, die beispielsweise mit einer Abstandsverbindung verbunden ist, und wird immer versuchen, unter irgendwelchen Belastungen oder Lasten auf den Bezugswinkel zurückzufedern. Sie definieren den Punkt in dem Raum, in dem das Gelenk erstellt werden soll, sowie den Winkel, den das Gelenk zu jeder Zeit versuchen und beibehalten soll, wie in der folgenden Abbildung gezeigt: <br><br><img class="center" src="images/weld_joint_image.png"></p><p> Wie Sie sehen können, werden die Ankerpunkte als Raumkoordinaten angegeben, daher muss bei der Definition besonders darauf geachtet werden, dass die Instanzen gleichzeitig mit den Gelenken erstellt werden und nicht durch den Raumeditor in den Raum platziert werden. Sie sollten auch erkennen, dass die Gelenke unabhängig von der Größe des Sprites der Instanzen oder der Befestigungen, die sie angebracht haben, erstellt werden. Wenn Sie also eine Schweißnaht irgendwo anders als den Ursprung der Instanz erstellen, ist sie immer noch gültig und beschränkt die beiden Instanzen auf die Position, an der sie erstellt wurde. <br><br> Da die Schweißverbindung flexibel ist und sich bei jeder Belastung biegt und biegt, können Sie die Schwingungsfrequenz (in Hz) sowie das Dämpfungsverhältnis für das Gelenk so einstellen, dass unterschiedliche Effekte erzielt werden - Sie müssen möglicherweise mit diesen Werten fein arbeiten stimmen Sie sie ab und es wird empfohlen, dass Sie mit kleineren Werten beginnen und sie erhöhen, bis Sie den gewünschten Effekt erhalten. <br><br> Wenn Sie den Wert &quot;col&quot; auf festlegen <tt>true</tt> dann können die beiden Instanzen interagieren und miteinander kollidieren, aber <i>nur</i> wenn sie Kollisionsereignisse haben, wenn sie jedoch auf gesetzt sind <tt>false</tt> sie werden nicht kollidieren, egal was passiert. <br><br></p><p><br></p><h3 class="studio"> Beispiel: </h3><p class="code">var i, fix, o_id, p_id;<br>
+p_id = noone;<br>
+o_id = noone;<br>
+fix = physics_fixture_create();<br>
+physics_fixture_set_box_shape(fix, 64, 32);<br>
+for (i = 0; i &lt; 5; i++;)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;o_id = instance_create_layer(x + (128 * i), y,
+"Instances", obj_BridgePart);<br>
+&nbsp;&nbsp;&nbsp;physics_fixture_bind(fix, o_id);<br>
+&nbsp;&nbsp;&nbsp;if i &gt; 0 &amp;&amp; i &lt; 4<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;physics_joint_weld_create(p_id,
+o_id, x + (128 * i) - 64, y, 0, 10, 12, true);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;p_id = o_id;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+physics-fixture_delete(fix);<br><span class="notranslate"></span></p><p> Der obige Code erstellt eine Fixture und verwendet dann eine Schleife, um eine Anzahl von Instanzen zu erstellen, die Fixture an jede neue Instanz zu binden und sie dann alle zusammen mit einer Schweißverbindung zu verbinden. Schließlich wird das Gerät aus dem Speicher gelöscht. </p><p><br></p><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Gelenke</a> </div><div style="float:right"> Weiter: <a href=
+"physics_joint_friction_create.html">physics_joint_friction_create</a> </div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

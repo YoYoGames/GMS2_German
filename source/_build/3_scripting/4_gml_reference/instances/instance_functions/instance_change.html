@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>instance_change</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/instances/instance_functions/instance_change.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Finstances%2Finstance_functions%2Finstance_change.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Finstances%2Finstance_functions%2Finstance_change.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h2> Instanzwechsel </h2><div class="body-scroll"><p><br></p><h3> Beschreibung </h3><blockquote><p> Sie können diese Funktion verwenden, um eine Instanz eines Objekts in eine andere Instanz eines anderen Objekts zu ändern, und dabei entscheiden, ob die ersten Instanzen Destroy und Cleanup Events und die neuen Instanzen Create Event ausgeführt werden sollen. Auf diese Weise können Sie zum Beispiel eine Bombe in eine Explosion verwandeln - in diesem Fall würde das Argument &quot;perf&quot; wahrscheinlich wahr sein, da Sie möchten, dass die Bombe ihr Destroy Event und Clean Up Event sowie die Explosion, um ihr Create Event durchzuführen - oder Sie könnten Ihren Playercharakter in einen anderen ändern - in diesem Fall wäre das Argument &quot;perf&quot; wahrscheinlich falsch, da Sie nicht möchten, dass die Instanzen ihre Create and Destroy / Clean Up Events ausführen. </p><p> Es ist erwähnenswert, dass das Ändern der Instanz bedeutet, dass Sie bis zum nächsten Schritt keine weiteren Aktionen mit dieser Instanz durchführen sollten, insbesondere nicht versuchen, auf Variablen usw. zuzugreifen, da dies zu einem Fehler führen wird. Grundsätzlich ändern Sie die Instanz, aber sie ist erst am Ende des aktuellen Schritts verfügbar, sodass der Zugriff auf eine der Variablen, die sie direkt enthält (z. B. Aufruf von <code>obj_Changed.x</code> ), nicht funktioniert. </p><div class="note"> <b>WARNUNG!</b> Wenn Sie eine physikaktivierte Instanz ändern, werden die physikalischen Eigenschaften <b>nicht</b> auf die neue Instanz übertragen, in die sie geändert wird. Daher sollten Sie Code verwenden, um den physikalischen Zustand der aktuellen Instanz auf die neue Instanz zu übertragen oder die neuen physischen Eigenschaften der Instanzen in ihrem Create Event oder im Objekteditor definiert zu haben. Aus diesem Grund wird empfohlen, dass Sie diese Funktion nicht bei physikfähigen Instanzen verwenden, sondern eine Kombination aus verwenden <tt>instance_destroy()</tt> und <tt>instance_create_layer()</tt>. </div></blockquote><p><br></p><h3> Syntax: </h3><p class="code">instance_change(obj, perf);<span class="notranslate"></span></p><p><br></p><h3> Argumente: </h3><blockquote><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">obj</span> </td> <td> Das neue Objekt, in das sich das aufrufende Objekt ändert. </td></tr><tr class="alt"><td> <span class="notranslate">perf</span> </td> <td> Gibt an, ob das Erstellen und Zerstören von Ereignissen dieses neuen Objekts ausgeführt werden soll (true) oder nicht (false). </td></tr></table></blockquote><p><br></p><h3> Kehrt zurück: </h3><p class="code">N/A<span class="notranslate"></span></p><p><br></p><h3> Beispiel: </h3><p class="code">if keyboard_check(vk_enter)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;instance_change(obj_Player_Swimming, false);<br>
+&nbsp;&nbsp;&nbsp;exit;<br>
+&nbsp;&nbsp;&nbsp;}<br><span class="notranslate"></span></p><blockquote><p> Der obige Code ändert die aufrufende Instanz in eine Instanz von &quot;obj_Player_Swimming&quot;, ohne das ursprüngliche Ereignis destroy zu erstellen, oder die neuen Instanzen erzeugen ein Ereignis, wenn der Benutzer die &quot;Enter&quot; -Taste drückt und den Code-Block beendet. </p></blockquote><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Instanzfunktionen</a> </div><div style="float:right"> Weiter: <a href=
+"instance_copy.html">instance_copy</a> </div></div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>DnD™ File Actions Library</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+
+<link rel="stylesheet" href="../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/2_drag_and_drop_reference/file_actions/index.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F2_drag_and_drop_reference%2Ffile_actions%2Findex.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F2_drag_and_drop_reference%2Ffile_actions%2Findex.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h2> Dateibibliothek </h2><div class="body-scroll"><p><br></p><p><img class="center" src="images/lib_files.png" alt="Dateiaktionen"></p><p> Die <b>Dateiaktionen</b> behandeln zwei verschiedene Dateitypen - Pufferdateien und Ini-Dateien - und verfügen über bestimmte allgemeine Dateiaktionen zum Umbenennen oder Kopieren vorhandener Dateien. <b>Pufferdateien</b> werden erstellt, indem die Daten aus einem Puffer, den Sie zuvor erstellt haben, gespeichert werden, und diese Daten können später jederzeit wieder in einen Puffer geladen werden. Weitere Informationen zu Puffern finden Sie hier: <a href="../buffer_actions/index.html">Pufferaktionen</a>. </p><p> <b>Ini-Dateien</b> sind kleine, leichte Dateien, die mit den meisten Plattformen kompatibel sind. Sie sind ideal für die Speicherung kleiner Informationen wie Schnittstellenpräferenzen, lokale Highscores, Füllstandsdaten usw. und sind sehr einfach zu benutzen. Ini-Dateien müssen nicht zuvor erstellt worden sein, um diese Aktionen zu verwenden, und Sie können aus einer nicht vorhandenen Ini-Datei lesen, und Sie erhalten einfach eine <tt>default</tt> Rückgabewert (den Sie angeben), aber wir empfehlen, dass Sie mindestens eine &quot;Basis&quot; -Ini-Datei zum Öffnen und Ändern erstellen, bevor Sie die Aktionen verwenden. Diese Basis-INI-Datei kann durch einfaches Aufrufen der <a a="" href=
+"open_ini_file.html">Open Ini File-</a> Aktion gefolgt von der <a href="close_ini_file.html">Close Ini-Datei erstellt werden</a>, da das Schließen der Datei sie auf den Datenträger schreibt oder Sie einen in die <a href=
+"../../../2_interface/1_editors/included_files.html">Included Files</a> des Ressourcenbaums aufnehmen können. Wenn Sie eine in der Ressourcenstruktur enthaltene Datei als Basis-Ini verwenden, sollten Sie auch den Abschnitt des Handbuchs zur <a href=
+"../../../1_overview/3_additional_information/file_system.html">Funktionsweise des Dateisystems</a> lesen. </p><div class="note"> <b>HINWEIS</b>: Bei Spielen mit Lokalisierung ist es sehr wichtig, dass Akzentbuchstaben aus externen Dateien gelesen werden können. Das bedeutet, dass Sie die Ini-Datei zuerst im <b>UTF8-Format</b> erstellen und dann als mitgelieferte Datei in <i><span class="notranslate">GameMaker Studio 2</span></i> damit sie beim Ausführen des Spiels exportiert und anstelle der Standard-INSI-Datei verwendet wird, die vom Ini erstellt wird Funktionen, wenn keine zuvor geliefert wurde. Auf diese Weise können Sie korrekt lesen und schreiben, wobei alle Akzente und nicht-lateinischen Buchstaben beibehalten werden. </div><p><br> Zum Arbeiten mit Dateien existieren folgende Aktionen: </p><table class="icons"><tr><td class="icons"> <a href="load_buffer.html"><img align="middle"
+src="images/i_files_load_buffer.png" alt="Ladepuffer"></a> </td><td class="text"> <a href="load_buffer.html">Ladepuffer</a> </td></tr><tr><td class="icons"> <a href="save_buffer.html"><img align="middle"
+src="images/i_files_save_buffer.png" alt="Puffer speichern"></a> </td><td class="text"> <a href="save_buffer.html">Puffer speichern</a> </td></tr><tr><td class="icons"> <a href="rename_file.html"><img align="middle"
+src="images/i_files_rename_file.png" alt="Datei umbenennen"></a> </td><td class="text"> <a href="rename_file.html">Datei umbenennen</a> </td></tr><tr><td class="icons"> <a href="copy_file.html"><img align="middle" src=
+"images/i_files_copy_file.png" alt="Datei kopieren"></a> </td><td class="text"> <a href="copy_file.html">Datei kopieren</a> </td></tr><tr><td class="icons"> <a href="delete_file.html"><img align="middle"
+src="images/i_files_delete_file.png" alt="Datei löschen"></a> </td><td class="text"> <a href="delete_file.html">Datei löschen</a> </td></tr><tr><td class="icons"> <a href="open_ini_file.html"><img align="middle"
+src="images/i_files_open_ini_file.png" alt="Öffnen Sie die Ini-Datei"></a> </td><td class="text"> <a href="open_ini_file.html">Öffnen Sie die Ini-Datei</a> </td></tr><tr><td class="icons"> <a href="close_ini_file.html"><img align="middle"
+src="images/i_files_close_ini_file.png" alt="Schließen Sie die Ini-Datei"></a> </td><td class="text"> <a href="close_ini_file.html">Schließen Sie die Ini-Datei</a> </td></tr><tr><td class="icons"> <a href="write_to_ini_file.html"><img align=
+"middle" src="images/i_files_write_to_ini_file.png" alt="In Ini-Datei schreiben"></a> </td><td class="text"> <a href="write_to_ini_file.html">In Ini-Datei schreiben</a> </td></tr><tr><td class="icons"> <a href="read_ini_file.html"><img align="middle"
+src="images/i_files_read_ini_file.png" alt="Lesen Sie die Ini-Datei"></a> </td><td class="text"> <a href="read_ini_file.html">Lesen Sie die Ini-Datei</a> </td></tr><tr><td class="icons"> <a href="if_file_exists.html"><img align="middle"
+src="images/i_files_if_file_exists.png" alt="Wenn Datei vorhanden ist"></a> </td><td class="text"> <a href="if_file_exists.html">Wenn Datei vorhanden ist</a> </td></tr></table><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Zurück: <a href="../index.html">Drag &amp; Drop-Referenz</a> </div><div style="float:right"> Weiter: <a href=
+"../type_actions/index.html">Datentyp-Aktionen</a> </div></div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

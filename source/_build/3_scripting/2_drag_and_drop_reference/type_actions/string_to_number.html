@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>String To Number</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+
+<link rel="stylesheet" href="../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/2_drag_and_drop_reference/type_actions/string_to_number.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F2_drag_and_drop_reference%2Ftype_actions%2Fstring_to_number.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F2_drag_and_drop_reference%2Ftype_actions%2Fstring_to_number.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h2><img style="vertical-align:middle" src=
+"images/i_types_string_to_number.png"> Zeichenfolge an Nummer </h2><div class="body-scroll"><p><br></p><h3> Beschreibung </h3><blockquote><p> Diese Aktion kann eine Zeichenfolge in eine Zahl konvertieren. Sie geben die zu ändernde Zeichenfolge an und geben dann eine Zielvariable zurück, auf die die reelle Zahl zurückgeben soll (diese Variable kann als temporäre lokale Variable gekennzeichnet werden). Beachten Sie, dass die Zeichenfolge <i>nicht</i> konvertiert wird, wenn die Zeichenfolge andere Zeichen als Zahlen und einen Dezimalpunkt hat. Wenn die Zeichenfolge jedoch mit einer Zahl <i>beginnt,</i> werden diese konvertiert und der Rest der Zeichenfolge wird ausgeschlossen. Es ist wichtig zu beachten, dass beim Zurückgeben von Dezimalstellen in diese Aktion die zurückgegebene Zeichenfolge nur auf <i>zwei</i> Dezimalstellen gerundet wird. Im Folgenden finden Sie eine Tabelle der Eingabewerte und was Sie erwarten würden zurückgegeben </p><div class="compat"><table><tr><th> Zeichenfolge </th><th> Zurückgegebener Wert </th></tr><tr><td> <span class="notranslate">&quot;123&quot;</span> </td> <td> 123 </td></tr><tr class="alt"><td> <span class="notranslate">&quot;123 Hello World&quot;</span> </td> <td> 123 </td></tr><tr><td> <span class="notranslate">&quot;Hello World&quot;</span> </td> <td> 0 (standardmäßig, wenn die Zeichenfolge nicht konvertiert werden kann, wird 0 zurückgegeben) </td></tr><tr class="alt"><td> <span class="notranslate">&quot;Hello World 123&quot;</span> </td> <td> 0 </td></tr><tr><td> <span class="notranslate">&quot;123.45678&quot;</span> </td> <td> 123,46 </td></tr></table></div></blockquote><p><br></p><h3> Aktionssyntax: </h3><img class="center" src="images/a_types_string_to_number.png" alt="Zeichenfolge zu Nummer Syntax"><p><br></p><h3> Argumente: </h3><blockquote><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">Value</span> </td> <td> Die zu konvertierende Zeichenfolge </td></tr><tr class="alt"><td> <span class="notranslate">Target</span> </td> <td> Die Zielvariable, die den zurückgegebenen Wert enthält </td></tr></table></blockquote><p><br></p><h3> Beispiel: </h3><img class="center" src="images/e_types_string_to_number.png" alt="Zeichenfolge an Zahl Beispiel"><blockquote> Der obige Aktionsblockcode initialisiert eine globale Variable und öffnet dann eine <tt>ini</tt> Datei. Eine Zeichenfolge wird aus der Datei gelesen und in einer temporären Variablen gespeichert, bevor sie in eine reelle Zahl konvertiert und der globalen Variablen zugewiesen wird. Das <tt>ini</tt> ist dann geschlossen. </blockquote><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Typen Aktionen</a> </div><div style="float:right"> Weiter: <a href=
+"number_to_string.html">Nummer zu String</a> </div></div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

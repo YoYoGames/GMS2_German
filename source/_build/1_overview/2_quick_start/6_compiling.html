@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>Compiling</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+
+<link rel="stylesheet" href="../../../../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/1_overview/2_quick_start/6_compiling.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F1_overview%2F2_quick_start%2F6_compiling.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F1_overview%2F2_quick_start%2F6_compiling.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h2> Kompilieren </h2><div class="body-scroll"><p><br></p><p> Das Kompilieren Ihres Spiels kann zwei Dinge bedeuten: es zum Testen kompilieren oder es kompilieren, um ein <i>Asset-Paket</i> für eine bestimmte Zielplattform zu erstellen. Sie können Ihr Spiel testen, indem Sie einfach die Wiedergabetaste drücken <img style="vertical-align:middle" src=
+"images/qs_icon_play.png"> an der Spitze der IDE, die das Spiel zum Testen mit dem angegebenen Ziel startet. Sie können das Spiel auch im <b>Debug-Modus</b> ausführen, indem Sie die Schaltfläche Debuggen verwenden <img style="vertical-align:middle" src="images/qs_icon_debug.png">. Dadurch wird das Spiel ausgeführt, aber auch das <b>Debug-Fenster</b> geöffnet, in dem Sie überwachen können, wie Ihr Spiel läuft, und alle Probleme <a href="7_debugging.html">beheben (</a> weitere Informationen finden Sie im Abschnitt <a href="7_debugging.html">Debuggen</a> ). </p><p> Standardmäßig wird <i><span class="notranslate">GameMaker Studio 2</span></i> mit der integrierten VM (virtuelle Maschine) ausgeführt und debuggt. Dies entspricht mehr oder weniger der Ausführung auf dem verwendeten Desktop-Betriebssystem. <i><span class="notranslate">GameMaker</span> Studio 2</i> ist jedoch eine <b>plattformübergreifende Engine</b> und Sie können Asset-Pakete Ihrer Projekte auf einer Reihe verschiedener Zielplattformen testen, debuggen und kompilieren (die genauen verfügbaren Plattformen hängen von den Details Ihrer Lizenz ab). Um die aktuelle Zielplattform zu ändern, klicken Sie auf die Schaltfläche <b>Ziele</b> <img style="vertical-align:middle" src=
+"images/qs_icon_targets.png"> Öffnen Sie das <b>Targets-Fenster</b>, das ungefähr so ​​aussieht (genaue Details variieren je nach Lizenztyp): <img class="center" src=
+"images/qs_targetlist.png" alt="Zielfenster"></p><p> Oben, neben der Schaltfläche &quot;Ziele&quot;, haben Sie die aktuellen Einstellungen, die Ihnen die Plattform und die tatsächlich verwendeten Einstellungen mitteilen. Anschließend wird der Rest des Fensters mit den Details und Optionen für alle verfügbaren Ziele angezeigt, die Sie verwenden können Wählen Sie, um stattdessen zu verwenden. Jeder Abschnitt dieses Fensters wird nachfolgend erläutert: </p><blockquote><a name="compile_remote" id="compile_remote"></a> <label class="collapse" for="five">Arbeitnehmer</label> <input id="five"
+type="checkbox"><div class="index_list"><p> Die erste Spalte des Target Managers ist den <b>Remote Workers zugeordnet</b>, die Ihnen zur Verfügung stehen. Zu Beginn haben Sie nur einen einzigen &quot;lokalen&quot; Computer, der auf diesem Computer installiert ist, auf dem <i><span class="notranslate">GameMaker Studio 2</span></i> installiert ist. Sie können aber auch einen Remote Worker konfigurieren. Wenn ein Remote - Worker konfiguriert wurde, werden Sie dann in der Lage sein, es hier aus der Liste zu wählen, und hat <i>es</i> Ihre Projekte zu bauen, anstatt die Host - Maschine zu verwenden, in denen <i><span class="notranslate">GameMaker Studio 2</span></i> installiert ist. </p><p> Weitere Informationen zum Einrichten und Verwenden von Remote Workers finden Sie im folgenden Abschnitt: </p><ul><li> <a href="../../2_interface/2_extras/remote_worker.html">Fernarbeiter</a> </li></ul></div><br><a name="compile_platform" id="compile_platform"></a> <label class=
+"collapse" for="one">Plattform</label> <input id="one" type=
+"checkbox"><div class="index_list"><p> In diesem Abschnitt werden alle verfügbaren Zielplattformen aufgelistet. Der Inhalt dieser Liste hängt von der Lizenz ab, die Sie haben, hat aber immer mindestens das Ziel &quot;Test&quot;. Um ein Ziel auszuwählen, klicken Sie einfach auf <img style="vertical-align:middle" src=
+"../../images/icon_lmb.png"> darauf. Dies aktualisiert dann die restlichen Optionenfenster, um abhängig von der ausgewählten Plattform verschiedene Details anzuzeigen. </p></div><br><a name="compile_output" id="compile_output"></a> <label class=
+"collapse" for="two">Ausgabe</label> <input id="two" type=
+"checkbox"><div class="index_list"><p> Jede Zielplattform kann ein oder mehrere Ausgabeformate haben. Die wichtigsten sind: </p><ul><li> <b>VM</b>: Das VM-Ziel (Virtual Machine) verwendet für jede Plattform einen allgemeinen <i>Runner</i> und interpretiert den Code für Ihr Spiel. Im Allgemeinen wird diese Option aufgrund ihrer schnelleren Build-Zeiten für Testzwecke verwendet, bietet jedoch nicht den gleichen Leistungsschub, den die Verwendung der YYC-Option (falls verfügbar) bietet. Sie können damit kleinere Spiele oder Spiele kompilieren, bei denen die Leistung jedoch kein Problem darstellt. <br><br></li><li> <b>YYC</b>: Der YYC ( <span class="notranslate">YoYo</span> Compiler) übernimmt die normale Ausgabe von <i><span class="notranslate">GameMaker Studio 2</span></i> und kompiliert sie in <i>nativen</i> Code für die Zielplattform, &quot;entlädt&quot; unnötige Funktionen und führt eine Vielzahl anderer Optimierungstechniken durch, um eine kleinere ausführbare Datei zu erstellen. Dies kann die Spieleleistung um mindestens zwei oder drei Mal erhöhen, besonders bei Spielen mit hohem Logikanteil, ideal für größere oder CPU-intensive Spiele. Die Kompilierungszeiten können länger dauern und Sie sollten den Compiler-Cache immer löschen, bevor Sie ein vollständiges Asset-Paket für eine Zielplattform erstellen. Beachten Sie, dass für das YYC-Ziel möglicherweise zusätzliche Tools für die ausgewählte Plattform erforderlich sind. Andernfalls funktioniert es nicht. Weitere Informationen hierzu finden Sie in der <a href="http://help.yoyogames.com/entries/91625158-SDK-Version-Support"
+target="_blank"><span class="notranslate">YoYo Games</span> Hilfe</a> sowie auf den einzelnen <a href=
+"../../2_interface/3_settings/preferences.html">Zieleinstellungen</a> in diesem Handbuch. <br><br></li><li> <b>JavaScript</b>: Das JavaScript-Ziel ist nur für einige Ziele wie das HTML5-Ziel verfügbar und legt das zu kompilierende Spiel auf reines JavaScript fest. </li></ul></div><br><a name="compile_device" id="compile_device"></a> <label class=
+"collapse" for="three">Gerät</label> <input id="three" type=
+"checkbox"><div class="index_list"><p> Bestimmte Plattformen (wie iOS oder <span class="notranslate">Android</span> ) ermöglichen es Ihnen, ein oder mehrere Geräte mit <i><span class="notranslate">GameMaker Studio 2</span></i> zu verknüpfen, damit Spiele diese selektiv kompilieren können. Anfangs ist die Geräteliste leer und Sie müssen klicken <img style="vertical-align:middle" src=
+"../../images/icon_lmb.png"> auf dem Stiftsymbol <img style=
+"vertical-align:middle" src="images/qs_icon_pencil.png"> um den <b>Geräte-Editor</b> zu öffnen: <img class="center" src=
+"images/qs_deviceeditor.png" alt="Gerätemanager"></p><p> Hier können Sie neue Geräte hinzufügen sowie den <i><span class="notranslate">GameMaker Studio</span> 2-</i> Test für eine Verbindung zu allen angeschlossenen Geräten durchführen lassen. Der genaue Inhalt dieses Fensters hängt von den Plattformspezifikationen ab (genaue Details zu jeder Plattform finden Sie im Abschnitt zum <a href=
+"../../2_interface/2_extras/device_manager.html">Geräte-Manager</a> ). Sobald ein Gerät gefunden oder hinzugefügt wurde, wird es in diesem Fenster angezeigt, wie in diesem Beispielbild für <span class="notranslate">Android</span>: <img class="center" src=
+"images/qs_adddevice.png" alt="Gerät hinzufügen"></p><p> Die genaue Vorgehensweise und die Voraussetzungen zum Einrichten von Geräten und zur Fehlerbehebung finden Sie im entsprechenden Abschnitt der <a href=
+"http://help.yoyogames.com/hc/en-us/categories/204246668-GameMaker-Studio-2"
+target="_blank"><span class="notranslate">GameMaker Studio 2</span> Knowledge Base</a>. </p></div><br><a name="compile_config" id="compile_config"></a> <label class=
+"collapse" for="four">Konfig</label> <input id="four" type=
+"checkbox"><div class="index_list"><p> Wie im Abschnitt &quot; <a href=
+"../../2_interface/3_settings/configurations.html">Konfigurationen&quot; beschrieben</a>, können Sie bestimmte Details speichern, um Ihr Spiel als <b>Configs zu kompilieren</b>. In diesem Bereich des Fensters &quot;Ziele&quot; können Sie <i><span class="notranslate">GameMaker Studio 2</span></i>, dass <i><span class="notranslate">GameMaker Studio 2</span></i> automatisch eine bestimmte Konfiguration für eine bestimmte Zielplattform auswählt. </p></div></blockquote><p><br></p><h2> Erstellen eines endgültigen ausführbaren Pakets </h2><p><br></p><p> Um Ihr Spielprojekt auf einer beliebigen Zielplattform zu kompilieren, müssen Sie die richtigen Build-Tools (siehe <a href=
+"../1_getting_started/5_required_sdks.html">hier</a> ) eingerichtet und die entsprechenden <a href=
+"../../2_interface/3_settings/preferences.html">Plattform-Einstellungen</a> ausgefüllt haben. Sobald Sie das getan haben, können Sie einfach auf die Schaltfläche <b>Create Executable</b> klicken <img style="vertical-align:middle"
+src="images/qs_icon_compile.png"> In der IDE starten Sie den Compiler-Build oder wählen <b>Create Executable</b> aus dem <a href=
+"menus/build_menu.html">Build-Menü</a>. Beide Optionen öffnen ein Datei-Explorer-Fenster, in dem Sie den endgültigen Namen angeben können, den Sie für Ihr Spielpaket verwenden möchten, bevor Sie auf <i>Speichern</i> klicken, um den Kompilierungs- und Erstellungsvorgang zu starten. Sobald Sie dies getan haben, werden die notwendigen Dateien erzeugt, damit Sie sie nach Wunsch verteilen können. </p><div class="note"> <b>HINWEIS</b>: Bevor Sie einen endgültigen Build Ihres Projekts für die Veröffentlichung erstellen, sollten Sie den <b>Asset Compiler Cache</b> immer löschen (mit dem Symbol &quot;Besen&quot;) <img style=
+"vertical-align:middle" src="images/qs_icon_clean.png"> an der Spitze der IDE), um sicherzustellen, dass alle zwischengespeicherten Dateien neu erstellt werden und keine veralteten Dateien Ihr endgültiges Spiel beschädigen. </div><p><br> Jede Zieloption speichert das folgende Format für eine Plattform: </p><ul><li> <b>Windows</b> - Beim Kompilieren für das allgemeine Windows-Betriebssystem werden Sie zuerst aufgefordert, zwischen dem Erstellen eines <i>Installer-</i> oder <i>Zip-</i> Pakets zu wählen, wobei das Installationsprogramm eine einzelne ausführbare Datei ist, die Ihr Spiel installiert, und die Zip-Datei eine komprimierte Datei im Zip-Format ist alle Ihre Spieldateien sind darin gespeichert (die Dateien müssen extrahiert werden, damit das Spiel ausgeführt werden kann). <img class="center" src="images/qs_windows_compile_options.png"
+alt="Windows-Kompilierungsoptionen"> Wenn Sie das Kästchen <i>Remember Packaging Option</i> markieren, wird <i><span class="notranslate">GameMaker Studio 2</span></i> die Auswahl für alle zukünftigen Kompilierungen speichern (dies kann in den <a href=
+"../../2_interface/3_settings/preferences.html">Windows-Einstellungen</a> zurückgesetzt oder geändert werden). Weitere <a href=
+"http://help.yoyogames.com/hc/en-us/sections/207157668" target=
+"_blank"><span class="notranslate">YoYo Games</span></a> finden Sie in der <a href=
+"http://help.yoyogames.com/hc/en-us/sections/207157668" target=
+"_blank"><span class="notranslate">YoYo Games</span> Hilfe</a> <br><br></li><li> <b>Ubuntu (Linux)</b> - Ubuntu (Linux) -Apps können als kompiliert werden <tt>*.zip</tt> Dateien. Weitere <a href=
+"http://help.yoyogames.com/hc/en-us/articles/235186168" target=
+"_blank"><span class="notranslate">YoYo Games</span></a> finden Sie in der <a href=
+"http://help.yoyogames.com/hc/en-us/articles/235186168" target=
+"_blank"><span class="notranslate">YoYo Games</span> Hilfe</a>. <br><br></li><li> <b>HTML5</b> - Wenn Sie HTML5 erstellt haben, dann ein <tt>index.html</tt> Datei (dies ist der Standardname, aber Sie können auch Ihren eigenen Namen in den Plattform-Einstellungen angeben) zusammen mit einem Ordner, der Ihre Spieledateien enthält, wird erstellt und am angegebenen Speicherort gespeichert. Damit Ihr Spiel funktioniert, müssen Sie <i>beide</i> auf einen Server hochladen. Das <tt>index.html</tt> kann auch angepasst werden, um Ihr Spiel mit einer anderen Hintergrundfarbe oder an einer anderen Position usw. zu zeigen... aber dafür ist HTML-Kenntnisse erforderlich, und Sie können beim Erstellen des Pakets auch Ihre eigene benutzerdefinierte Indexdatei angeben (siehe die <a href=
+"../../2_interface/3_settings/game_options/options_html5.html">HTML5 Spieloptionen</a> ). Weitere <a href=
+"http://help.yoyogames.com/hc/en-us/sections/115000309008" target=
+"_blank"><span class="notranslate">YoYo Games</span></a> finden Sie in der <a href=
+"http://help.yoyogames.com/hc/en-us/sections/115000309008" target=
+"_blank"><span class="notranslate">YoYo Games</span> Hilfe</a>. <br><br></li><li> <b><span class="notranslate">Android</span></b> - Für <span class="notranslate">Android</span> Geräte, eine einzige <tt>*.apk</tt> Es wird eine Datei erstellt, die direkt auf jedem <span class="notranslate">Android</span> Gerät verwendet oder in die <i>Google Play-</i> oder <i><span class="notranslate">Amazon</span></i> Stores (oder jede andere Website, die <span class="notranslate">Android</span> Apps akzeptiert) hochgeladen werden kann. Weitere <a href=
+"http://help.yoyogames.com/hc/en-us/articles/115001368727" target=
+"_blank"><span class="notranslate">YoYo Games</span></a> finden Sie in der <a href=
+"http://help.yoyogames.com/hc/en-us/articles/115001368727" target=
+"_blank"><span class="notranslate">YoYo Games</span> Hilfe</a>. <br><br></li><li> <b>iOS</b> - Kompilieren nach iOS erstellt ein <tt>xarchive</tt> Datei, die dann in Xtools verwendet wird, um das endgültige iOS-Paket zu erstellen. Beachten Sie, dass zur Kompilierung für iOS <b>ein Apple Mac-Computer mit OSX oder höher</b> sowie die entsprechenden Zertifikate und Berechtigungen <b>erforderlich sind</b>. Weitere <a href="http://help.yoyogames.com/hc/en-us/articles/115001368747"
+target="_blank"><span class="notranslate">YoYo Games</span></a> finden Sie in der <a href="http://help.yoyogames.com/hc/en-us/articles/115001368747"
+target="_blank"><span class="notranslate">YoYo Games</span> Hilfe</a>. <br><br></li><li> <b>Mac OS</b> - Das Mac OS-Ziel erstellt entweder ein <tt>*.app</tt> Datei oder a <tt>*.pkg</tt> Datei, abhängig davon, ob Sie sie später in den Mac App Store hochladen möchten oder nicht. Wie bei iOS <b>benötigen Sie einen Apple Mac-Computer mit OSX oder höher</b> sowie die entsprechenden Zertifikate und Berechtigungen. Weitere <a href=
+"http://help.yoyogames.com/hc/en-us/articles/235186128" target=
+"_blank"><span class="notranslate">YoYo Games</span></a> finden Sie in der <a href=
+"http://help.yoyogames.com/hc/en-us/articles/235186128" target=
+"_blank"><span class="notranslate">YoYo Games</span> Hilfe</a>. <br><br></li><li> <b><span class="notranslate">Windows UWP</span></b> - Für <span class="notranslate">Windows UWP</span> <i><span class="notranslate">GameMaker Studio 2</span></i> ein <tt>*.appx</tt> Paket, das dann in den Windows Store hochgeladen werden kann. Wenn Sie auf die Schaltfläche Create Executable klicken, werden Sie aufgefordert, <i><span class="notranslate">GameMaker Studio 2</span></i> mitzuteilen, welche Art von Paket Sie erstellen möchten (entweder für ARM-, x64- oder x86-Architekturen), und Sie sollten das auswählen, was auf die Geräte Ihres Spiels zielt unterstützt werden bei: <img class="center" src=
+"images/qs_uwp_compile_options.png" alt="UWP-Kompilierungsoptionen"> Wenn Sie das Kontrollkästchen <b>Paket für Store-Upload</b> markieren, wird das endgültige Paket erstellt <tt>.appxupload</tt> Datei, die von Microsoft angegeben wird, sollte für das Senden von Apps an ihren Store verwendet werden, wie in diesem Artikel <a href=
+"https://docs.microsoft.com/en-us/windows/uwp/publish/upload-app-packages"
+target="_blank">hier beschrieben</a>. Beachten Sie auch, dass Sie die Standard-Verpackungsoption aus den <a href=
+"../../2_interface/3_settings/preferences.html">UWP-Einstellungen</a> festlegen können, damit sich <i><span class="notranslate">GameMaker Studio 2</span></i> die Auswahl für alle zukünftigen Kompilierungen merkt (dh dieses Optionsfenster wird nicht angezeigt). Weitere Informationen zum Einrichten und Kompilieren der UWP-Plattform finden Sie in der <a href=
+"http://help.yoyogames.com/hc/en-us/sections/115000309028" target=
+"_blank"><span class="notranslate">YoYo Games</span> Hilfe</a>. </li></ul><p> Sobald Sie Ihr ausführbares Asset-Paket erstellt haben, können Sie die Datei an andere Personen weitergeben oder auf Ihrer Website zum Download bereitstellen oder diese Dateien auf die verschiedenen Hosting-Services für die individuelle Verteilung oder sogar auf Online-Stores (wie Google Play, iTunes oder den MS Store) für den allgemeinen Vertrieb und Einzelhandel. </p><p> Beachten Sie, dass Sie die mit <i><span class="notranslate">GameMaker Studio 2</span></i> Spiele beliebig verteilen können, einschließlich des Verkaufs. Dies setzt natürlich voraus, dass die Sprites, Bilder und Sounds, mit denen du sie erstellt hast, auch verteilt oder verkauft werden können und dass du die gesetzlichen Rechte an allen Assets hast. Außerdem wird vorausgesetzt, dass das Spiel dem EULA von <span class="notranslate">YoYo Games</span> entspricht <i><span class="notranslate">GameMaker Studio</span> 2</i>. Sie finden die Lizenzvereinbarung im Installationsordner von <i><span class="notranslate">GameMaker Studio 2</span></i>, normalerweise &quot; <tt>C:\Program
+Files\GameMaker Studio 2\Licence.txt</tt> &quot;. </p><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Schnellstart-Index</a> </div><div style="float:right"> Weiter: <a href=
+"7_debugging.html">Debuggen</a> </div></div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>draw_sprite</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/drawing/sprites_and_tiles/draw_sprite.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fdrawing%2Fsprites_and_tiles%2Fdraw_sprite.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fdrawing%2Fsprites_and_tiles%2Fdraw_sprite.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h1 class="studio"> draw_sprite </h1><h2 class="studio"> Zeichnet ein Sprite an einer bestimmten Position. </h2><h3 class="studio"> Syntax: </h3><p class="code">draw_sprite(sprite, subimg, x, y);<span class="notranslate"></span></p><p><br></p><div><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">sprite</span> </td> <td> Der Index des zu zeichnenden Sprites. </td></tr><tr><td> <span class="notranslate">subimg</span> </td> <td> Das Unterbild (Frame) des zu zeichnenden Sprites (image_index oder -1 entspricht dem aktuellen Animationsrahmen des Objekts). </td></tr><tr><td> <span class="notranslate">x</span> </td> <td> Die x-Koordinate, an der das Sprite gezeichnet werden soll. </td></tr><tr><td> <span class="notranslate">y</span> </td> <td> Die y-Koordinate, an der das Sprite gezeichnet werden soll. </td></tr></table></div><p><br></p><p> <b>Rückkehr:</b> N / A </p><p><br></p><h3 class="studio"> Beschreibung </h3><p> Diese Funktion zeichnet das gegebene Sprite und das Teilbild an einer Position innerhalb des Spielraums. Für das Sprite können Sie die Instanzvariable verwenden <a href=
+"../../instances/instance_variables/sprite_index.html"><tt>sprite_index</tt></a> um das aktuelle Sprite zu erhalten, das der Instanz zugewiesen ist, auf der der Code ausgeführt wird, oder Sie können ein beliebiges anderes Sprite-Asset verwenden. Das gleiche gilt für das Teilbild, da dieses auch auf die Instanzvariable eingestellt werden kann <a href=
+"../../instances/instance_variables/image_index.html"><tt>image_index</tt></a> Dadurch wird das Sub-Image auf das für das aktuelle Instanz-Sprite ausgewählte Sub-Image gesetzt (beachten Sie, dass Sie ein anderes Sprite zeichnen und immer noch den Sub-Image-Wert für die aktuelle Instanz verwenden können) oder Sie können einen anderen Wert zum Zeichnen verwenden ein bestimmtes Teilbild des ausgewählten Sprites. Wenn der Wert größer als die Anzahl der Unterbilder ist, wird <i><span class="notranslate">GameMaker Studio 2</span></i> die Nummer automatisch wiederholen, um das entsprechende Bild auszuwählen (z. B. wenn das gezeichnete Sprite 5 Unterbilder mit den Nummern 0 bis 4 hat und wir den Index setzen Wert auf 7, dann zeichnet die Funktion Teilbild 3, nummeriert 0). Schließlich ist die x- und y-Position die Position innerhalb des Raums, in der das Sprite gezeichnet wird, und es ist auf den Sprite <a href="../../instances/instance_variables/sprite_xoffset.html">x-Offset</a> und <a href=
+"../../instances/instance_variables/sprite_yoffset.html">y-Offset</a> zentriert. <br><br></p><p><br></p><h3 class="studio"> Beispiel: </h3><p class="code">draw_sprite(sprite_index, image_index, x, y);<br>
+draw_sprite(spr_Halo, 0, x, y-32);<span class="notranslate"></span></p><p> Dadurch wird das zugewiesene Sprite (sprite_index) mit dem aktuellen Teilbild an der x- und y-Position der Instanz innerhalb des Raums gezeichnet. Es wird dann das erste Bild des Sprites, das mit &quot;spr_Halo&quot; indiziert ist, an der gleichen x- und y-Position, aber 32 Pixel über &#39;zeichnen. </p><p><br></p><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Sprites und Fliesen zeichnen</a> </div><div style="float:right"> Weiter: <a href=
+"draw_sprite_ext.html">draw_sprite_ext</a> </div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

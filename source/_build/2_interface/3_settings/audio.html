@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>Audio Groups</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+
+<link rel="stylesheet" href="../../../../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/2_interface/3_settings/audio.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F2_interface%2F3_settings%2Faudio.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F2_interface%2F3_settings%2Faudio.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h2> Audiogruppen </h2><div class="body-scroll"><p><img class="center" src="images/audio_groups.png" alt="Audiogruppen-Editor"></p><p> Die <b>Audio Group Manager</b> ist von der zur Verfügung stehenden <a href=
+"../../1_overview/2_quick_start/menus/tools_menu.html">Werkzeuge</a> Menü in der IDE. Hier können Sie hinzufügen, löschen und <b>Audio</b> - <b>Gruppen</b> umbenennen sowie setzen ihre Plattform Exportoptionen. <i><span class="notranslate">GameMaker Studio 2</span></i> können Sie jede Audio-Ressource (Soundeffekte und Musik) verschiedenen Audio-Gruppen zuweisen, um die Anzahl der gleichzeitig gespielten Sounds zu optimieren, und Ihnen die weitere Kontrolle darüber geben, welche Plattformen sie verwenden werden exportiert. Um eine Audiogruppe zu definieren, müssen Sie klicken <img style="vertical-align:middle" src="../../images/icon_lmb.png"> <i>Klicken Sie</i> auf die Schaltfläche <i>Neu</i> hinzufügen, um eine neue Gruppe zu erstellen, die Sie dann benennen können. Um die Gruppe zu ändern, klicken Sie auf <img style=
+"vertical-align:middle" src="../../images/icon_lmb.png"> Wählen Sie im Drop-down-Menü den Ordner aus, den Sie bearbeiten möchten. </p><div class="note"> <b>WICHTIG!</b> Audiogruppen sind mit der Testlizenz des Produkts <b>nicht</b> verfügbar. </div><p><br> Um einen Sound zu einer Audiogruppe hinzuzufügen, müssen Sie den <a href=
+"../1_editors/sounds.html">Sound-Editor</a> für diesen Sound öffnen und dann die Gruppe aus der Option auswählen, die Sie dort finden. Sobald Sie einer benutzerdefinierten Audiogruppe einen Sound hinzugefügt haben, können Sie in diesem Fenster auswählen, auf welcher Plattform der Sound exportiert werden soll. Es kann sein, dass Sie standardmäßig alle Ihre Sounds in höchster Qualität haben, aber für HTML5 (zum Beispiel) möchten Sie eine niedrigere Qualität der Sounddatei verwenden, um weniger Speicherplatz zu verbrauchen. In diesem Fall fügen Sie die Dateien mit der niedrigeren Qualität zu <i><span class="notranslate">GameMaker Studio 2</span></i> und weisen sie dann einer neuen Audiogruppe zu. Sie würden dann diese Audiogruppe aus dem Dropdown-Menü auswählen und festlegen, dass nur in HTML5 exportiert werden soll, und den HTML5-Export aus den Exportoptionen für Audiogruppen mit höherer Qualität entfernen. Es ist wichtig zu beachten, dass Sie die Exportoptionen für die Audiogruppe &quot;Standard&quot; nicht ändern können und dass sie beim Erstellen eines endgültigen Spielpakets immer auf alle verfügbaren Plattformen exportiert werden. </p><p> Sobald Sie Audiogruppen definiert und ihnen Sounds zugewiesen haben, können Sie sie in der Liste auf der linken Seite sehen, wenn Sie die Gruppe auswählen. Es wird immer eine &quot;Standard&quot; -Audiogruppe geben und alle Sounds, die sich in dieser Gruppe befinden, sind <i>immer im Spielpaket für alle Plattformen enthalten</i> und werden beim Start alle in den Speicher geladen (es sei denn, sie werden als &quot;gestreamt&quot; gekennzeichnet) in den Sound Editor-Eigenschaften), aber beim Erstellen einer benutzerdefinierten Audiogruppe werden die hinzugefügten Dateien <i>erst beim Aufruf der Funktion in den Speicher geladen <a href=
+"../../3_scripting/4_gml_reference/audio/audio_group_load.html"><tt>
+audio_group_load()</tt></a></i>. Auf diese Weise können Sie steuern, welche Audiodaten zu jeder Zeit im Speicher vorhanden sind. Beachten Sie auch, dass für alle <a href=
+"../../3_scripting/4_gml_reference/audio/audio%20groups.html">Audio-Gruppenfunktionen</a>, müssen Sie die Audio-Gruppen - ID - Wert liefern. Dies ist einfach der Name, den Sie der Audiogruppe gegeben haben. </p><p> Audiogruppen sind auch mit den <a href=
+"configurations.html">Konfigurationseinstellungen</a> verknüpft. Wenn Sie eine Konfiguration auswählen, können Sie das Fenster &quot;Audiogruppen&quot; öffnen und die Exportziele für diese Konfiguration auf der rechten Seite auswählen. Wenn Sie dann die Konfigurationen ändern, werden diese Ausgabeziele geändert. Beachten Sie, dass Sie <i>keine</i> Soundressourcen für verschiedene Gruppen pro Konfiguration festlegen <i>können, sondern</i> nur das Exportziel für die angegebene Gruppe. </p><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Einstellungsindex</a> </div><div style="float:right"> Weiter: <a href=
+"configurations.html">Konfigurationen</a> </div></div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>JSDoc Script Comments</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+
+<link rel="stylesheet" href="../../../../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/1_overview/3_additional_information/jsdoc.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F1_overview%2F3_additional_information%2Fjsdoc.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F1_overview%2F3_additional_information%2Fjsdoc.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h2> JSDoc Skript Kommentare </h2><div class="body-scroll"><p><br></p><p> Wenn Sie möchten, dass Ihre benutzerdefinierten Skripts Code-Vervollständigung aufweisen und die erforderlichen Argumente usw. im Skript-Editor <a href=
+"http://www.oracle.com/technetwork/articles/java/index-137868.html"
+target="_blank">angezeigt werden</a>, müssen Sie einige <a href=
+"http://www.oracle.com/technetwork/articles/java/index-137868.html"
+target="_blank">JSDoc-</a> Stil-Kommentare hinzufügen. Wenn Sie ein Projekt importiert haben, das mit einer früheren Version von <i><span class="notranslate">GameMaker Studio</span></i>, haben Sie am Anfang des <a href="obsolete_functions.html">Kompatibilitätsskripts</a> für die Funktion möglicherweise Kommentare wie diese gesehen: <img class="center" src=
+"images/javadoc_import_example.png" alt="JSDoc-Importbeispiel"></p><p> Das Format für einen typischen Skriptkopf wäre, die Beschreibung der Funktion, den Funktionsnamen und dann die verschiedenen Argumente (Parameter) zu haben, die die Funktion benötigt, wobei sichergestellt wird, dass jede Zeile mit einem dreifachen Backslash &quot;///&quot; als gestartet wird Das weist <i><span class="notranslate">GameMaker Studio 2</span></i> an, Kommentare als JSDoc zu analysieren. Die Kommentare selbst müssen einen Bezeichner (gefolgt von &quot;@&quot;) und Inhalt erhalten, und die verfügbaren Bezeichner lauten wie folgt: </p><div class="compat"><table><tr><th> Identifikator </th><th> Inhalt </th></tr><tr><td> @funktion / @func </td><td> Der vollständige Skriptname und die Argumente für die Funktion &quot; <tt>my_script(x, y, colour)</tt> &quot;. </td></tr><tr><td> @description / @desc </td><td> Eine allgemeine Beschreibung dessen, was das Skript macht. </td></tr><tr class="alt"><td> @ param / @arg / @ argument </td><td> Der Argumenttyp (optional), eingeschlossen in {}, der Argumentname und eine kurze Beschreibung (mit Leerzeichen dazwischen) </td></tr></table></div><p> Um eine Vorstellung davon zu bekommen, wie dies beim Schreiben eigener Skripte funktionieren würde, nehmen wir dieses grundlegende Beispiel: </p><p class="code">// is_same_object(id, object)<br>
+if argument0.object_index == argument1<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;return true;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else return false;<br><span class="notranslate"></span></p><p> Das ganze Skript überprüft, ob eine Instanz den gleichen object_index wie ein gegebenes Objekt hat und einfach wie folgt aufgerufen wird: </p><p class="code">if is_same_object(id, obj_Player)<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;instance_destroy()<br>
+&nbsp;&nbsp;&nbsp;}<br><span class="notranslate"></span></p><p> Wenn Sie dies jedoch in den Skript-Editor schreiben, werden Ihnen die Argumente nicht angezeigt und Sie erhalten keine Hilfe, wenn Sie sie verwenden. Daher müssen wir eine Beschreibung, einen Funktionsnamen und die Argumente als JSDoc-Kommentare hinzufügen: </p><p class="code">/// @function is_same_object(id, object)<br>
+/// @description Compare an instance object index with that of
+another.<br>
+/// @param {real} instance_id The unique instance ID value of the
+instance to check.<br>
+/// @param {real} object_index The object index to be checked
+against.<br>
+<br>
+if argument0.object_index == argument1<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;return true;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+else return false;<br><span class="notranslate"></span></p><p> Wenn Sie dieses Skript jetzt irgendwo im Code aufrufen, erhalten Sie eine Auto-Vervollständigung und eine Argumenthilfe usw. <img class="center" src=
+"images/javadoc_example.png" alt="JSDoc Beispiel"></p><p> Im Bild oben zeigt der obere Teil die Funktion in der automatischen Vervollständigung und der untere Teil zeigt, wie der untere Ar- gumenthelfer funktioniert. Es ist wichtig zu beachten, dass wenn Sie das verwenden <tt>@function</tt> Bezeichner, dann wird der Skriptname, den Sie dort angeben, in der IDE <i>genauso angezeigt wie der Skriptname im Ressourcenbaum</i>. So können Sie dem Skript eine Sache in der Ressourcenstruktur benennen und sie als andere verwenden <tt>@function</tt> und die IDE erkennt <i>beide</i> als Alias ​​der gleichen Skript-Ressource, aber nur die <tt>@function</tt> Einer wird eine Auto-Vervollständigung usw. haben. </p><p> Beachten Sie, dass sowohl der optionale &quot;Typ&quot; als auch die obligatorischen &quot;Beschreibungsteile&quot; von <tt>@param</tt> werden nicht standardmäßig im IDE-Code abgeschlossen angezeigt, und um sie zu sehen, müssen Sie die Optionen in den <a href=
+"../1_getting_started/preferences/prefs_languages.html">GML-Einstellungen</a> aktivieren. </p><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Zusätzlicher Informationsindex</a> </div><div style="float:right"> Weiter: <a href=
+"micro_web_server.html">Micro-Webserver</a> </div></div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

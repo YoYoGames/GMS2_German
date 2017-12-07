@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>GamePad Input</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/controls/gamepad input/index.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fcontrols%2Fgamepad%20input%2Findex.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fcontrols%2Fgamepad%20input%2Findex.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h2> GamePad-Eingabe </h2><div class="body-scroll"><p><br></p><p> <i><span class="notranslate">GameMaker Studio 2</span></i> verfügt über eine Reihe dedizierter Funktionen, mit denen sowohl analoge als auch digitale Steuerelemente von mehreren verbundenen Game-Pads erkannt werden können. Diese Funktionen funktionieren ähnlich wie die <a href="../device%20input/index.html">Geräteeingänge</a>, da Sie bis zu vier verschiedene XInput-Gamepads erkennen können, die verbunden sind (und bis zu 8 DirectInput-Gamepads), und die Eingaben von jedem mit den gleichen Funktionen bearbeiten können. Beachten Sie, dass wenn ein Gamepad an Ihr Gerät angeschlossen wird (oder es entfernt wird), ein asynchrones <a href=
+"../../../../2_interface/1_editors/events/async_events.html">Systemereignis</a> ausgelöst wird, bei dem Sie die Situation mit den entsprechenden Funktionen behandeln können. </p><p> Die Gamepads &quot;Slots&quot; werden von 0 mit den Slots 0 - 3 inklusive indiziert, <i>nur für Xinput Gamepads</i>, also: Xbox360 Controller und Kompatible. Sie können jedoch auch die Steckplätze 4 bis einschließlich 11 für DirectInput-Gamepads überprüfen, was bedeutet, dass Sie viele andere Controller-Modelle erkennen können, wenn Sie über diese Steckplätze verbunden sind. Es ist erwähnenswert, dass bei der Verwendung von DirectInput-Gamepads die unten angegebenen Konstanten möglicherweise nicht genau mit den Schaltflächen übereinstimmen, die Sie beim Drücken erwarten, aufgrund der fragmentierten und nicht standardisierten Art, wie die API von Controller-Herstellern implementiert wird. Es wird empfohlen, dass Sie in Ihren Spielen eine Art Gamepad-Setup-Bildschirm haben, in dem die Gamepad-Schaltflächen basierend auf Eingaben von jedem angeschlossenen Gerät neu definiert werden können, um Probleme zu vermeiden. Beachten Sie auch, dass die Direct Input-Schnittstelle im <i>kooperativen Modus ausgeführt wird.</i> Dies bedeutet, dass Ihr Spiel nur Zugriff auf die Vordergrundanwendung hat, was dazu führt, dass Direct Input-Controller &quot;verloren&quot; sind, wenn das Spiel den Fokus verwendet und dann &quot;gefunden&quot; wieder wenn es wieder in den Fokus kommt (dies kann im System Event erkannt und behoben werden). </p><p> Wenn Sie mit den Gamepad-Funktionen arbeiten, gibt es eine Reihe von eingebauten Konstanten, die verwendet werden sollten, um Schaltflächen und Stickachsen usw. zu erhalten / definieren: </p><div class="compat"><table><tr><th> Konstante </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">gp_face1</span> </td> <td> Obere Taste 1 (dies entspricht dem <i>&quot;A&quot;</i> auf einem Xbox 360-Controller und dem <i>Kreuz</i> auf einem PS-Controller) </td></tr><tr class="alt"><td> <span class="notranslate">gp_face2</span> </td> <td> Obere Taste 2 (dies entspricht dem <i>&quot;B&quot;</i> auf einem Xbox 360-Controller und dem <i>Kreis</i> auf einem PS-Controller) </td></tr><tr><td> <span class="notranslate">gp_face3</span> </td> <td> Obere Taste 3 (dies entspricht dem <i>&quot;X&quot;</i> auf einem Xbox 360-Controller und dem <i>Quadrat</i> auf einem PS-Controller) </td></tr><tr class="alt"><td> <span class="notranslate">gp_face4</span> </td> <td> Obere Taste 4 (dies entspricht dem <i>&quot;Y&quot;</i> auf einem Xbox 360-Controller und dem <i>Dreieck</i> auf einem PS-Controller) </td></tr><tr><td> <span class="notranslate">gp_shoulderl</span> </td> <td> Linke Schultertaste </td></tr><tr class="alt"><td> <span class="notranslate">gp_shoulderlb</span> </td> <td> Linke Schulter auslösen </td></tr><tr><td> <span class="notranslate">gp_shoulderr</span> </td> <td> Rechte Schultertaste </td></tr><tr class="alt"><td> <span class="notranslate">gp_shoulderrb</span> </td> <td> Abzug der rechten Schulter </td></tr><tr><td> <span class="notranslate">gp_select</span> </td> <td> Die Auswahltaste (dies ist ein Touch-Pad drücken auf einem PS4-Controller) </td></tr><tr class="alt"><td> <span class="notranslate">gp_start</span> </td> <td> Der Startknopf (dies ist die &quot;Optionen&quot; Taste auf einem PS4 Controller) </td></tr><tr><td> <span class="notranslate">gp_stickl</span> </td> <td> Der linke Stick drückte (als Knopf) </td></tr><tr class="alt"><td> <span class="notranslate">gp_stickr</span> </td> <td> Der rechte Stick drückte (als Knopf) </td></tr><tr><td> <span class="notranslate">gp_padu</span> </td> <td> D-Pad auf </td></tr><tr class="alt"><td> <span class="notranslate">gp_padd</span> </td> <td> D-Pad nach unten </td></tr><tr><td> <span class="notranslate">gp_padl</span> </td> <td> D-Pad links </td></tr><tr class="alt"><td> <span class="notranslate">gp_padr</span> </td> <td> D-Pad rechts </td></tr><tr><td> <span class="notranslate">gp_axislh</span> </td> <td> Linke Steuerknüppel horizontale Achse (analog) </td></tr><tr class="alt"><td> <span class="notranslate">gp_axislv</span> </td> <td> Linke Steuerknüppel-Vertikalachse (analog) </td></tr><tr><td> <span class="notranslate">gp_axisrh</span> </td> <td> Rechter Steuerknüppel horizontale Achse (analog) </td></tr><tr class="alt"><td> <span class="notranslate">gp_axisrv</span> </td> <td> Rechter Stab vertikale Achse (analog) </td></tr></table></div><p><br> Um besser zu verstehen, welcher Teil des Controllers jede Konstante darstellt, können Sie das folgende Bild eines Standard-Gamepads verwenden: <img class="center" src="gamepad.png"></p><p> Im Folgenden finden Sie eine Liste aller Gamepad-Funktionen: </p><blockquote><ol><li> <a href=
+"gamepad_is_supported.html">gamepad_is_supported</a> <br></li><li> <a href=
+"gamepad_get_device_count.html">Gamepad_get_device_count</a> <br></li><li> <a href=
+"gamepad_is_connected.html">gamepad_is_connected</a> <br></li><li> <a href=
+"gamepad_get_description.html">gamepad_get_description</a> <br></li><li> <a href=
+"gamepad_get_button_threshold.html">gamepad_get_button_threshold</a> <br></li><li> <a href=
+"gamepad_set_button_threshold.html">gamepad_set_button_threshold</a> <br></li><li> <a href="gamepad_axis_count.html">gamepad_axis_count</a> <br></li><li> <a href="gamepad_axis_value.html">gamepad_axis_value</a> <br></li><li> <a href=
+"gamepad_button_check.html">gamepad_button_check</a> <br></li><li> <a href=
+"gamepad_button_check_pressed.html">gamepad_button_check_pressed</a> <br></li><li> <a href=
+"gamepad_button_check_released.html">gamepad_button_check_released</a> <br></li><li> <a href=
+"gamepad_button_count.html">gamepad_button_count</a> <br></li><li> <a href=
+"gamepad_button_value.html">Gamepad_Button_Wert</a> <br></li><li> <a href=
+"gamepad_set_vibration.html">Gamepad_set_vibration</a> <br></li><li> <a href=
+"gamepad_set_axis_deadzone.html">gamepad_set_axis_deadzone</a> <br></li><li> <a href="gamepad_set_colour.html">gamepad_set_colour</a> <br></li></ol></blockquote><h2> Kompatibilität </h2><p> Die folgende Liste zeigt die aktuelle Kompatibilität zwischen den Plattformen (beachten Sie, dass sich dies mit zukünftigen Updates ändert): <br><br></p><ul><li> Windows wird vollständig mit bis zu maximal 12 angeschlossenen Geräten unterstützt (nummeriert von 0 bis 11, wobei 0 - 3 XInput-Geräte und 4 - 11 DirectInput sind). <br></li><li> Mac OS wird mit maximal 4 angeschlossenen Geräten auf einmal unterstützt, und diese Geräte können NUR vom Typ <span class="notranslate">Playstation</span> 3 oder Xbox 360 sein. Bitte beachten Sie, dass die &quot; <b>Build für Mac AppStore</b> &quot; -Option in Mac Game Optionen sein muss OFF, damit die Pad-Unterstützung funktioniert. <br><br></li><li> Ubuntu unterstützt auch Gamepad-Eingaben, aber Sie müssen möglicherweise zusätzliche Bibliotheken aus dem Ubuntu-Repository installieren. Sie können dies leicht tun, indem Sie ein Befehlszeilen-Terminal öffnen und Folgendes eingeben: <p class="code">sudo apt-get install jstest-gtk<br>
+sudo apt-get install joystick.<br><span class="notranslate"></span></p><p> Dies wird GUI-Unterstützung für den Joystick / Gamepad sowie die Joystick / Gamepad-API selbst installieren. <br><br></p></li><li> HTML5-Spiele mit Gamepads werden von den meisten gängigen Browsern mit Ausnahme von <i>Safari unterstützt</i>. <br><br></li><li> Gamepad-Unterstützung erstreckt sich auch auf iOS mit dem <b>iCade-</b> Gehäuse. Die linke Achse entspricht dem Steuerknüppel (obwohl der Eingang digital ist, nicht analog), die vier &quot;Gesicht&quot; -Knöpfe werden den Fronttasten des Schranks zugeordnet, und die vier Schulterknöpfe werden denen auf der Rückseite des Gehäuses zugeordnet. <br><br></li><li> <span class="notranslate">Android</span> Export unterstützt NYKO-Controller und generische Bluetooth-Controller (einschließlich OUYA), aber nur, wenn sie aktiviert sind, was bedeutet, dass Sie die Option iCade / Bluetooth im Bereich <a href=
+"../../../../2_interface/3_settings/game_options/options_android.html">Allgemein</a> der <b><span class="notranslate">Android</span></b> Spieloptionen aktivieren müssen. Sie benötigen die API-Stufe 12, damit sie vollständig funktionieren, und es sollte beachtet werden, dass sich <i><span class="notranslate">GameMaker Studio 2</span></i> als verbunden mit allen Bluetooth-Geräten registriert, mit denen Ihr Gerät gekoppelt ist, unabhängig davon, ob es tatsächlich verbunden ist oder nicht. Daher sollte dies bei der Zuweisung und Überprüfung von &quot;Slots&quot; berücksichtigt werden. <br><br></li><li> Wenn Sie auf der PS4 das Touchpad - Tracking verwenden möchten, müssen Sie die <a href=
+"../device%20input/index.html"><tt>device_mouse_*</tt></a> Tasten. <br><br></li></ul><p> Im Idealfall möchten Sie auf <i>allen</i> Zielplattformen eine Liste verfügbarer Gamepad- &quot;Slots&quot; auflisten und sie dann prüfen, um festzustellen, ob irgendwelche Geräte gefunden wurden, etwa so: </p><p class="code">var maxpads = gamepad_get_device_count();<b>for
+(var i = 0; i &lt; maxpads; i++)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if (gamepad_is_connected(i))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// do stuff with
+pad "i"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br></b><span class="notranslate"></span></p><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Zurück: <a href=
+"../index.html">Kontrollen</a> </div><div style="float:right"> Weiter: <a href=
+"../virtual%20keys/index.html">Virtuelle Schlüssel</a> </div></div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>iap_restore_all</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/in app purchases/iap_restore_all.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fin%20app%20purchases%2Fiap_restore_all.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fin%20app%20purchases%2Fiap_restore_all.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h1 class="studio"> iap_restore_all </h1><h2 class="studio"> Stellt alle Einkäufe für das Spiel wieder her. </h2><h3 class="studio"> Syntax: </h3><p class="code">iap_restore_all();<span class="notranslate"></span></p><p><br></p><p> <b>Rückkehr:</b> N / A </p><p><br></p><h3 class="studio"> Beschreibung </h3><p> Stellt alle Käufe auf ihren Standardstatus für das Spiel und den Benutzer wieder her. Dies wäre anwendbar, wenn (zum Beispiel) der Benutzer das Gerät geändert oder den Titel von seinem aktuellen Gerät entfernt und den Titel erneut installiert hat. Dies löst ein <a href=
+"../../../2_interface/1_editors/events/async_events.html"><b>IAP-Ereignis</b></a> des Typs aus <tt>iap_ev_restore</tt> und die ds_map <tt>iap_data</tt> wird den folgenden zusätzlichen Schlüssel haben, der dann überprüft werden kann, um sicherzustellen, dass die Produkte und Käufe erfolgreich wiederhergestellt wurden: </p><blockquote><ul><li> &quot; <b>Ergebnis</b> &quot; - Das Ergebnis als boolescher Wert, wobei <tt>true</tt> zeigt eine erfolgreiche Wiederherstellung an und <tt>false</tt> eine Art Fehler. </li></ul></blockquote><p> <i><b>HINWEIS:</b> Nur die Mac- und iOS-Speicher bieten derzeit eine Wiederherstellungsfunktion.</i> <br><br></p><p><br></p><h3 class="studio"> Beispiel: </h3><p class="code">iap_restore_all();<span class="notranslate"></span></p><p> Dies würde anfordern, dass der Zielspeicher alle Käufe für das Spiel auf dem Gerät, auf dem er ausgeführt wird, wiederherstellt, und es wird ein <b>IAP-Ereignis</b> mit dem Ergebnis des Anrufs ausgelöst, das in dem Spezialspeicher gespeichert ist <tt>iap_data</tt> ds_map. </p><p><br></p><div class="clear"><div style="float:left"> Zurück: <a href="index.html">In App-Käufen</a> </div><div style="float:right"> Nächstes: <a href=
+"iap_acquire.html">iap_acquire</a> </div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

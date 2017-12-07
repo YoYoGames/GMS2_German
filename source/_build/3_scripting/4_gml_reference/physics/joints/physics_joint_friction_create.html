@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>physics_joint_friction_create</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/physics/joints/physics_joint_friction_create.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fphysics%2Fjoints%2Fphysics_joint_friction_create.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fphysics%2Fjoints%2Fphysics_joint_friction_create.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h1 class="studio"> physics_joint_friction_create </h1><h2 class="studio"> Ein Gelenk zur Verringerung der relativen Bewegung zwischen zwei Vorrichtungen. </h2><h3 class="studio"> Syntax: </h3><p class="code">physics_joint_friction_create(inst1, inst2,
+anchor_x, anchor_y, max_force, max_torque, col)<span class="notranslate"></span></p><p><br></p><div class="param"><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">inst1</span> </td> <td> Die erste Instanz zum Verbinden mit dem Gelenk </td></tr><tr class="alt"><td> <span class="notranslate">inst2</span> </td> <td> Die zweite Instanz, um sich mit dem Gelenk zu verbinden </td></tr><tr><td> <span class="notranslate">anchor_x</span> </td> <td> Die x-Koordinate für das Gelenk innerhalb der Spielwelt </td></tr><tr class="alt"><td> <span class="notranslate">anchor_y</span> </td> <td> Die y-Koordinate für das Gelenk innerhalb der Spielwelt </td></tr><tr><td> <span class="notranslate">max_force</span> </td> <td> Die maximale Reibungskraft, die angewendet wird </td></tr><tr class="alt"><td> <span class="notranslate">max_torque</span> </td> <td> Die maximale Rotationskraft, die angewendet wird </td></tr><tr><td> <span class="notranslate">col</span> </td> <td> Ob die beiden Instanzen kollidieren können (wahr) oder nicht (falsch) </td></tr></table></div><p><br></p><p> <b>Rückgabe:</b> Index des Gelenks </p><p><br></p><h3 class="studio"> Beschreibung </h3><p> Die Reibungsverbindung unterscheidet sich ein wenig von allen anderen Gelenken in der Physiksimulation, da die erzeugte Verbindung nicht die Position oder Bewegung der Instanzen einschränkt, sondern ihre Geschwindigkeit und Rotation. Dies geschieht, indem die maximalen Eingangswerte für Kraft und Drehmoment genommen und diese an die zweite Vorrichtung angelegt werden, um die Geschwindigkeit und den Drehimpuls auf dieselben Werte wie die der ersten Instanz zu bringen. Wenn Sie also eine stationäre Instanz und eine sich bewegende Instanz haben, verbinden Sie diese mit einer Reibungsverbindung, die sich bewegende Instanz wird dann allmählich langsamer, bis sie auch stationär ist. Wenn sich beide Instanzen bewegen, wird die Bewegungsgeschwindigkeit der zweiten Instanz so geändert, dass sie der der ersten Instanz entspricht. <br><br><img class="center" src="images/friction_joint_image.png"></p><p> Wie bei den meisten anderen Verbindungen, geben Sie die Instanzen an, die zusammengefügt werden sollen, sowie die Position für die Verbindung, die innerhalb des Raums erstellt werden soll. Sie liefern dann die maximale Kraft und das maximale Drehmoment (Richtungs- und Rotationsreibung), und wenn Sie den &quot;col&quot; -Wert auf stellen <tt>true</tt> dann können die beiden Instanzen interagieren und miteinander kollidieren, aber <i>nur</i> wenn sie Kollisionsereignisse haben, wenn sie jedoch auf gesetzt sind <tt>false</tt> sie werden nicht kollidieren, egal was passiert. <br><br></p><p><br></p><h3 class="studio"> Beispiel: </h3><p class="code">var mainFixture, o_id;<br>
+mainFixture = physics_fixture_create();<br>
+physics_fixture_set_circle_shape(mainFixture,
+sprite_get_width(sprite_index) / 2);<br>
+o_id = instance_create_layer(x+300, y, "Instances",
+obj_Rudder);<br>
+physics_fixture_bind(mainFixture, id);<br>
+physics_fixture_bind(mainFixture, o_id);<br>
+physics_joint_friction_create(id, o_id, x, y, 10, 0.3, true);<br>
+physics_fixture_delete(mainFixture);<br><span class="notranslate"></span></p><p> Der obige Code erzeugt eine Fixture und bindet sie dann an zwei Instanzen, bevor sie beide mittels einer Reibungsverbindung verbinden. </p><p><br></p><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Gelenke</a> </div><div style="float:right"> Weiter: <a href=
+"physics_joint_delete.html">physics_joint_delete</a> </div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

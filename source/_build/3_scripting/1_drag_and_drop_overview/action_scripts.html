@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>Creating Action Scripts</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+
+<link rel="stylesheet" href="../../../../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/1_drag_and_drop_overview/action_scripts.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F3_scripting%2F1_drag_and_drop_overview%2Faction_scripts.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F3_scripting%2F1_drag_and_drop_overview%2Faction_scripts.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h2> Erstellen von Aktionsskripten </h2><div class="body-scroll"><p><br></p><p> Eine der Ressourcen im <b>Ressourcenbaum</b> ist die <b>Skript-</b> Ressource. Skripts sind einfache Code-Blöcke oder DnD™ -Aktionen, die ausgeführt werden, als wären sie eine der eingebauten Funktionen oder Aktionen von <i><span class="notranslate">GameMaker Studio 2</span></i>. Wir haben einen ganzen Abschnitt des Handbuchs zum Schreiben von Skripten mit Code ( <a href=
+"../../2_interface/1_editors/scripts.html">hier</a> ), aber Sie können Skripte auch nur mit den Drag &amp; Drop-Aktionen erstellen. </p><p> Ein DnD™ Skript (wie jede integrierte Aktion DnD™) können verschiedene Werte annehmen (oder gar keine), und dann eine Kette von Aktionen ausführen und entweder einen Wert zurückgeben oder nichts zurückgeben, und Sie würden es die Verwendung rufen <a href=
+"../2_drag_and_drop_reference/common_actions/execute_script.html">Script ausführen</a> <img style="vertical-align:middle" src=
+"../2_drag_and_drop_reference/common_actions/images/i_common_execute_script.png"> Aktion, die so aussieht: <img class="center" src=
+"../2_drag_and_drop_reference/common_actions/images/a_common_execute_script.png"
+alt="Script-Syntax ausführen"> Die Eingabevariablen werden als Argumente bezeichnet, und Sie können bis zu 4 davon mit dieser Aktion angeben (obwohl Sie alle, einige oder keine davon verwenden können, je nachdem, was Sie für das Skript benötigen), aber Sie können auch den <a href=
+"../2_drag_and_drop_reference/common_actions/execute_code.html">Ausführungscode verwenden</a> <img style="vertical-align:middle" src=
+"../2_drag_and_drop_reference/common_actions/images/i_common_execute_code.png"> Um das Skript aufzurufen, kann Ihr Skript entweder bis zu 16 Argumente haben (bei Verwendung des <tt>argument0 ... argument15</tt> Variablen) oder so viele Argumente wie nötig (bei Verwendung der <tt>argument[n]</tt> Array): <img class="center" src=
+"images/executecode_example.png" alt="ActionScript mit Code ausführen"></p><p> Um ein DnD™ -Skript zu erstellen, verwenden Sie einfach die rechte Maustaste <img style="vertical-align:middle" src="../../images/icon_rmb.png"> auf der Skript-Ressource und wählen Sie <i>Erstellen</i>. Dadurch wird ein neues DnD™ -Skript erstellt und das Editorfenster geöffnet: <img class="center"
+src="images/dnd_scripts.png" alt="D &amp; D Skript Editor"></p><p> Sie können das Skript benennen, indem Sie mit der rechten Maustaste klicken <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> Klicken Sie darauf im Ressourcenbaum und wählen Sie <i>Umbenennen</i> (oder verwenden Sie einen langsamen Doppelklick mit der linken Maustaste <img style="vertical-align:middle" src=
+"../../images/icon_lmb.png"> ), Aber beachten Sie, dass der Name des Skriptes auf die Skriptregeln für Funktionen entsprechen <i>müssen,</i> so müssen sie mit einem Buchstaben beginnen und nur Buchstaben, Zahlen oder die „_“ Unter bar Symbol enthalten. </p><p> Wie bereits erwähnt, können Sie einem Skript eine Reihe von Argumenten übergeben, die dann die Aufgabe ausführen, für die Sie es geschrieben haben. Um dies besser zu verstehen, nehmen Sie zum Beispiel eine Aktion und denken darüber nach, wie es funktioniert... Sie platzieren es in ein Ereignis und spezifizieren eine Anzahl von Parametern und es wird Ihre Instanz dazu bringen, etwas zu tun. Skripte sind genau gleich, mit dem einzigen Unterschied, dass <i>Sie sie</i> schreiben. Das folgende Bild zeigt ein einfaches DnD™ -Skript, das ein einzelnes Argument verwendet und eine Anzahl von Instanzen an zufälligen Positionen innerhalb eines Raums erstellt: <img class="center"
+src="images/script_example.png" alt="D &amp; D-Skriptbeispiel"></p><p> Beachten Sie, dass wir den Wert zuweisen <tt><b>argument0</b></tt> zu einer temporären Variable am Anfang. Alle Werte, die an ein Skript übergeben werden, erhalten die folgenden <b>integrierten</b> Variablen: </p><p class="code">argument0, argument1, ..., etc... up to
+argument15<span class="notranslate"></span></p><p> Sie können direkt auf diese integrierten Argumentvariablen zugreifen oder sie temporären (lokalen) Variablen zuweisen, wie wir es im obigen Beispiel getan haben (die Verwendung temporärer Variablen macht es einfacher, dem zu folgen, was jeder tut und wird empfohlen). Im obigen Skript ist der Wert für <tt>argument0</tt> wird verwendet, um die Anzahl der Male zu bestimmen <tt>repeat</tt> Schleife wird ausgeführt, und Sie würden das Skript wie folgt aufrufen: <img class="center" src=
+"images/script_call.png" alt="Rufen Sie D &amp; D-Skript auf"></p><p> Sie können nicht nur Argumente in ein Skript übergeben, sondern Sie können auch ein Skript dazu auffordern, einen Wert zurückzugeben (mithilfe der <a href=
+"../2_drag_and_drop_reference/common_actions/return.html">Eingabetaste)</a> <img style="vertical-align:middle" src=
+"../2_drag_and_drop_reference/common_actions/images/i_common_return.png"> action), so dass Sie diese zum Beispiel zum Erstellen von Berechnungsmethoden oder zum Zurückgeben einer Instanz-ID nach einer komplexen Kollisionserkennung oder einer beliebigen Anzahl von Dingen verwenden können. Beachten Sie jedoch, dass die <b>Verwendung von return das Skript beendet</b> und keine Aktionen nach der Ausführung ausgeführt werden. Dies bedeutet, dass Sie sich Gedanken darüber machen müssen, wie Ihre Skripts strukturiert sind. </p><p> Unten ist ein Drag &amp; Drop-Skript, das einen Wert zurückgibt: <img class="center" src="images/script_example_return.png" alt="D &amp; D Skript Return Beispiel"></p><p> Das obige Skript überprüft einfach alle Instanzen in einem Raum, um zu sehen, was sie tun <tt>object_index</tt> ist und wenn einer von ihnen das Spielerobjekt ist, wird das Skript zurückkehren <tt>true</tt> (Beenden des Skripts) oder <tt>false</tt>. Sie würden dieses Skript so nennen: <img class="center" src="images/script_call_return.png" alt="Rufen Sie D &amp; D-Skript mit Rückgabewert auf"> Also rufen wir das Skript auf und lassen es eine temporäre (lokale) Variable erzeugen, um den zurückgegebenen Wert zu speichern (was in diesem Fall entweder der Fall ist) <tt>true</tt> oder <tt>false</tt> ), und dann wird diese Variable überprüft und eine Aktion ausgeführt. </p><p> Wenn Sie Ihre DnD™ -Skripte erstellen, können Sie dieselben Aktionen ausführen wie beim Hinzufügen von Aktionen zu einem Objektereignis. Sie können sogar Skripte innerhalb von Skripten aufrufen und auf diese Weise mehr &quot;modularen&quot; Aktionscode erstellen. Skripte, die auf diese Weise erstellt wurden, können Ihnen viel Zeit beim Erstellen der gleichen Action-Sequenzen sparen und dazu beitragen, dass Ihre Action-Sequenzen leichter zu lesen und leichter zu debuggen sind. </p><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Drag &amp; Drop Übersicht</a> </div><div style="float:right"> Weiter: <a href="changing_dnd.html">Drag &amp; Drop auf Code ändern</a> </div></div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

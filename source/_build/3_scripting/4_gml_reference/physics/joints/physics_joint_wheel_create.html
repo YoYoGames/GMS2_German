@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>physics_joint_wheel_create</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/physics/joints/physics_joint_wheel_create.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fphysics%2Fjoints%2Fphysics_joint_wheel_create.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fphysics%2Fjoints%2Fphysics_joint_wheel_create.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h1 class="studio"> physics_joint_wheel_create </h1><h2 class="studio"> Erstellen Sie ein Radgelenk, das zwei Instanzen an einem gemeinsamen Punkt verbindet. </h2><h3 class="studio"> Syntax: </h3><p class="code">physics_joint_wheel_create(inst1, inst2, anchor_x,
+anchor_y, axis_x, axis_y, enableMotor, max_motor_torque,
+motor_speed, freq_hz, damping_ratio, col)<span class="notranslate"></span></p><p><br></p><div class="param"><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">inst1</span> </td> <td> Die erste Instanz zum Verbinden mit dem Gelenk </td></tr><tr class="alt"><td> <span class="notranslate">inst2</span> </td> <td> Die zweite Instanz, um sich mit dem Gelenk zu verbinden </td></tr><tr><td> <span class="notranslate">anchor_x</span> </td> <td> Die x-Koordinate, an der das Gelenk verankert ist, innerhalb der Spielwelt </td></tr><tr class="alt"><td> <span class="notranslate">anchor_y</span> </td> <td> Die y-Koordinate, an der das Gelenk innerhalb der Spielwelt verankert ist </td></tr><tr><td> <span class="notranslate">axis_x</span> </td> <td> Die x-Komponente des Radachsenvektors </td></tr><tr class="alt"><td> <span class="notranslate">axis_y</span> </td> <td> Die y-Komponente des Radachsenvektors </td></tr><tr><td> <span class="notranslate">enableMotor</span> </td> <td> Ob der Motor aktiv sein soll (wahr) oder nicht (falsch) </td></tr><tr class="alt"><td> <span class="notranslate">max_motor_torque</span> </td> <td> Stellt das maximale Motordrehmoment ein, das zum Erreichen der gewünschten Motordrehzahl verwendet wird (in Newton pro Meter) </td></tr><tr><td> <span class="notranslate">motor_speed</span> </td> <td> Dies ist die Geschwindigkeit, mit der sich der Motor drehen sollte </td></tr><tr class="alt"><td> <span class="notranslate">freq_hz</span> </td> <td> Dies ist die Schwingungsfrequenz für das Gelenk, in Hertz </td></tr><tr><td> <span class="notranslate">damping_ratio</span> </td> <td> Dieses Dämpfungsverhältnis für die Verbindung </td></tr><tr class="alt"><td> <span class="notranslate">col</span> </td> <td> Ob die beiden Instanzen kollidieren können (wahr) oder nicht (falsch) </td></tr></table></div><p><br></p><p> <b>Rückgabe:</b> Index des Gelenks </p><p><br></p><h3 class="studio"> Beschreibung </h3><p> Ein Radgelenk kombiniert einfach einen Kolben und ein Drehgelenk, wie ein Rad, das am Stoßdämpfer eines Autos montiert ist. Sie geben den Ankerpunkt für den Gelenkbrunnen an, wenn die beiden physikalisch aktivierten Instanzen sich verbinden, und die erste Instanz wird als &quot;Körper&quot; für das Gelenk fungieren, während der zweite das &quot;Rad&quot; ist und sich frei bewegen darf die gemeinsame Achse. Sie können auch einen Achsenvektor einstellen, der die imaginäre Linie ist, entlang der das Gelenk als &quot;Feder&quot; wirkt, die es dem Rad ermöglicht, auf Hindernisse zu springen (ähnlich wie beim Kolbengelenk). Das folgende Bild zeigt dies: <br><br><img class="center" src="images/wheel_joint_image.png"></p><p> Wenn Sie einen Motor aktivieren, dreht sich die zweite Instanz um die Ankerposition und Sie können das maximale Motordrehmoment für die gewünschte Motordrehzahl (N / m) sowie die Drehzahl für den Motor einstellen. Da das Radgelenk auch eine Achse hat, entlang der es sich bewegen kann, können Sie die Schwingungsfrequenz (in Hz) sowie das Dämpfungsverhältnis für das Gelenk einstellen - Sie müssen möglicherweise mit diesen Werten spielen, um sie fein abzustimmen, und es wird empfohlen Sie beginnen mit kleineren Werten und erhöhen sie, bis Sie den gewünschten Effekt erhalten. <br><br> Wie bei allen Verbindungen, wenn Sie den &quot;col&quot; -Wert auf stellen <tt>true</tt> dann können die beiden Instanzen interagieren und miteinander kollidieren, aber <i>nur</i> wenn sie Kollisionsereignisse haben, wenn sie jedoch auf gesetzt sind <tt>false</tt> sie werden nicht kollidieren, egal was passiert. <br></p><p><br></p><h3 class="studio"> Beispiel: </h3><p class="code">var mainFixture = physics_fixture_create();<br>
+physics_fixture_set_box_shape(mainFixture, 128, 32);<br>
+var wheelFixture = physics_fixture_create();<br>
+physics_fixture_set_circle_shape(wheelFixture, 32);<br>
+var o_id = instance_create_layer(x+25, y + 100, "Instances",
+obj_Wheel);<br>
+physics_fixture_bind(mainFixture, id);<br>
+physics_fixture_bind(wheelFixture, o_id);<br>
+physics_joint_wheel_create(id, o_id, o_id.x, o_id.y, 0, 1, true,
+10, 1, 15, 6, false);<br>
+physics_fixture_delete(mainFixture);<br>
+physics_fixture_delete(wheelFixture);<br><span class="notranslate"></span></p><p> Der obige Code erstellt und definiert zwei neue Fixtures. Diese werden dann an die aufrufende Instanz und an eine neue Instanz gebunden, die erstellt wird, bevor ein Radgelenk angewendet wird, um sie zu verbinden, woraufhin die Vorrichtungen aus dem Speicher gelöscht werden. </p><p><br></p><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Gelenke</a> </div><div style="float:right"> Weiter: <a href=
+"physics_joint_weld_create.html">physics_joint_weld_create</a> </div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

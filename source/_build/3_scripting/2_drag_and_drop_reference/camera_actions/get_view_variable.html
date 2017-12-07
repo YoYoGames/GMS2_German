@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>Get View Variable</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+
+<link rel="stylesheet" href="../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/2_drag_and_drop_reference/camera_actions/get_view_variable.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F2_drag_and_drop_reference%2Fcamera_actions%2Fget_view_variable.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F2_drag_and_drop_reference%2Fcamera_actions%2Fget_view_variable.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h2><img style="vertical-align:middle" src=
+"images/i_cameras_get_view_variable.png"> Erhalten Sie Variable anzeigen </h2><div class="body-scroll"><p><br></p><h3> Beschreibung </h3><blockquote><p> Mit dieser Aktion können Sie den Wert bestimmter integrierter Variablen abrufen, die sich auf einen bestimmten <b>Anzeige-Port</b> beziehen. Sie wählen die View-Port-Variable aus, die abgerufen werden soll, geben dann den View-Port zum Ziel (von 0 bis 7) und schließlich die Zielvariable für den zurückgegebenen Wert (dies kann als temporäre lokale Variable gekennzeichnet werden). Der Ansichtsport ist der Bereich des Bildschirms, der zum Zeichnen einer bestimmten Kameraansicht verwendet wird (wie im Raumeditor eingerichtet). Die verschiedenen Variablen, die Sie auf diese Weise erhalten können, sind in der folgenden Tabelle aufgeführt: </p><div class="compat"><table><tr><th> Variable </th><th> Beschreibung </th></tr><tr><td> Kamera </td><td> Der zurückgegebene Wert wird der eindeutige ID - Wert der Kamera sein, um den Hafen zu vergeben (siehe <a href=
+"../../4_gml_reference/cameras%20and%20display/cameras/index.html">hier</a> für weitere Informationen). </td></tr><tr class="alt"><td> Sichtweite </td><td> Dies ergibt einen Wert von <tt>true</tt> oder <tt>false</tt> woher <tt>true</tt> ist, dass der Ansichtsport sichtbar ist (dh: er wird auf den Bildschirm gezeichnet), und <tt>false</tt> was bedeutet, dass nichts gezeichnet wird. </td></tr><tr><td> Zeigen Sie Port X-Koordinate an </td><td> Dies ist die X-Position des Ansichts-Ports innerhalb des Spielfensters. </td></tr><tr class="alt"><td> Zeigen Sie Y-Koordinate an </td><td> Dies ist die Y-Position des View-Ports innerhalb des Spielfensters. </td></tr><tr><td> Portbreite anzeigen </td><td> Dies ist die Breite (in Pixeln) des Ansichtsanschlusses. </td></tr><tr class="alt"><td> Porthöhe anzeigen </td><td> Dies ist die Höhe (in Pixel) des Ansichtsanschlusses. </td></tr><tr><td> Zeigen Sie die Port-Oberflächen-ID an </td><td> Dies gibt den eindeutigen ID-Wert für die Oberfläche zurück, die dem Ansichtsport zugewiesen ist, oder -1, wenn keine Oberfläche zugewiesen wurde. </td></tr></table></div></blockquote><p><br></p><h3> Aktionssyntax: </h3><img class="center" src="images/a_cameras_get_view_variable.png"
+alt="Erhalten Sie Variablensyntax anzeigen"><p><br></p><h3> Argumente: </h3><blockquote><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">Variable</span> </td> <td> Die integrierte Ansicht Variable zu bekommen </td></tr><tr class="alt"><td> <span class="notranslate">View</span> </td> <td> Der View-Port zum Targeting (von 0 - 7) </td></tr><tr><td> <span class="notranslate">Target</span> </td> <td> Die Zielvariable, die den zurückgegebenen Wert enthält (kann als temporäre lokale Variable gekennzeichnet werden) </td></tr></table></blockquote><p><br></p><h3> Beispiel: </h3><img class="center" src="images/e_cameras_get_view_variable.png"
+alt="Beispiel für Variablen anzeigen"><blockquote> Der obige Aktionsblockcode ruft die aktuelle Kamera-ID ab, die dem Anzeigeport [0] zugewiesen wurde, und prüft dann, ob sie mit der in einer globalen Variablen gespeicherten identisch ist. Ist dies nicht der Fall, ist die Kamera auf die neue Kamera eingestellt. </blockquote><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Kameraaktionen</a> </div><div style="float:right"> next: <a href="set_view_variable.html">Setze Ansichtsvariable</a> </div></div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

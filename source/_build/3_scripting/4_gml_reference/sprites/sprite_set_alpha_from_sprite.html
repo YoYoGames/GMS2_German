@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>sprite_set_alpha_from_sprite</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/sprites/sprite_set_alpha_from_sprite.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fsprites%2Fsprite_set_alpha_from_sprite.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fsprites%2Fsprite_set_alpha_from_sprite.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h2> sprite_set_alpha_from_sprite </h2><div class="body-scroll"><p><br></p><h3> Syntax: </h3><p class="code">sprite_set_alpha_from_sprite(ind, spr);<span class="notranslate"></span></p><blockquote><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">ind</span> </td> <td> Der Index des Sprites zum Ändern der Transparenzkarte von. </td></tr><tr class="alt"><td> <span class="notranslate">spr</span> </td> <td> Der Index des Sprites, von dem die Transparenzkartendaten übernommen werden sollen. </td></tr></table></blockquote><p><br></p><h3> Kehrt zurück </h3><p class="code">N/A<span class="notranslate"></span></p><p><br></p><h3> Beschreibung </h3><blockquote><p> Diese Funktion verwendet den Wert / die Sättigung eines Sprites und multipliziert es mit dem Alpha des Ziel-Sprites. Idealerweise sollte das Sprite, das zum Erzeugen der neuen Alpha-Map verwendet wird, Graustufen sein, wobei die weißen Bereiche einen äquivalenten Alpha-Wert von 1 (undurchsichtig) haben, die schwarzen Bereiche Alpha 0 (transparent) entsprechen und die grauen Bereiche ein Alpha-In zwischen 0 und 1. Das Sprite, für das Sie das Alpha festlegen, <i>kann weder eine permanente Ressource sein</i>, noch kann das Sprite, mit dem Sie das Alpha festlegen, verwendet werden, da dies zu einem Fehler führt. Dies bedeutet, dass Sie zwei völlig neue Sprites &quot;on the fly&quot; erstellen müssen, damit die Funktion korrekt funktioniert. Dies kann durch die Verwendung von Oberflächen oder durch Erstellen eines Sprites auf dem Bildschirm erreicht werden (das Codebeispiel unten zeigt, wie der Effekt mit Oberflächen erzielt werden kann). </p><div class="note"> <b>HINWEIS:</b> Diese Funktion ist nur für <b>Bitmap-</b> Sprites und nicht für SWF- oder JSON (Spine) -Sprites geeignet. </div><p><br> Unten ist ein Bild, das zeigt, wie diese Funktion funktioniert: <img class="center" src="spr_alpha.png"></p></blockquote><p><br></p><h3> Erweitertes Beispiel: </h3><blockquote><p> In diesem erweiterten Beispiel zeigen wir, wie Sie aus zwei Sprite-Ressourcen ein Spezialeffekt-Sprite erstellen können. Zu Beginn benötigen wir eine Controller-Variable im <b>Create Event</b> der Instanz. Diese Variable soll sicherstellen, dass das Sprite nur einmal erstellt wird: </p></blockquote><p class="code">spr_create = true;<span class="notranslate"></span></p><blockquote><p> Sobald das erledigt ist, müssen wir dann zum <b>Draw Event gehen</b> und diesen Code hinzufügen: </p></blockquote><p class="code">if spr_create<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;spr_create = false;<br>
+&nbsp;&nbsp;&nbsp;var surf, spr;<br>
+&nbsp;&nbsp;&nbsp;surf =
+surface_create(sprite_get_width(spr_Explosion_Alpha),
+sprite_get_height(spr_Explosion_Alpha));<br>
+&nbsp;&nbsp;&nbsp;surface_set_target(surf);<br>
+&nbsp;&nbsp;&nbsp;draw_clear_alpha(c_black, 0);<br>
+&nbsp;&nbsp;&nbsp;draw_sprite(spr_Gradient, 0, 0, 0);<br>
+&nbsp;&nbsp;&nbsp;sprite_index = sprite_create_from_surface(surf,
+0, 0, sprite_width, sprite_height, false, false,
+sprite_get_xoffset(spr_Gradient),
+sprite_get_xoffset(spr_Gradient));<br>
+&nbsp;&nbsp;&nbsp;draw_clear_alpha(c_black, 0);<br>
+&nbsp;&nbsp;&nbsp;draw_sprite(spr_Explosion_Alpha, 0,
+sprite_get_xoffset(spr_Gradient),
+sprite_get_xoffset(spr_Gradient));<br>
+&nbsp;&nbsp;&nbsp;spr = sprite_create_from_surface(surf, 0, 0,
+sprite_width, sprite_height, false, false,
+sprite_get_xoffset(spr_Gradient),
+sprite_get_xoffset(spr_Gradient));<br>
+&nbsp;&nbsp;&nbsp;surface_reset_target();<br>
+&nbsp;&nbsp;&nbsp;surface_free(surf);<br>
+&nbsp;&nbsp;&nbsp;sprite_set_alpha_from_sprite(sprite_index,
+spr);<br>
+&nbsp;&nbsp;&nbsp;sprite_delete(spr);<br>
+&nbsp;&nbsp;&nbsp;}<br>
+draw_sprite(sprite_index, 0, x, y);<br><span class="notranslate"></span></p><blockquote><p> Der obige Code prüft zuerst, ob die Steuervariable wahr ist oder nicht, und wenn dies der Fall ist, führt er den Code zum Setzen des Sprite-Alphas aus und setzt die Variable auf false, um zu verhindern, dass der Code mehr als einmal ausgeführt wird. In diesem Fall erstellt es eine Oberfläche mit der Größe der Alphamaske, die wir verwenden möchten, und zeichnet dann das Sprite, dessen Alpha geändert werden soll, auf die Oberfläche und erstellt daraus ein neues Sprite, das als das Symbol zugewiesen wird <tt>sprite_index</tt> des Objekts. Der Code löscht dann die Oberfläche und zeichnet das Alpha-Map-Sprite darauf und erstellt ein weiteres neues Sprite, das seinen Index in einer lokalen Variablen speichert. Schließlich erhält das neue Sprite, das dem Objekt zugewiesen wurde, seinen Alpha-Satz von diesem temporären Sprite, die Oberfläche wird freigegeben und das temporäre Sprite wird entfernt. </p><p> Hier ist eine letzte Sache zu tun, und das ist das Entfernen des Sprites, das für das Objekt aus dem Speicher erstellt wurde, wenn es nicht verwendet wird. Dies würde entweder im <b>Destroy Event</b> oder im <b>Room End Event</b> wie <b>folgt</b> geschehen: </p></blockquote><p class="code">sprite_delete(sprite_index);<br><span class="notranslate"></span></p><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Zurück: <a href=
+"index.html">Sprites</a> </div><div style="float:right"> Weiter: <a href=
+"sprite_set_cache_size.html">sprite_set_cache_size</a> </div></div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

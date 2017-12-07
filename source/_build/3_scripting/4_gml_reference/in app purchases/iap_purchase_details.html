@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>iap_purchase_details</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/in app purchases/iap_purchase_details.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fin%20app%20purchases%2Fiap_purchase_details.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fin%20app%20purchases%2Fiap_purchase_details.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h1 class="studio"> iap_purchase_details </h1><h2 class="studio"> Hinzufügen von Einkaufsdetails eines einzelnen Produkts zu einer ds_map </h2><h3 class="studio"> Syntax: </h3><p class="code">iap_purchase_details(product_id, ds_map);<span class="notranslate"></span></p><p><br></p><div class="param"><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">product_id</span> </td> <td> Die Produkt-ID-Zeichenfolge für den Kauf. </td></tr><tr class="alt"><td> <span class="notranslate">ds_map</span> </td> <td> Die ds_map, die die Kaufinformationen speichert. </td></tr></table></div><p><br></p><p> <b>Rückkehr:</b> N / A </p><p><br></p><h3 class="studio"> Beschreibung </h3><p> Mit dieser Funktion können Sie ein zuvor erstelltes Objekt auffüllen <a href="../data_structures/ds%20maps/index.html"><tt>ds_map</tt></a> mit einer Anzahl von Schlüssel / Wert-Paaren, die die Kaufdetails des gegebenen Produkts beschreiben. Die folgenden Daten werden in der Karte zurückgegeben: </p><blockquote><ul><li> &quot; <b>Produkt</b> &quot; - Die Produkt-ID-Zeichenfolge. <br><br></li><li> &quot; <b>Bestellung</b> &quot; - Die eindeutige Bestell-ID, sofern verfügbar (nicht alle Shops unterstützen dies). <br><br></li><li> &quot; <b>Token</b> &quot; - Die Einkaufstokenkette, sofern verfügbar (nicht alle Filialen unterstützen dies). <br><br></li><li> &quot; <b>Payload</b> &quot; - Die vom Zielspeicher zurückgegebene Payload, sofern verfügbar (nicht alle Käufe erfordern dies, und nicht alle Shops unterstützen dies). <br><br></li><li> &quot; <b>Quittung</b> &quot; - Die Quittungszeichenfolge, sofern verfügbar (nicht alle Filialen unterstützen dies). <br><br></li><li> <b>„Antwort“</b> - Ein Antwortwert (als reelle Zahl), soweit verfügbar, auf der Grundlage der Antwortwerte von Google Play (siehe <a href=
+"http://developer.android.com/google/play/billing/billing_reference.html"
+target="_blank">hier</a> für weitere Details). </li></ul></blockquote><p> Die Karte enthält außerdem einen weiteren Schlüssel, &quot; <b>Status</b> &quot;, mit dem der aktuelle Status des Kaufs überprüft werden kann. Dieser Schlüssel hat eine der folgenden Konstanten als Wert: <br><br></p><div class="compat"><table><tr><th> Konstante </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">iap_available</span> </td> <td> Das Produkt ist verfügbar oder das Spiel wartet auf das Ergebnis eines Kaufs. </td></tr><tr class="alt"><td> <span class="notranslate">iap_failed</span> </td> <td> Der Kaufversuch ist fehlgeschlagen. </td></tr><tr><td> <span class="notranslate">iap_purchased</span> </td> <td> Das Produkt wurde erfolgreich erworben. </td></tr><tr class="alt"><td> <span class="notranslate">iap_canceled</span> </td> <td> Der Nutzer hat den Kauf storniert. </td></tr><tr><td> <span class="notranslate">iap_refunded</span> </td> <td> Der Kauf wurde storniert. </td></tr></table></div><p><br><br> Die folgenden Hinweise beziehen sich auf die Schlüssel &quot;token&quot; und &quot;receipt&quot; der Map, die in Bezug auf den verwendeten Zielspeicher zurückgegeben werden: </p><blockquote><ol><li> Für den <b><span class="notranslate">Amazon</span> Store werden</b> die Kauf- &quot;Token&quot; und &quot;Quittungs&quot; -Einträge als ein und dasselbe behandelt. <br><br></li><li> Für <b>Google Play</b> gibt es keine &quot;Quittungs&quot; -Daten und es wird von Ihnen erwartet, dass Sie die Käufe über die zurückgegebenen &quot;Payloads&quot; verifizieren (sollten Sie über eine Payload verifizieren, wird empfohlen, dass Sie keine hartcodierten Werte verwenden). <i><span class="notranslate">GameMaker Studio 2</span></i> überprüft weiterhin die bei einem Kauf durch Google Play zurückgegebene Datensignatur mit dem öffentlichen Schlüssel, der auf der Registerkarte &quot; <b>IAP&quot;</b> der <b>Spieloptionen angegeben ist</b>. <br><br></li><li> Bei <b>Google Play ist</b> das mit einem Kauf versehene &quot;Token&quot; zur Verwendung mit konsumierenden Käufen gedacht. <br><br></li><li> Für <b>iOS-</b>, <b>MacOS-</b>, <b><span class="notranslate">Windows 8</span> (N und JS) -</b> und <b><span class="notranslate">Windows Phone</span></b> Zielspeicher gibt es &quot;Empfangsdaten&quot; für Einkäufe, aber das zugehörige &quot;Token&quot; wird <i>intern</i> für Entwicklerzwecke generiert. </li></ol></blockquote><p><br><br> <i><b>HINWEIS:</b> Die <tt>ds_map</tt> used wird <b>nicht</b> von der Funktion erstellt, dh Sie müssen es zuvor erstellen und es aus dem Speicher entfernen, wenn es nicht mit der entsprechenden Funktion verwendet wird.</i> <br><br></p><p><br></p><h3 class="studio"> Beispiel: </h3><p class="code">var p_map = ds_map_create();<br>
+var p_index = ds_map_find_value(iap_data, "index");<br>
+iap_purchase_details(p_index, p_map);<br>
+if ds_map_find_value(p_map, "status") == iap_purchased<br>
+&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;global.Gold += 100000;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+ds_map_destroy(p_map);<br><span class="notranslate"></span></p><p> Der obige Code erstellt eine ds_map und füllt sie dann mit den Schlüssel / Wert-Paaren für den Kauf mit der Produkt-ID, die in der Variablen &quot;p_index&quot; gespeichert ist, die wir von der speziellen erhalten <tt>iap_data</tt> ds_map, die ausschließlich im <b>IAP-Event erstellt wird</b>. Wenn die Taste &quot;Status&quot; die Konstante zurückgibt <tt>iap_purchased</tt> Dann wird eine globale Variable festgelegt. </p><p><br></p><div class="clear"><div style="float:left"> Zurück: <a href="index.html">In App-Käufen</a> </div><div style="float:right"> Nächstes: <a href=
+"iap_activate.html">iap_activate</a> </div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

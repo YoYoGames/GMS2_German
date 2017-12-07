@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>physics_joint_revolute_create</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/physics/joints/physics_joint_revolute_create.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fphysics%2Fjoints%2Fphysics_joint_revolute_create.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fphysics%2Fjoints%2Fphysics_joint_revolute_create.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h1 class="studio"> physics_joint_revolute_create </h1><h2 class="studio"> Erstellen Sie ein Drehgelenk, das zwei Instanzen an einem gemeinsamen Punkt verbindet. </h2><h3 class="studio"> Syntax: </h3><p class="code">physics_joint_revolute_create(inst1, inst2,
+w_anchor_x, w_anchor_y, ang_min_limt, ang_max_limit, ang_limit,
+max_motor_torque, motor_speed, motor, col)<span class="notranslate"></span></p><p><br></p><div class="param"><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">inst1</span> </td> <td> Die erste Instanz zum Verbinden mit dem Gelenk </td></tr><tr class="alt"><td> <span class="notranslate">inst2</span> </td> <td> Die zweite Instanz, um sich mit dem Gelenk zu verbinden </td></tr><tr><td> <span class="notranslate">w_anchor_x</span> </td> <td> Die x-Koordinate für das Gelenk innerhalb der Spielwelt </td></tr><tr class="alt"><td> <span class="notranslate">w_anchor_y</span> </td> <td> Die y-Koordinate für das Gelenk innerhalb der Spielwelt </td></tr><tr><td> <span class="notranslate">ang_min_limit</span> </td> <td> Die untere zulässige Grenze für den Gelenkwinkel </td></tr><tr class="alt"><td> <span class="notranslate">ang_max_limit</span> </td> <td> Die obere zulässige Grenze für den Gelenkwinkel </td></tr><tr><td> <span class="notranslate">ang_limit</span> </td> <td> Ob der Winkel der Verbindung zu begrenzen (wahr) oder nicht (falsch) </td></tr><tr class="alt"><td> <span class="notranslate">max_motor_torque</span> </td> <td> Stellt das maximale Motordrehmoment ein, das zum Erreichen der gewünschten Motordrehzahl verwendet wird (in Newton pro Meter) </td></tr><tr><td> <span class="notranslate">motor_speed</span> </td> <td> Dies ist die Geschwindigkeit, mit der sich der Motor drehen sollte </td></tr><tr class="alt"><td> <span class="notranslate">motor</span> </td> <td> Ob der Motor aktiv sein soll (wahr) oder nicht (falsch) </td></tr><tr><td> <span class="notranslate">col</span> </td> <td> Ob die beiden Instanzen kollidieren können (wahr) oder nicht (falsch) </td></tr></table></div><p><br></p><p> <b>Rückgabe:</b> Index des Gelenks </p><p><br></p><h3 class="studio"> Beschreibung </h3><p> Ein Drehgelenk zwingt zwei Körper, einen gemeinsamen Ankerpunkt zu teilen (oft Gelenkpunkt genannt) und das Gelenk hat einen einzigen Freiheitsgrad - die relative Rotation der beiden Körper um diesen Punkt. Um eine Drehung zu spezifizieren, müssen Sie zwei Instanzen und einen einzelnen Ankerpunkt im Raum bereitstellen, wie Sie auf dem Bild sehen können: <br><br><img class="center" src="images/revolute_joint_image_1.png"></p><p> Wenn Sie sich das Bild ansehen, können Sie sehen, dass die beiden Instanzen zum Überlappen erstellt wurden und an dem Punkt, an dem sie sich berühren, haben wir ein Drehgelenk definiert. Jetzt kann dieses Gelenk durch die Werte &quot;ang_min_limit&quot; und &quot;ang_max_limit&quot; in seiner Rotationsfreiheit eingeschränkt werden. Wie funktioniert das? Nun, schauen wir uns ein anderes Bild an: <br><br><img class="center" src="images/revolute_joint_image_2.png"></p><p> Wie du sehen kannst, sind die Winkel in der Physikwelt <i>nicht</i> die gleichen wie in den Standardwinkeln von <i><span class="notranslate">GameMaker Studio 2</span></i> wo rechts 0 Grad ist und dann gegen den Uhrzeigersinn, also oben 90, links 180 und unten 270 ist. Nein, Bei der Drehung des Drehgelenks verläuft die 0 ° -Achse von der Gelenkposition zum Ursprung der zweiten durch die Funktion definierten Instanz und die Winkel werden dann im Uhrzeigersinn berechnet. Wenn Sie die Winkelbegrenzung einschalten, werden die Grenzen als relativ zu dieser 0-Grad-Achse definiert und der Grenzbereich <i>sollte Null umfassen</i>, da andernfalls die Verbindung beim Start des Raums schlingern wird. Schließlich können Sie definieren, ob das Gelenk einen Motor hat oder nicht. Dies bedeutet, dass sich das Gelenk bei unbeeinflusster Kollision in eine Richtung bewegt, die durch die Motordrehzahl definiert ist, wobei eine positive Zahl im Uhrzeigersinn und eine negative Zahl im Gegenuhrzeigersinn steht. Das Argument &quot;max_motor_torque&quot; dient dazu, die Drehzahl so zu begrenzen, dass Sie keinen ständig beschleunigenden Motor bekommen und den Einfluss einer Kollision auf die Drehung begrenzen. Auf diese Weise können Sie mit einem Gelenkmotor die Gelenkreibung simulieren, indem Sie die Gelenkgeschwindigkeit auf Null und das maximale Drehmoment auf einen kleinen, aber signifikanten Wert einstellen. Der Motor wird versuchen, zu verhindern, dass sich die Verbindung dreht, wird jedoch zu einer signifikanten Last führen. <br><br> Wie bei allen Verbindungen, wenn Sie den &quot;col&quot; -Wert auf stellen <tt>true</tt> dann können die beiden Instanzen interagieren und miteinander kollidieren, aber <i>nur</i> wenn sie Kollisionsereignisse haben, wenn sie jedoch auf gesetzt sind <tt>false</tt> sie werden nicht kollidieren, egal was passiert. <br></p><p><br></p><h3 class="studio"> Beispiel: </h3><p class="code">var mainFixture, o_id;<br>
+mainFixture = physics_fixture_create();<br>
+physics_fixture_set_circle_shape(mainFixture,
+sprite_get_width(sprite_index) / 2);<br>
+o_id=instance_create_layer(x+25, y, "Instances", obj_Door);<br>
+physics_fixture_bind(mainFixture, id);<br>
+physics_fixture_bind(mainFixture, o_id);<br>
+physics_joint_revolute_create(id, o_id, x+25, y, -90, 90, 1, 0, 0,
+0, 0);<br>
+physics_fixture_delete(mainFixture);<br><span class="notranslate"></span></p><p> Der obige Code erzeugt und definiert ein neues Fixture und erzeugt dann eine Instanz von &quot;obj_Door&quot;, wobei das erzeugte Fixture an die zwei neuen Objekte gebunden wird. Sie werden dann durch ein Drehgelenk ohne Motor verbunden und die Winkel auf +/- 90 Grad begrenzt. Schließlich wird das Fixture gelöscht, da es nicht mehr benötigt wird. </p><p><br></p><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Gelenke</a> </div><div style="float:right"> Weiter: <a href=
+"physics_joint_prismatic_create.html">physics_joint_prismatic_create</a> </div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

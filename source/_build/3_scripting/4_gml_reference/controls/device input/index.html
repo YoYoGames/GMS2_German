@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>Device Input</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/controls/device input/index.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fcontrols%2Fdevice%20input%2Findex.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fcontrols%2Fdevice%20input%2Findex.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h2> Geräteeingabe </h2><div class="body-scroll"><p><br></p><p> Wenn Ihr Spiel auf Plattformen ausgerichtet ist, die Multitouch erlauben, sollten Sie diese Funktionen verwenden. Sie funktionieren genauso wie ein PC, wenn mehrere Mäuse angeschlossen wären und die Konstanten, nach denen gesucht wird, dieselben sind wie die für die <a href="../mouse%20input/index.html">Standardmausfunktionen</a>: <br><br></p><div class="compat"><table><tr><th> Konstante </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">mb_left</span> </td> <td> Die linke Maustaste </td></tr><tr class="alt"><td> <span class="notranslate">mb_middle</span> </td> <td> Die mittlere Maustaste (dies ist möglicherweise nicht für alle Zielplattformen gültig) </td></tr><tr><td> <span class="notranslate">mb_right</span> </td> <td> Die rechte Maustaste </td></tr><tr class="alt"><td> <span class="notranslate">mb_none</span> </td> <td> Keine Maustaste </td></tr><tr><td> <span class="notranslate">mb_any</span> </td> <td> Irgendeine der Maustasten </td></tr></table></div><p><br> Die Funktionen können alle einen &quot;Berührungs-&quot; Wert annehmen, der einer Berührung auf der Geräteanzeige entspricht, jedoch hängt die maximale Anzahl von Berührungen, die erkannt werden können, sehr von dem Gerät und dem Betriebssystem ab, das ausgeführt wird. Zum Beispiel können einige Low-End- <span class="notranslate">Android</span> Geräte möglicherweise nur 2 oder 3 Berührungen gleichzeitig erkennen, während ein UWP-Gerät möglicherweise bis zu 10 erkennen kann. Beachten Sie auch, dass auf Touchscreen-Geräten ein Doppeltippen als zurückgegeben wird das Äquivalent eines Ereignisses mit der <b>rechten Maustaste</b>. Wenn Sie z. B. mehrere aufeinander folgende Taps in schneller Folge erkennen müssen, müssen Sie nach <b>beiden</b> suchen <tt>mb_left</tt> und <tt>mb_right</tt>. Diese Funktionalität kann mit aktiviert oder deaktiviert werden <a href=
+"device_mouse_dbclick_enable.html"><tt>device_mouse_dbclick_enable</tt></a>. </p><p> Im Folgenden finden Sie eine Liste aller gerätespezifischen Steuerungsfunktionen: </p><blockquote><ol><li> <a href=
+"device_mouse_check_button.html">device_mouse_check_button</a> <br></li><li> <a href=
+"device_mouse_check_button_pressed.html">device_mouse_check_button_pressed</a> <br></li><li> <a href=
+"device_mouse_check_button_released.html">device_mouse_check_button_released</a> <br></li><li> <a href=
+"device_mouse_dbclick_enable.html">device_mouse_dbclick_enable</a> <br></li><li> <a href="device_mouse_x.html">device_mouse_x</a> <br></li><li> <a href="device_mouse_y.html">device_mouse_y</a> <br></li><li> <a href="device_mouse_raw_x.html">device_mouse_raw_x</a> <br></li><li> <a href="device_mouse_raw_y.html">device_mouse_raw_y</a> <br></li><li> <a href=
+"device_mouse_x_to_gui.html">device_mouse_x_to_gui</a> <br></li><li> <a href=
+"device_mouse_y_to_gui.html">device_mouse_y_to_gui</a> <br></li><li> <a href=
+"device_is_keypad_open.html">device_is_keypad_open</a> <br></li><li> <a href="device_get_tilt_x.html">device_get_tilt_x</a> <br></li><li> <a href="device_get_tilt_y.html">device_get_tilt_y</a> <br></li><li> <a href="device_get_tilt_z.html">device_get_tilt_z</a> <br></li></ol></blockquote><p> Bitte beachten Sie, dass auf mobilen Geräten ( <span class="notranslate">Android</span>, iOS und Windows Phone), können Sie die Zurück - Taste jederzeit verwenden, da es auf der Tastatur <b>Backspace</b> abgebildet wird, die das ist <i><span class="notranslate">GameMaker Studio</span> 2</i> <a href="../keyboard%20input/index.html">Tastatur konstant</a> <tt>vk_backspace</tt> Sie können also Prüfungen für diesen Schlüssel durchführen und auf diesen Geräten Aktionen ausführen, als ob die Zurück-Schaltfläche verwendet wurde. </p><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Zurück: <a href=
+"../index.html">Kontrollen</a> </div><div style="float:right"> Weiter: <a href=
+"../gesture%20input/index.html">Gesteneingabe</a> </div></div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

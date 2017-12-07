@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>Audio Buffers</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/audio/audio buffers.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Faudio%2Faudio%20buffers.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Faudio%2Faudio%20buffers.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h2> Audio-Puffer </h2><div class="body-scroll"><p><br></p><p> Sie können <b>Audiopuffer verwenden</b>, um Audiodateien in Ihren Spielen zu laden, zu speichern und zu bearbeiten. Diese Puffer werden zuvor mit den entsprechenden <a href="../buffers/index.html">Pufferfunktionen erstellt.</a> Anschließend können Sie mit den folgenden Funktionen einen Sound für Ihr Projekt erstellen: </p><blockquote><ol><li> <a href=
+"audio_create_buffer_sound.html">audio_create_buffer_sound</a> </li><li> <a href=
+"audio_free_buffer_sound.html">audio_free_buffer_sound</a> </li></ol></blockquote><p> Beachten Sie, dass Sie nach dem Erstellen eines Sounds aus einem Audiopuffer <i>keinen</i> neuen Sound im Speicher erstellen, sondern auf die Position innerhalb des Puffers zeigen, in dem der Sound gespeichert ist. Sie sollten diesen Puffer nicht ändern, nachdem ihm ein Sound zugeordnet wurde. Andernfalls werden unerwartete Ergebnisse angezeigt, und Sie können den Puffer nicht löschen, solange ihm ein Sound zugeordnet ist. Geben Sie stattdessen zuerst den Ton (oder die Töne) frei und löschen Sie dann den Puffer. Sobald Sie Ihre neue Audio-Ressource aus einem Puffer erstellt haben, können Sie ihren Index-Wert in einer der normalen Audio-Funktionen verwenden, um sie zu spielen, ändern Sie die Verstärkung oder Tonhöhe, pausieren Sie es, etc... Beachten Sie, dass der Puffer zum Laden der Audio <b>kann nur PCM-Sounds unterstützen</b>, daher werden Formate wie OGG nicht unterstützt. <br><br> Eine weitere Funktion von gepuffertem Audio besteht darin, dass Sie mit einem Puffer eine Audiowarteschlange erstellen können, die dann auf das Gerät gestreamt wird, auf dem Ihr Projekt ausgeführt wird. Eine Audio-Warteschlange nimmt einen regulären Puffer, den Sie zuvor mit Audiodaten gefüllt haben, und ermöglicht es Ihnen, auf Teile davon &quot;zu zeigen&quot; und <i><span class="notranslate">GameMaker Studio 2</span></i>: Studio anzuweisen, das Audio in einer bestimmten Reihenfolge aus diesem Puffer zu streamen. Die verfügbaren Funktionen für Audio-Warteschlangen sind: </p><blockquote><ol><li> <a href=
+"audio_create_play_queue.html">audio_create_play_queue</a> </li><li> <a href="audio_free_play_queue.html">audio_free_play_queue</a> </li><li> <a href="audio_queue_sound.html">audio_queue_sound</a> </li></ol></blockquote><p> Sobald eine Warteschlange erstellt wurde, können Sie den zurückgegebenen Warteschlangenindex genauso wie den Soundindex für jeden normalen Sound verwenden, um ihn wiederzugeben, ihn anzuhalten, neu zu starten oder seine Verstärkung und Tonhöhe zu ändern. Das einzige, was Sie nicht tun können, ist die Spurlänge oder die Spurposition zu bestimmen, aber ansonsten kann eine Audiowarteschlange wie jeder andere Sound verwendet werden. Sie sollten auch beachten, dass einige der Audio-Warteschlangenfunktionen auch ein <a href=
+"../../../2_interface/1_editors/events/async_events.html">asynchrones</a> Audiowiedergabeereignis auslösen. <br><br> Audio-Puffer ermöglichen es Ihnen auch, Ton von einer der verfügbaren Quellen (wie Mikrofonen oder dem Betriebssystem) aufzunehmen, die dann unter Verwendung der obigen Funktionen in eine Warteschlange eingereiht und gestreamt werden können (zum Beispiel). Das Aufzeichnen von Audio löst ein <a href=
+"../../../2_interface/1_editors/events/async_events.html">Asynchrones</a> Audioaufzeichnungs- <a href=
+"../../../2_interface/1_editors/events/async_events.html">Ereignis aus,</a> das spezifische Informationen darüber enthält, was aufgezeichnet wird. <br><br> Für die Audioaufnahme stehen folgende Funktionen zur Verfügung: </p><blockquote><ol><li> <a href="audio_start_recording.html">audio_start_recording</a> </li><li> <a href="audio_stop_recording.html">audio_stopp_aufzeichnung</a> </li><li> <a href=
+"audio_get_recorder_count.html">audio_get_recorder_count</a> </li><li> <a href=
+"audio_get_recorder_info.html">audio_get_recorder_info</a> </li></ol></blockquote><div class="note"> <b>HINWEIS:</b> Die meisten Plattformen unterstützen die Aufnahme von Audio in irgendeiner Form, aber das bedeutet nicht, dass alle Geräte dies zulassen, selbst wenn die Plattform dies tut <a href=
+"audio_get_recorder_count.html"><tt>audio_get_recorder_count()</tt></a> Die Funktion gibt einen Wert größer als 0 zurück, um zu überprüfen, ob Aufzeichnungsgeräte verfügbar sind, bevor die übrigen Aufzeichnungsfunktionen verwendet werden. </div><p><br></p><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Audio</a> </div><div style="float:right"> Weiter: <a href=
+"audio%20synchronisation.html">Audiosynchronisierung</a> </div></div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

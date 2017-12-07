@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>Shader Constants</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/shaders/shader constants/index.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fshaders%2Fshader%20constants%2Findex.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fshaders%2Fshader%20constants%2Findex.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h1 class="studio"> Shader Konstanten </h1><h2 class="studio"> In diesem Abschnitt werden die <i><span class="notranslate">GameMaker Studio 2</span></i> spezifischen Konstanten aufgeführt, die zum Erstellen von Shadern verwendet werden. </h2><p> Neben den Shader-Funktionen und -Konstanten, die auf den GLSL ES- <a href=
+"http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf"
+target="_blank">Referenzseiten definiert wurden</a>, stehen Ihnen auch eine Reihe von Shader-Konstanten zur Verfügung, die nur für <i><span class="notranslate">GameMaker</span> Studio 2 zur Verfügung stehen</i>. <br><br></p><h3 class="studio"> Matrizen </h3><p> Die folgenden Anzeigematrixkonstanten können als Array-Indizes verwendet werden, wenn die Shader-Array-Konstante verwendet wird <tt>gm_Matrices</tt>: </p><div class="compat"><table><tr><th> Konstante </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">MATRIX_VIEW</span> </td> <td> Diese Array-Indexkonstante hält den Index in der aktuellen Ansichtsmatrix. Der zurückgegebene Index wird beim Aufruf von <tt>gm_Matrices</tt> Konstante innerhalb des Shader-Codes. </td></tr><tr class="alt"><td> <span class="notranslate">MATRIX_PROJECTION</span> </td> <td> Diese Array-Indexkonstante hält den Index auf der aktuellen Projektionsmatrix. Der zurückgegebene Index wird beim Aufruf von <tt>gm_Matrices</tt> Konstante innerhalb des Shader-Codes. </td></tr><tr><td> <span class="notranslate">MATRIX_WORLD</span> </td> <td> Diese Array-Indexkonstante hält den Index zur aktuellen Weltmatrix. Dies kann für Dinge wie Beleuchtung verwendet werden, wenn Sie Lichtinformationen im Welt-Raum haben. Der zurückgegebene Index wird beim Aufruf von <tt>gm_Matrices</tt> Konstante innerhalb des Shader-Codes. </td></tr><tr class="alt"><td> <span class="notranslate">MATRIX_WORLD_VIEW</span> </td> <td> Diese Array-Index-Konstante enthält den Index für das Ergebnis der Welt- und View-Matrizen, die miteinander multipliziert werden. Dies wird oft für Dinge wie Nebel verwendet. Der zurückgegebene Index wird beim Aufruf von <tt>gm_Matrices</tt> Konstante innerhalb des Shader-Codes. </td></tr><tr><td> <span class="notranslate">MATRIX_WORLD_VIEW_PROJECTION</span> </td> <td> Diese Array-Index-Konstante enthält den Index für das Ergebnis der Welt-, Ansichts- und Projektionsmatrizen, die miteinander multipliziert werden. Dies ist die normale Transformationsmatrix, die für Vertexpositionen verwendet wird. Der zurückgegebene Index wird beim Aufruf von <tt>gm_Matrices</tt> Konstante innerhalb des Shader-Codes. </td></tr><tr class="alt"><td> <span class="notranslate">MATRIX_MAX</span> </td> <td> Dies ist kein Array-Index, sondern gibt die Größe des Matrix-Arrays im Vertex-Shader zurück. </td></tr><tr><td> <span class="notranslate">MAX_VS_LIGHTS</span> </td> <td> Dies ist kein Array-Index, sondern gibt die Anzahl der Lichter im Vertex-Shader zurück. </td></tr></table></div><h3 class="studio"> Andere Konstanten </h3><p> Die folgenden vordefinierten Matrix-Uniformen und -Konstanten können in Ihrem Shader verwendet werden, um auf <i><span class="notranslate">GameMaker Studio 2</span></i> spezifische Werte zuzugreifen: </p><div class="compat"><table><tr><th> Konstante </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">gm_Matrices[matrix]</span> </td> <td> Diese Array-Konstante gibt eine Transformationsmatrix zurück und ist eine der verfügbaren vordefinierten Uniformen, die <i><span class="notranslate">GameMaker Studio 2</span></i> für Sie im Shader-Code-Editor erstellt. Der Array-Index wird aus einer der oben aufgeführten Konstanten ausgewählt. </td></tr><tr class="alt"><td> <span class="notranslate">gm_BaseTexture</span> </td> <td> Dies ist eine 2D-Sampler-Konstante, die die von <i><span class="notranslate">GameMaker Studio 2</span></i> Textur des aktuellen Objekts zurückgibt. Es wäre also das aktuelle Sprite, die Oberfläche oder die Textur, die normalerweise beim Zeichnen ohne den Namen des Shaders verwendet würde. </td></tr><tr><td> <span class="notranslate">gm_LightingEnabled</span> </td> <td> Dies kann verwendet werden, um die Beleuchtung von <i><span class="notranslate">GameMaker Studio 2</span></i> zu erhalten oder einzustellen, wenn 3D verwendet wird. </td></tr><tr class="alt"><td> <span class="notranslate">gm_FogStart</span> </td> <td> Dies kann verwendet werden, um den Abstand zu berechnen, an dem Polygone beginnen, mit der Nebelfarbe gemischt zu werden. </td></tr><tr><td> <span class="notranslate">gm_RcpFogRange</span> </td> <td> Dies kann verwendet werden, um die Entfernung zu erhalten, bei der Nebel maximal ist und nichts mehr zu sehen ist. </td></tr><tr class="alt"><td> <span class="notranslate">gm_PS_FogEnabled</span> </td> <td> Dies wird zurückkehren <tt>true</tt> oder <tt>false</tt> wenn die GPU Pixelnebel aktiviert hat oder nicht. </td></tr><tr><td> <span class="notranslate">gm_FogColour</span> </td> <td> Dies kann verwendet werden, um die von <i><span class="notranslate">GameMaker</span> Studio 2</i> verwendete <i><span class="notranslate">GameMaker</span></i>. </td></tr><tr class="alt"><td> <span class="notranslate">gm_VS_FogEnabled</span> </td> <td> Dies wird zurückkehren <tt>true</tt> oder <tt>false</tt> wenn die GPU Vertex-Nebel aktiviert hat oder nicht. </td></tr><tr><td> <span class="notranslate">gm_AlphaTestEnabled</span> </td> <td> Dies kann verwendet werden, um Alpha-Tests im Shader zu erhalten. Sehen <a href=
+"../../drawing/gpu/gpu_set_alphatestenable.html"><tt>gpu_set_alphatestenable</tt></a> Weitere Informationen zum Alphatest </td></tr><tr><td> <span class="notranslate">gm_AlphaRefValue</span> </td> <td> Dies kann verwendet werden, um den aktuellen Alpha-Test-Referenzwert zu erhalten. Sehen <a href=
+"../../drawing/gpu/gpu_set_alphatestref.html"><tt>gpu_set_alphatestref</tt></a> für weitere Informationen über die Alpha-Test-Referenz. </td></tr></table></div><p><br></p><div class="clear"><div style="float:left"> Zurück: <a href=
+"../index.html">Shader</a> </div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>
