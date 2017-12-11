@@ -21,7 +21,7 @@ function ValidateRequest(s)
   res = s.match(regexp);
   if (res)
   {
-    alert("Invalid character \"" + (res[0]) + "\" !");
+    alert("Ungültiges Zeichen \"" + (res[0]) + "\" !");
     return false;
   }
 
@@ -39,7 +39,7 @@ function Search(s)
   for (i=0; i<request.length; i++) {
    if (request[i].length<$minchars)
    {
-     alert("Your search term \"" + request[i] + "\" was too short, please select one that is greater than " + $minchars + " character(s).");
+     alert("Ihr Suchbegriff \"" + request[i] + "\" war zu kurz, bitte wählen Sie eine, die größer ist als " + $minchars + " Figuren.");
      return false;
    }
   }
@@ -48,7 +48,7 @@ function Search(s)
   var docs = RecursiveSearch(0, true, []);
   if (!docs.length) { 
     var e = document.createElement("OPTION");
-    e.text = "No matches found!";
+    e.text = "Keine Treffer gefunden!";
     e.value = "";
     document.forms['searchform'].founddocslist[0] = e;
   } else
