@@ -933,7 +933,7 @@ var HelpIndex = [
 ["Kompatibilitätsbericht", [
 ["Anmerkungen", "source/_build/2_interface/1_editors/notes.html"], 
 ["Veraltete Funktionen", "source/_build/1_overview/3_additional_information/obsolete_functions.html"]]], 
-["Kompatibilitätsskripte", "source/_build/1_overview/3_additional_information/obsolete_functions.html"], 
+["Kompatibilitätsskripts", "source/_build/1_overview/3_additional_information/obsolete_functions.html"], 
 ["Kompiliere Fehlerausgabefenster", "source/_build/2_interface/2_extras/output.html"], 
 ["Compilerfehler", "source/_build/1_overview/3_additional_information/errors.html"], 
 ["Compiler-Funktionen", "source/_build/3_scripting/4_gml_reference/miscellaneous/index.html"], 
@@ -1320,7 +1320,7 @@ var HelpIndex = [
 ["DnD™ Bewegungsaktionen", [
 ["DnD™ Bibliothek für Audio-Aktionen", "source/_build/3_scripting/2_drag_and_drop_reference/audio_actions/index.html"], 
 ["DnD™ Bewegungsaktionsbibliothek", "source/_build/3_scripting/2_drag_and_drop_reference/movement_actions/index.html"]]], 
-["DnD™ Partikel-Aktionen", "source/_build/3_scripting/2_drag_and_drop_reference/particle_actions/index.html"], 
+["DnD™ Partikelaktionen", "source/_build/3_scripting/2_drag_and_drop_reference/particle_actions/index.html"], 
 ["DnD™ Partikel -", "source/_build/3_scripting/2_drag_and_drop_reference/particle_actions/index.html"], 
 ["DnD™ -Pfadaktionen", "source/_build/3_scripting/2_drag_and_drop_reference/path_actions/index.html"], 
 ["DnD™ Paths - Pfadgeschwindigkeit festlegen", "source/_build/3_scripting/2_drag_and_drop_reference/path_actions/index.html"], 
@@ -3224,7 +3224,7 @@ var HelpIndex = [
 ["Versionshinweise", "source/_build/1_overview/1_getting_started/4_release_notes.html"], 
 ["Remote Worker-Kompilierung", "source/_build/2_interface/2_extras/remote_worker.html"], 
 ["Remote Worker Netzwerkeinstellungen", "source/_build/2_interface/2_extras/remote_worker.html"], 
-["Remote-Worker-Einstellungen", "source/_build/2_interface/2_extras/remote_worker.html"], 
+["Remote Worker-Einstellungen", "source/_build/2_interface/2_extras/remote_worker.html"], 
 ["Remote-Worker-Setup", "source/_build/2_interface/2_extras/remote_worker.html"], 
 ["Fernarbeiter", [
 ["Fernarbeiter", "source/_build/2_interface/2_extras/remote_worker.html"], 
