@@ -26,12 +26,12 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! --><script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
-</script><h1 class="studio"> aktuelle Uhrzeit </h1><h2 class="studio"> Gibt die seit dem Start des Betriebssystems verstrichenen Millisekunden zurück. </h2><h3 class="studio"> Syntax: </h3><p class="code">current_time;<span class="notranslate"></span></p><p><br></p><p> <b>Rückgabe:</b> Echt </p><p><br></p><h3 class="studio"> Beschreibung </h3><p> Diese <b>schreibgeschützte</b> Variable gibt die Anzahl der Millisekunden zurück, die seit dem Start des Betriebssystems vergangen sind. <br><br></p><p><br></p><h3 class="studio"> Beispiel: </h3><p class="code">if current_time &gt; 600000<br>
+</script><h1 class="studio"> aktuelle Uhrzeit </h1><h2 class="studio"> Gibt die Millisekunden zurück, die seit dem Start des Spiels vergangen sind. </h2><h3 class="studio"> Syntax: </h3><p class="code">current_time;<span class="notranslate"></span></p><p><br></p><p> <b>Rückgabe:</b> Real </p><p><br></p><h3 class="studio"> Beschreibung </h3><p> Diese <b>schreibgeschützte</b> Variable gibt die Anzahl der Millisekunden zurück, die seit dem Start des Spiels vergangen sind. <br><br></p><p><br></p><h3 class="studio"> Beispiel: </h3><p class="code">if current_time &gt; 600000<br>
 &nbsp;&nbsp;&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;msg = show_question_async("Would you like to
 rate?");<br>
-&nbsp;&nbsp;&nbsp;}<br><span class="notranslate"></span></p><p> Der obige Code überprüft, ob mehr als 10 Minuten vergangen sind, bevor der Benutzer eine Frage gestellt hat. </p><p><br></p><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Datum und Uhrzeit</a> </div><div style="float:right"> Nächste: <a href=
-"current_second.html">aktuelle_zweite</a> </div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+&nbsp;&nbsp;&nbsp;}<br><span class="notranslate"></span></p><p> Der obige Code prüft, ob mehr als 10 Minuten vergangen sind, bevor dem Benutzer eine Frage gestellt wird. </p><p><br></p><div class="clear"><div style="float:left"> Rückseite: <a href="index.html">Datum und Uhrzeit</a> </div><div style="float:right"> Nächstes: <a href=
+"current_second.html">current_second</a> </div></div><h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

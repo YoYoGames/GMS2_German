@@ -26,16 +26,18 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! --><script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
-</script><h1 class="studio"> keyboard_check </h1><h2 class="studio"> Gibt zurück, ob die angegebene Taste auf der Tastatur momentan gedrückt gehalten wird. </h2><h3 class="studio"> Syntax: </h3><p class="code">keyboard_check(key);<span class="notranslate"></span></p><p><br></p><div class="param"><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">key</span> </td> <td> Der Schlüssel zum Überprüfen des Down-Status von. </td></tr></table></div><p><br></p><p> <b>Rückgabe:</b> Boolean </p><p><br></p><h3 class="studio"> Beschreibung </h3><p> Mit dieser Funktion können Sie prüfen, ob eine Taste gedrückt ist oder nicht. im Gegensatz zu den <a href=
+</script><h2> keyboard_check </h2><div class="body-scroll"><p><br></p><h3> <b>Beschreibung</b> </h3><blockquote><p> Mit dieser Funktion können Sie prüfen, ob eine Taste gedrückt wird oder nicht. nicht so wie <a href=
 "keyboard_check_pressed.html"><tt>keyboard_check_pressed</tt></a> oder <a href=
-"keyboard_check_released.html"><tt>keyboard_check_released</tt></a> Funktionen, die nur einmal beim Drücken oder Loslassen der Taste ausgelöst werden, wird diese Funktion bei jedem Schritt ausgelöst, für den die Taste gedrückt gehalten wird. <br><br></p><p><br></p><h3 class="studio"> Beispiel: </h3><p class="code">if keyboard_check(vk_left)<br>
+"keyboard_check_released.html"><tt>keyboard_check_released</tt></a> Funktionen, die nur einmal beim Drücken oder Loslassen der Taste ausgelöst werden, wird diese Funktion bei jedem Schritt ausgelöst, für den die Taste gedrückt wird. Die Funktion nimmt einen von der Funktion zurückgegebenen Keycode-Wert an <a href="ord.html"><tt>ord()</tt></a> (nur <i>Großbuchstaben</i> von AZ oder Zahlen von 0-9) oder eine der <tt>vk_*</tt> Konstanten auf der Hauptseite der <a href=
+"index.html">Tastatureingabe</a>. </p></blockquote><p><br></p><h3> <b>Syntax:</b> </h3><p class="code">keyboard_check(key);<span class="notranslate"></span></p><div class="param"><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">key</span> </td> <td> Der Schlüssel zum Überprüfen des Down-Status von. </td></tr></table></div><p><br></p><h3> <b>Kehrt zurück:</b> </h3><p class="code">Boolean<span class="notranslate"></span></p><p><br></p><h3> <b>Beispiel:</b> </h3><p class="code">if keyboard_check(vk_left)<br>
 &nbsp;&nbsp;&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;x -= 5;<br>
-&nbsp;&nbsp;&nbsp;}<br><span class="notranslate"></span></p><p> Der obige Code überprüft, ob die Pfeiltaste gedrückt wird und bewegt die Instanz um 5 Pixel nach jedem Schritt, den sie als wahr zurückgibt. </p><p><br></p><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Tastatureingabe</a> </div><div style="float:right"> Weiter: <a href=
-"keyboard_check_pressed.html">keyboard_check_pressed</a> </div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+&nbsp;&nbsp;&nbsp;}<br><span class="notranslate"></span></p><blockquote><p> Der obige Code überprüft, ob die Pfeiltaste gedrückt wird, und verschiebt die Instanz bei jedem Schritt, den sie als wahr zurückgibt, um 5 Pixel. </p></blockquote><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Rückseite: <a href="index.html">Tastatureingabe</a> </div><div style="float:right"> Weiter: <a href=
+"keyboard_check_pressed.html">keyboard_check_pressed</a> </div></div></div><h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

@@ -26,17 +26,24 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! --><script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
-</script><h2> Texturen </h2><p> Es gibt auch ein paar spezielle Funktionen, die sich auf die Art und Weise beziehen, in der <i><span class="notranslate">GameMaker Studio 2</span></i> die verwendeten Texturen-Seiten zeichnet. Bitte beachten Sie, dass ein Sprite tatsächlich ein strukturiertes Quad ist (ein Vierpunkt-Primitiv aus zwei Dreiecken) und daher auch einige der folgenden Funktionen die Darstellung beeinflussen: </p><ul><li> <a href="texture_get_height.html">texture_get_height</a> </li><li> <a href="texture_get_width.html">texture_get_width</a> </li><li> <a href=
+</script><h2> Texturen </h2><div class="body-scroll"><p><br></p><p> Die folgenden Funktionen beziehen sich alle auf &quot;Texturen&quot;, dh Bilder, die im VRAM gespeichert sind und als Sprites oder andere Dinge in Ihrem Spiel verwendet werden. Die ersten verfügbaren Funktionen werden zum Abrufen von Informationen zu bestimmten Bildern und deren Position oder Größe auf der <a href=
+"../../../2_interface/3_settings/textures.html">Textur-Seite</a> sowie zum Festlegen bestimmter Textur-Features verwendet: </p><ul><li> <a href="texture_get_height.html">texture_get_height</a> </li><li> <a href="texture_get_width.html">textur_get_breite</a> </li><li> <a href=
 "texture_get_texel_height.html">texture_get_texel_height</a> </li><li> <a href=
-"texture_get_texel_width.html">texture_get_texel_width</a> </li><li> <a href="texture_get_uvs.html">texture_get_uvs</a> </li><li> <a href="texture_set_stage.html">texture_set_stage</a> </li><li> <a href="draw_texture_flush.html">draw_texture_flush</a> </li></ul><p> Es gibt auch ein paar Sprite-Funktionen, die sich auf den Umgang mit ihren Texturen beziehen: </p><ul><li> <a href="../../sprites/sprite_flush.html">sprite_flush</a> </li><li> <a href=
+"texture_get_texel_width.html">Textur_get_texel_width</a> </li><li> <a href="texture_get_uvs.html">texture_get_uvs</a> </li><li> <a href="texture_set_stage.html">texture_set_stage</a> </li><li> <a href="texture_global_scale.html">texture_global_scale</a> </li></ul><p> <i><span class="notranslate">GameMaker Studio 2</span></i> verfügt außerdem über eine Reihe von Funktionen, die sich auf die Verwaltung des VRAM beziehen, der einzelnen Texturen sowie ganzen Texturgruppen zugeordnet ist: </p><ul><li> <a href="draw_texture_flush.html">draw_texture_flush</a> </li><li> <a href="../../sprites/sprite_flush.html">sprite_flush</a> </li><li> <a href=
 "../../sprites/sprite_flush_multi.html">sprite_flush_multi</a> </li><li> <a href=
 "../../sprites/sprite_prefetch.html">sprite_prefetch</a> </li><li> <a href=
-"../../sprites/sprite_prefetch_multi.html">sprite_prefetch_multi</a> </li></ul><p><br></p><div class="clear"><div style="float:left"> Zurück: <a href=
-"../index.html">Zeichnen</a> </div><div style="float:right"> Nächstes: <a href=
-"../colour/index.html">Farbe</a> </div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+"../../sprites/sprite_prefetch_multi.html">sprite_prefetch_multi</a> </li><li> <a href="texture_prefetch.html">texture_prefetch</a> </li><li> <a href="texture_flush.html">textur_flush</a> </li></ul><p> Schließlich haben wir die folgenden Funktionen, die hauptsächlich dazu dienen, das Projekt zu debuggen und eine effiziente Verwendung des Texturspeichers sicherzustellen: </p><ul><li> <a href=
+"texture_debug_messages.html">texture_debug_messages</a> </li><li> <a href="texture_is_ready.html">texture_is_ready</a> </li><li> <a href=
+"texturegroup_get_textures.html">texturegroup_get_textures</a> </li><li> <a href=
+"texturegroup_get_sprites.html">texturegroup_get_sprites</a> </li><li> <a href=
+"texturegroup_get_fonts.html">texturegroup_get_fonts</a> </li><li> <a href=
+"texturegroup_get_tilesets.html">texturegroup_get_tilesets</a> </li></ul><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Rückseite: <a href=
+"../index.html">Zeichnen</a> </div><div style="float:right"> Weiter: <a href=
+"../colour/index.html">Farbe</a> </div></div></div><h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

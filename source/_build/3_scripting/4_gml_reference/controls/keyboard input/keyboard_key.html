@@ -26,16 +26,17 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! --><script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
-</script><h1 class="studio"> Tastaturtaste </h1><h2 class="studio"> Speichert den aktuellen Schlüssel. </h2><h3 class="studio"> Syntax: </h3><p class="code">keyboard_key;<span class="notranslate"></span></p><p><br></p><p> <b>Rückgabe:</b> Echt </p><p><br></p><h3 class="studio"> Beschreibung </h3><p> Mit dieser Variable können Sie den Schlüsselcode der Taste abrufen, die gerade gedrückt wird, und 0 zurückgeben, wenn nach der Überprüfung keine Taste gedrückt wird. <br><br></p><p><br></p><h3 class="studio"> Beispiel: </h3><p class="code">switch (keyboard_key)<br>
+</script><h2> Tastaturtaste </h2><div class="body-scroll"><p><br></p><h3> <b>Beschreibung</b> </h3><blockquote><p> Mit dieser Variablen können Sie den Keycode der aktuell gedrückten Taste abrufen. Wenn die Taste keine Prüfung ausführt, wird 0 zurückgegeben, wenn keine Taste gedrückt wird. </p></blockquote><p><br></p><h3> <b>Syntax:</b> </h3><p class="code">keyboard_key;<span class="notranslate"></span></p><p><br></p><h3> <b>Kehrt zurück:</b> </h3><p class="code">Real<span class="notranslate"></span></p><p><br></p><h3> <b>Beispiel:</b> </h3><p class="code">switch (keyboard_key)<br>
 &nbsp;&nbsp;&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;case vk_numpad1: gun = weapon[0,0]; break;<br>
 &nbsp;&nbsp;&nbsp;case vk_numpad2: gun = weapon[1,0]; break;<br>
 &nbsp;&nbsp;&nbsp;case vk_numpad3: gun = weapon[2,0]; break;<br>
-&nbsp;&nbsp;&nbsp;}<br><span class="notranslate"></span></p><p> Der obige Code verwendet den Wert von <tt>keyboard_key</tt> Variable, um eine Variable auf denselben Wert wie ein Array zu setzen. </p><p><br></p><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Tastatureingabe</a> </div><div style="float:right"> Weiter: <a href=
-"keyboard_lastkey.html">Tastatur_Lastschlüssel</a> </div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+&nbsp;&nbsp;&nbsp;}<br><span class="notranslate"></span></p><blockquote><p> Der obige Code verwendet den Wert von <tt>keyboard_key</tt> Variable, um eine Variable auf denselben Wert wie ein Array zu setzen. </p></blockquote><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Rückseite: <a href="index.html">Tastatureingabe</a> </div><div style="float:right"> Weiter: <a href=
+"keyboard_lastkey.html">keyboard_lastkey</a> </div></div></div><h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

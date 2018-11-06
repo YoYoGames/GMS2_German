@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>uwp_check_privilege</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/uwp and xbox_live/uwp_check_privilege.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fuwp%20and%20xbox_live%2Fuwp_check_privilege.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fuwp%20and%20xbox_live%2Fuwp_check_privilege.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h2> uwp_check_privilege </h2><div class="body-scroll"><p><br></p><h3 class="studio"> Beschreibung </h3><blockquote><p> Mit dieser Funktion können Sie prüfen, ob ein bestimmter Benutzer ein ausgewähltes Privileg hat. Die Funktion gibt im asynchronen Systemereignis wahr oder falsch zurück, je nachdem, ob das Privileg aktiviert ist oder nicht. Wenn Sie das Argument try_resolution auf true setzen und das Privileg nicht aktiviert ist, wird auch ein Systemdialogfeld geöffnet (das Spiel wird angehalten) ) um den Benutzer aufzufordern, das Konto zu aktualisieren, oder was auch immer erforderlich ist, um das Privileg zu erhalten. Wenn der Benutzer die erforderliche Option aktiviert, gibt die Funktion true zurück. </p><p> Für die Funktion müssen Sie eine der folgenden Konstanten für die Berechtigungsanforderung verwenden: </p><div class="compat"><table><tr><th> Konstante </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">uwp_privilege_internet_browsing</span> </td> <td> Prüfen Sie, ob das Surfen im Internet zulässig ist </td></tr><tr class="alt"><td> <span class="notranslate">uwp_privilege_social_network_sharing</span> </td> <td> Prüfen Sie, ob das Teilen in sozialen Netzwerken zulässig ist </td></tr><tr><td> <span class="notranslate">uwp_privilege_share_kinect_content</span> </td> <td> Prüfen Sie, ob das Teilen des Kinect Controllers zulässig ist </td></tr><tr class="alt"><td> <span class="notranslate">uwp_privilege_video_communications</span> </td> <td> Überprüfen Sie, ob die Videokommunikation zulässig ist </td></tr><tr><td> <span class="notranslate">uwp_privilege_communications</span> </td> <td> Prüfen Sie, ob die Internetkommunikation zulässig ist </td></tr><tr class="alt"><td> <span class="notranslate">uwp_privilege_user_created_content</span> </td> <td> Überprüfen Sie, ob der Zugriff auf vom Benutzer erstellte Inhalte zulässig ist </td></tr><tr><td> <span class="notranslate">uwp_privilege_multiplayer_sessions</span> </td> <td> Überprüfen Sie, ob Online-Multiplayer-Sitzungen zulässig sind </td></tr><tr class="alt"><td> <span class="notranslate">uwp_privilege_sessions</span> </td> <td> Prüfen Sie, ob Online-Sitzungen zulässig sind </td></tr><tr><td> <span class="notranslate">uwp_privilege_fitness_upload</span> </td> <td> Prüfen Sie, ob das Hochladen von Fitnessdaten zulässig ist </td></tr></table></div><p><br> Sobald die Funktion aufgerufen wurde, löst sie ein <a href=
+"../../../2_interface/1_editors/events/async_events.html">asynchrones Systemereignis aus,</a> wenn das Rückrufergebnis empfangen wurde, das über eine spezielle DS-Zuordnung verfügt <tt>async_load</tt>. Diese Map sollte dann für den folgenden Schlüssel analysiert werden: </p><ul><li> &quot; <b>event_type</b> &quot; - sollte den Wert &quot;check_privilege_result&quot; enthalten, wenn das Ereignis von dieser Funktion ausgelöst wurde </li></ul><p> Wenn sich der Ereignistyp auf diese Funktion bezieht, gibt es auch die folgenden zusätzlichen Tasten: </p><ul><li> &quot; <b>result</b> &quot; - Wird eine oder mehrere der folgenden Konstanten (kombinierte Werte) sein: <div class="compat"><table><tr><th> Konstante </th><th> Wert </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">uwp_privilege_result_no_issue</span> </td> <td> 0 </td><td> <span class="notranslate">There are no privilege issues with the user</span> </td> </tr><tr class="alt"><td> <span class="notranslate">uwp_privilege_result_purchase_required</span> </td> <td> 1 </td><td> <span class="notranslate">The user must purchase something additional, usually a subscription, for access</span> </td> </tr><tr><td> <span class="notranslate">uwp_privilege_result_aborted</span> </td> <td> 2 </td><td> <span class="notranslate">The check was aborted</span> </td> </tr><tr class="alt"><td> <span class="notranslate">uwp_privilege_result_banned</span> </td> <td> 4 </td><td> <span class="notranslate">The user is banned</span> </td> </tr><tr><td> <span class="notranslate">uwp_privilege_result_restricted</span> </td> <td> 8 </td><td> <span class="notranslate">The user is restricted from access, usually through parental controls</span> </td> </tr></table></div></li><li style="list-style: none"><br></li><li> &quot; <b>privileg</b> &quot; - ist eine der oben aufgeführten Konstanten für die Verwendung in der Funktion. Sie können also prüfen, welches Privileg Sie bei mehreren Prüfungen angefordert haben. </li></ul></blockquote><p><br></p><h3> Syntax: </h3><p class="code">uwp_check_privilege(user_id, privilege,
+attempt_resolution);<span class="notranslate"></span></p><blockquote><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">user_id</span> </td> <td> Der zu überprüfende Benutzer-ID-Zeiger. </td></tr><tr class="alt"><td> <span class="notranslate">privilege</span> </td> <td> Die zu prüfende Berechtigungskonstante (siehe Beschreibung oben). </td></tr><tr><td> <span class="notranslate">attempt_resolution</span> </td> <td> Aktivieren Sie den Lösungsversuch, wenn auf festgelegt ist <tt>true</tt> oder ignorieren, wenn auf gesetzt <tt>false</tt>. </td></tr></table></blockquote><p><br></p><h3> Kehrt zurück: </h3><p class="code">Real<span class="notranslate"></span></p><p><br></p><h3> Beispiel: </h3><p class="code">var user_one = xboxlive_get_user(0);<br>
+if (xboxlive_user_is_signed_in(user_one))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;uwp_check_privilege(user_one,
+xboxlive_privilege_multiplayer_sessions, true);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br><span class="notranslate"></span></p><blockquote><p> Das obige überprüft, ob der Benutzer angemeldet ist und ob es sich um die Berechtigung für Mehrspieler-Sitzungen handelt. </p></blockquote><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Rückseite: <a href="index.html">UWP und XBox Live</a> </div><div style="float:right"> Nächstes: <a href=
+"xboxlive_get_user_count.html">xboxlive_get_user_count</a> </div></div></div><h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

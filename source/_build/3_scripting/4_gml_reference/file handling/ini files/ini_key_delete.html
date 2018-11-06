@@ -9,6 +9,7 @@
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>ini_key_delete</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
+
 <link rel="stylesheet" href="../../../../../../files/helpindex.css"
 type="text/css">
 <link rel="stylesheet" href="../../../../../../default.css" type=
@@ -26,11 +27,11 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! --><script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
-</script><h2> ini_key_delete </h2><div class="body-scroll"><h3 class="studio"> Syntax: </h3><p class="code">ini_key_delete(section, key);<span class="notranslate"></span></p><p><br></p><div class="param"><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">section</span> </td> <td> Der Abschnitt zum Löschen eines Schlüssels aus. </td></tr><tr><td> <span class="notranslate">key</span> </td> <td> Der zu löschende Schlüssel </td></tr></table></div><p><br></p><p> <b>Rückkehr:</b> N / A </p><p><br></p><h3 class="studio"> Beschreibung </h3><p> Mit dieser Funktion können Sie den ausgewählten Schlüssel (und den entsprechenden Wert) aus einer Ini-Datei entfernen. <br><br></p><p><br></p><h3 class="studio"> Beispiel: </h3><p class="code">ini_open('savedata.ini');<br>
-ini_write_real('save1','Score',score);<br>
-ini_key_delete('save1','Score');<br>
-ini_close();<span class="notranslate"></span></p><p> In diesem Beispiel wird &#39;savedata.ini&#39; geöffnet und ein Wert in &#39;save1&#39;&gt; &#39;Score&#39; geschrieben. Es löscht dann den &quot;Score&quot; -Schlüssel und schließt die INI-Datei. </p><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Ini-Dateien</a> </div><div style="float:right"> Weiter: <a href=
-"ini_section_delete.html">ini_section_delete</a> </div></div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+</script><h2> ini_key_delete </h2><div class="body-scroll"><p><br></p><h3> Beschreibung </h3><blockquote><p> Mit dieser Funktion können Sie den ausgewählten Schlüssel (und den entsprechenden Wert) aus einer Ini-Datei entfernen. </p></blockquote><p><br></p><h3> Syntax: </h3><p class="code">ini_key_delete(section, key);<span class="notranslate"></span></p><p><br></p><div class="param"><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">section</span> </td> <td> Der Abschnitt, aus dem ein Schlüssel gelöscht werden soll. </td></tr><tr><td> <span class="notranslate">key</span> </td> <td> Der Schlüssel zum Löschen. </td></tr></table></div><p><br></p><h3> Kehrt zurück: </h3><p class="code">N/A<span class="notranslate"></span></p><p><br></p><h3> Beispiel: </h3><p class="code">ini_open("savedata.ini");<br>
+ini_write_real("save1","Score",score);<br>
+ini_key_delete("save1","Score");<br>
+ini_close();<span class="notranslate"></span></p><blockquote><p> In diesem Beispiel wird &quot;savedata.ini&quot; geöffnet und ein Wert in &quot;save1&quot;&gt; &quot;Score&quot; geschrieben. Dann wird die &quot;Score&quot; -Taste gelöscht und die.ini-Datei geschlossen. </p></blockquote><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Ini-Dateien</a> </div><div style="float:right"> Weiter: <a href=
+"ini_section_delete.html">ini_section_delete</a> </div></div></div><h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

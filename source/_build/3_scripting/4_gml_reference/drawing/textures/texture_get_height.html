@@ -26,13 +26,14 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! --><script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
-</script><h1 class="studio"> texture_get_height </h1><h2 class="studio"> Ruft die Höhe eines bestimmten Texturelements ab. </h2><h3 class="studio"> Syntax: </h3><p class="code">texture_get_height(tex);<span class="notranslate"></span></p><p><br></p><div><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">tex</span> </td> <td> Der zu verwendende Texturseiten-Asset-Zeiger </td></tr></table></div><p><br></p><p> <b>Rückgabe:</b> Echt </p><p><br></p><h3 class="studio"> Beschreibung </h3><p> Gibt die Höhe der Textur mit der angegebenen ID zurück, die immer ein Wert zwischen 0 und 1 ist. Dies kann dann zum Zuordnen von Texturen zu Modellen oder Primitiven verwendet werden. <br><br></p><p><br></p><h3 class="studio"> Beispiel: </h3><p class="code">tex_h =
-texture_get_height(surface_get_texture(global.Surf));<span class="notranslate"></span></p><p> Der obige Code wird die Höhe der Textur von einer zuvor erstellten Oberfläche erhalten. </p><p><br></p><div class="clear"><div style="float:left"> Zurück: <a href=
-"index.html">Texturen</a> </div><div style="float:right"> Weiter: <a href=
-"texture_get_width.html">texture_get_width</a> </div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+</script><h2> texture_get_height </h2><div class="body-scroll"><p><br></p><h3> Beschreibung </h3><blockquote><p> Gibt die Höhe der Textur mit der angegebenen ID zurück. Dies ist immer ein Wert im Bereich von 0 bis 1. Dies kann dann verwendet werden, wenn Texturen Modellen oder Primitiven zugeordnet werden. </p></blockquote><p><br></p><h3> Syntax: </h3><p class="code">texture_get_height(tex);<span class="notranslate"></span></p><div><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">tex</span> </td> <td> Der zu verwendende Textur-Seiten-Asset-Zeiger </td></tr></table></div><p><br></p><h3> Kehrt zurück: </h3><p class="code">Real<span class="notranslate"></span></p><p><br></p><h3> Beispiel: </h3><p class="code">tex_h =
+texture_get_height(surface_get_texture(global.Surf));<br><span class="notranslate"></span></p><blockquote><p> Der obige Code ermittelt die Höhe der Textur von einer zuvor erstellten Oberfläche. </p></blockquote><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Rückseite: <a href=
+"index.html">Texturen</a> </div><div style="float:right"> Nächstes: <a href=
+"texture_get_width.html">Textur_get_Breite</a> </div></div></div><h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

@@ -26,14 +26,14 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! --><script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
-</script><h2> view_set_yport </h2><p><br></p><h3> Beschreibung </h3><blockquote><p> Diese Funktion kann verwendet werden, um die y-Position des gegebenen Ansichtsports festzulegen. Sie geben den View-Port-Index (von 0 bis 7) und die neue Position an, an der er platziert werden soll. </p></blockquote><p><br></p><h3> Syntax: </h3><p class="code">view_set_yport(view_port, y)<span class="notranslate"></span></p><p><br></p><h3> Argumente: </h3><blockquote><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">view_port</span> </td> <td> Der View-Port zum Targeting (0 - 7) </td></tr><tr class="alt"><td> <span class="notranslate">y</span> </td> <td> Die neue y-Position </td></tr></table></blockquote><p><br></p><h3> Kehrt zurück: </h3><p class="code">N/A<span class="notranslate"></span></p><p><br></p><h3> Beispiel: </h3><p class="code">if view_get_yport(0) != (display_get_height() / 2)
+</script><h2> view_set_yport </h2><p><br></p><h3> Beschreibung </h3><blockquote><p> Mit dieser Funktion kann die y-Position des angegebenen Ansichtsports festgelegt werden. Sie geben den View-Port-Index (von 0 bis 7) und die neue Position an, an der er platziert werden soll. </p></blockquote><p><br></p><h3> Syntax: </h3><p class="code">view_set_yport(view_port, y)<span class="notranslate"></span></p><p><br></p><h3> Argumente: </h3><blockquote><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">view_port</span> </td> <td> Der Ansichts-Port zum Ziel (0 - 7) </td></tr><tr class="alt"><td> <span class="notranslate">y</span> </td> <td> Die neue y-Position </td></tr></table></blockquote><p><br></p><h3> Kehrt zurück: </h3><p class="code">N/A<span class="notranslate"></span></p><p><br></p><h3> Beispiel: </h3><p class="code">if view_get_yport(0) != (display_get_height() / 2)
 - (view_hport[0] / 2)<br>
 &nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;view_get_yport(0, (display_get_height() / 2) -
+&nbsp;&nbsp;&nbsp;view_set_yport(0, (display_get_height() / 2) -
 (view_hport[0] / 2));<br>
-&nbsp;&nbsp;&nbsp;}<br><span class="notranslate"></span></p><p> Der obige Code überprüft die y-Position des View-Ports [0] und wenn er nicht dort ist, wo er benötigt wird, wird er auf diese Position gesetzt. </p><p><br></p><div class="clear"><div style="float:left"> Zurück: <a href=
-"index.html">Kameras</a> </div><div style="float:right"> Nächstes: <a href=
-"view_set_wport.html">view_set_wport</a> </div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+&nbsp;&nbsp;&nbsp;}<br><span class="notranslate"></span></p><p> Der obige Code prüft die y-Position des View-Ports [0], und wenn dies nicht der Fall ist, wird er auf diese Position gesetzt. </p><p><br></p><div class="clear"><div style="float:left"> Zurück: <a href=
+"index.html">Kameras</a> </div><div style="float:right"> Weiter: <a href=
+"view_set_wport.html">view_set_wport</a> </div></div><h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

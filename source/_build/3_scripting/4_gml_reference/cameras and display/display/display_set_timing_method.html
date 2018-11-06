@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>display_set_timing_method</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/cameras and display/display/display_set_timing_method.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fcameras%20and%20display%2Fdisplay%2Fdisplay_set_timing_method.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fcameras%20and%20display%2Fdisplay%2Fdisplay_set_timing_method.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! --><script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script><h2> display_set_timing_method </h2><div class="body-scroll"><p><br></p><h3> Beschreibung </h3><blockquote><p> Diese Funktion kann verwendet werden, um die Timing-Methode für das Rendern Ihres Spiels festzulegen. Die Methode kann eine der folgenden Konstanten sein: </p><div class="alt"><table><tr><th> Konstante </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">tm_sleep</span> </td> <td> Verwenden Sie den Schlafbereich als Hauptmethode </td></tr><tr class="alt"><td> <span class="notranslate">tm_countvsyncs</span> </td> <td> Verwenden Sie das vsync-Timing als Haupt-Timing-Methode (Standardeinstellung für alle unterstützten Plattformen). </td></tr></table></div><p><br> Die vsync-Timing-Methode verwendet die Zielplattformenunterstützung für die vertikale Synchronisierung, um einen Anker für die Timing-Berechnungen der Spiele-Rendering bereitzustellen. Wenn Sie für den Modus den Ruhemodus einstellen, wird nur versucht, sicherzustellen, dass jeder Frame die korrekte Zeitdauer hat (z. B. 1/30) oder 1/60 Sekunde) durch Warten oder Schlafen. Im Allgemeinen liefert das Standard-vsync-Timing die glattesten Ergebnisse. Beachten Sie jedoch, dass bei Verwendung der vsync-Methode die Werte für den Schlafbereich immer noch relevant sind, auch wenn die Auswirkungen hierdurch geringer sind. Wir empfehlen, den Standardwert bei Verwendung dieser Methode beizubehalten. </p><p> Auf allen Plattformen <i>außer</i> PS4, Ubuntu und HTML5 verwendet <i><span class="notranslate">GameMaker Studio 2</span></i> standardmäßig die vsync-Zeitmethode, während auf den nicht unterstützten Plattformen <i>nur</i> die Zeitspanne für die Zeitspanne für den Schlafbereich verwendet werden kann. </p><p> Wenn Sie die Schlafspanne einstellen möchten, können Sie dies mit der Funktion tun <a href=
+"display_set_sleep_margin.html"><tt>display_set_sleep_margin()</tt></a> und Sie können herausfinden, welche Timing-Methode aktuell mit der Funktion verwendet wird <a href=
+"display_get_timing_method.html"><tt>display_get_timing_method()</tt></a>. </p></blockquote><p><br></p><h3> Syntax: </h3><p class="code">display_set_timing_method(method);<span class="notranslate"></span></p><div><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">method</span> </td> <td> Die zu verwendende Timing-Methode (siehe Liste der Konstanten oben) </td></tr></table></div><p><br></p><h3> Kehrt zurück: </h3><p class="code">N/A<span class="notranslate"></span></p><p><br></p><h3> Beispiel: </h3><p class="code">if display_get_timing_method() != tm_sleep<br>
+{<br>
+display_set_timing_method(tm_sleep);<br>
+if display_get_sleep_margin() != 20<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;display_set_sleep_margin(20);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+}<br><span class="notranslate"></span></p><blockquote><p> Der obige Code prüft die Timing-Methode und dann, wenn sie nicht eingestellt ist <tt>tm_sleep</tt> es wird darauf eingestellt und der Schlafbereich auf 20 eingestellt. </p></blockquote><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Die Anzeige</a> </div><div style="float:right"> Weiter: <a href=
+"display_get_timing_method.html">display_get_timing_method</a> </div></div></div><h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

@@ -26,17 +26,17 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! --><script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
-</script><h1 class="studio"> draw_set_font </h1><h2 class="studio"> Legt die Schriftart zum Zeichnen von Text fest. </h2><h3 class="studio"> Syntax: </h3><p class="code">draw_set_font(font);<span class="notranslate"></span></p><p><br></p><div><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">font</span> </td> <td> Der Name der zu verwendenden Schriftart. </td></tr></table></div><p><br></p><p> <b>Rückkehr:</b> N / A </p><p><br></p><h3 class="studio"> Beschreibung </h3><p> Diese Funktion stellt die Schriftart ein, die für alle weiteren Textzeichnungen verwendet werden soll. Diese Schriftart muss zu den <a href=
-"../../../../2_interface/1_editors/fonts.html">Schriftarten-Assets</a> des Spiels hinzugefügt worden sein oder entweder mit der <a href=
-"../../../../2_interface/1_editors/fonts.html">Schriftart</a> erstellt worden sein <a href=
+</script><h2> draw_set_font </h2><div class="body-scroll"><p><br></p><h3> Beschreibung </h3><blockquote><p> Diese Funktion legt die Schriftart fest, die für alle weiteren Textzeichnungen verwendet werden soll. Diese Schriftart muss den <a href=
+"../../../../2_interface/1_editors/fonts.html">Fontassets</a> des Spiels hinzugefügt worden sein oder mit der <a href=
 "../../fonts/font_add.html"><tt>font_add</tt></a> oder <a href=
-"../../fonts/font_add_sprite.html"><tt>font_add_sprite</tt></a>. Sie können diese Einstellung auch auf -1 setzen, um Zeichentext mit einer 12-Punkt-Arial-Schriftart zu zeichnen. <br><br></p><p><br></p><h3 class="studio"> Beispiel: </h3><p class="code">draw_set_colour(c_blue);<br>
+"../../fonts/font_add_sprite.html"><tt>font_add_sprite</tt></a>. </p></blockquote><p><br></p><h3> Syntax: </h3><p class="code">draw_set_font(font);<span class="notranslate"></span></p><div><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">font</span> </td> <td> Der Name der zu verwendenden Schriftart. </td></tr></table></div><p><br></p><h3> Kehrt zurück: </h3><p class="code">N/A<span class="notranslate"></span></p><p><br></p><h3> Beispiel: </h3><p class="code">draw_set_colour(c_blue);<br>
 draw_set_font(fnt_Game);<br>
-draw_text(200, 200, "Hello World" );<br><span class="notranslate"></span></p><p> Der obige Code wird den gegebenen Text unter Verwendung der Schriftart zeichnen, die in der Variablen &quot;fnt_Game&quot; indiziert und blau gefärbt ist. </p><p><br></p><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Zeichentext</a> </div><div style="float:right"> Weiter: <a href=
-"draw_set_halign.html">draw_set_halign</a> </div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+draw_text(200, 200, "Hello World" );<br><span class="notranslate"></span></p><blockquote><p> Der obige Code zeichnet den angegebenen Text mit der Schriftart, die in der Variablen &quot;fnt_Game&quot; indiziert und blau markiert ist. </p></blockquote><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Rückseite: <a href="index.html">Text zeichnen</a> </div><div style="float:right"> Weiter: <a href=
+"draw_set_halign.html">draw_set_halign</a> </div></div></div><h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

@@ -26,7 +26,7 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! --><script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
-</script><h1 class="studio"> device_get_tilt_x </h1><h2 class="studio"> Diese Funktion gibt die Neigung auf der X-Achse des Geräts zurück. </h2><h3 class="studio"> Syntax: </h3><p class="code">device_get_tilt_x()<span class="notranslate"></span></p><p><br></p><p> <b>Rückgabe:</b> Echt </p><p><br></p><h3 class="studio"> Beschreibung </h3><p> Diese Funktion gibt einen Wert zwischen -1 und 1 zurück, abhängig vom Neigungswinkel des Geräts. Die tatsächliche Korrelation zwischen den Neigungsgraden und dem zurückgegebenen Wert hängt vom verwendeten Gerät und Betriebssystem ab, aber im Allgemeinen ist der Wert 1 oder -1 gleich wie +/- 90 °. Das Bild unten zeigt, wie jedes, wenn die verfügbaren Funktionen auf das Gerät bezogen sind: <img class="center" src=
+</script><h1 class="studio"> device_get_tilt_x </h1><h2 class="studio"> Diese Funktion gibt den Neigungswinkel auf der X-Achse Ihres Geräts zurück. </h2><h3 class="studio"> Syntax: </h3><p class="code">device_get_tilt_x()<span class="notranslate"></span></p><p><br></p><p> <b>Rückgabe:</b> Real </p><p><br></p><h3 class="studio"> Beschreibung </h3><p> Diese Funktion gibt je nach Neigungswinkel des Geräts einen Wert zwischen -1 und 1 zurück. Die tatsächliche Korrelation zwischen den Neigungsgraden und dem zurückgegebenen Wert hängt von dem verwendeten Gerät und Betriebssystem ab. Im Allgemeinen ist der Wert 1 oder -1 jedoch gleich +/- 90 °. Das Bild unten zeigt, wie sich die verfügbaren Funktionen auf das Gerät beziehen: <img class="center" src=
 "tilt_image.png"></p><p><br></p><h3 class="studio"> Beispiel: </h3><p class="code">if display_get_orientation() =
 display_landscape<br>
 &nbsp;&nbsp;&nbsp;{<br>
@@ -35,8 +35,8 @@ display_landscape<br>
 else<br>
 &nbsp;&nbsp;&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;x += sign(device_get_tilt_x());<br>
-&nbsp;&nbsp;&nbsp;}<br><span class="notranslate"></span></p><p> Der obige Code überprüft die Ausrichtung des Displays und verwendet dann den entsprechenden Neigungswert, um den Player entlang der x-Achse zu bewegen. </p><p><br></p><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Geräteeingabe</a> </div><div style="float:right"> Nächstes: <a href=
-"device_get_tilt_y.html">device_get_tilt_y</a> </div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+&nbsp;&nbsp;&nbsp;}<br><span class="notranslate"></span></p><p> Der obige Code überprüft die Ausrichtung der Anzeige und verwendet dann den entsprechenden Neigungswert, um den Player entlang der x-Achse zu bewegen. </p><p><br></p><div class="clear"><div style="float:left"> Rückseite: <a href="index.html">Geräteeingang</a> </div><div style="float:right"> Weiter: <a href=
+"device_get_tilt_y.html">device_get_tilt_y</a> </div></div><h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -26,9 +26,8 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! --><script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
-</script><h2> file_text_writeln </h2><div class="body-scroll"><h3 class="studio"> Syntax: </h3><p class="code">file_text_writeln(fileid);<span class="notranslate"></span></p><p><br></p><div class="param"><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">fileid</span> </td> <td> Die ID der zu bearbeitenden Datei. </td></tr></table></div><p><br></p><p> <b>Rückgabe:</b> Echt </p><p><br></p><h3 class="studio"> Beschreibung </h3><p> Mit dieser Funktion können Sie eine neue Zeile in eine geöffnete Textdatei schreiben. Auf diese Weise können Sie Zeilen überspringen oder Informationen zeilenweise schreiben (siehe Beispielcode unten). <br><br></p><p><br></p><h3 class="studio"> Beispiel: </h3><p class="code">var i, file;<br>
-file = file_text_open_write(working_directory +
-"\hiscore.txt");<br>
+</script><h2> file_text_writeln </h2><div class="body-scroll"><h3 class="studio"> Syntax: </h3><p class="code">file_text_writeln(fileid);<span class="notranslate"></span></p><p><br></p><div class="param"><table><tr><th> Streit </th><th> Beschreibung </th></tr><tr><td> <span class="notranslate">fileid</span> </td> <td> Die ID der zu bearbeitenden Datei. </td></tr></table></div><p><br></p><p> <b>Rückgabe:</b> Real </p><p><br></p><h3 class="studio"> Beschreibung </h3><p> Mit dieser Funktion können Sie eine neue Zeile in eine geöffnete Textdatei schreiben. Auf diese Weise können Sie Zeilen zeilenweise überspringen oder Informationen schreiben (siehe Beispielcode unten). <br><br></p><p><br></p><h3 class="studio"> Beispiel: </h3><p class="code">var i, file;<br>
+file = file_text_open_write(working_directory + "hiscore.txt");<br>
 for (i = 0; i &lt; 10; i += 1)<br>
 &nbsp;&nbsp;&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;file_text_write_real(file, scr[i]);<br>
@@ -36,8 +35,8 @@ for (i = 0; i &lt; 10; i += 1)<br>
 &nbsp;&nbsp;&nbsp;file_text_write_string(file, scr_name[i]);<br>
 &nbsp;&nbsp;&nbsp;file_text_writeln(file);<br>
 &nbsp;&nbsp;&nbsp;}<br>
-file_text_close(file);<br><span class="notranslate"></span></p><p> Der obige Code öffnet eine Datei zum Schreiben und durchläuft dann zwei Arrays, wobei jeder Array-Wert in eine neue Zeile der Datei geschrieben wird. Die Datei wird dann geschlossen, wenn die Schleife beendet ist. </p><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Zurück: <a href="index.html">Textdateien</a> </div><div style="float:right"> Weiter: <a href=
-"file_text_eoln.html">file_text_eoln</a> </div></div></div><h5> © Urheberrecht <span class="notranslate">YoYo Games Ltd.</span> 2017 Alle Rechte vorbehalten </h5>
+file_text_close(file);<br><span class="notranslate"></span></p><p> Der obige Code öffnet eine Datei zum Schreiben und durchläuft dann zwei Arrays, wobei jeder Arraywert in eine neue Zeile der Datei geschrieben wird. Die Datei wird dann geschlossen, wenn die Schleife beendet ist. </p><p><br></p></div><div class="footer"><div class="buttons"><div class="clear"><div style="float:left"> Rückseite: <a href="index.html">Textdateien</a> </div><div style="float:right"> Weiter: <a href=
+"file_text_eoln.html">file_text_eoln</a> </div></div></div><h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
